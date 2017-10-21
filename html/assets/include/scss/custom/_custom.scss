@@ -1,0 +1,29 @@
+/* Add here all your css styles (customizations) */
+@import "settings/variables";
+@import "custom/custom.variables";
+
+
+// Base Mods
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, .h7,
+h1, h2, h3, h4, h5, h6 {
+  font-family: $g-font-secondary;
+}
+
+
+.u-header__logo {
+
+	&-img {
+		width: 70%;
+	}
+}
+
+@media all and (min-width: $g-sm) {
+	.u-header__logo {
+
+		&-img {
+			width: 100%;
+		}
+	}
+}
