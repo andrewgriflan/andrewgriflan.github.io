@@ -1,11 +1,14 @@
 // Add here all your customized variables
 
+// Variables
+@import "settings/variables";
+
 // Font Families
-$g-font-primary: "Roboto", Helvetica, Arial, sans-serif !default;
-$g-font-secondary: "Catamaran", Helvetica, Arial, sans-serif !default;
+$g-font-primary: "Roboto", Helvetica, Arial, sans-serif;
+$g-font-secondary: "Catamaran", Helvetica, Arial, sans-serif;
 
 // Font Sizes
-$g-font-primary-size: 16px;
+$g-font-primary-size: 18px;
 
 // Rupie Color Palette
 $rupieLightRed: #f9b7eb;
@@ -17,6 +20,14 @@ $rupieWhite: #fefeff;
 
 // Primary Color
 $g-color-primary: $rupiePurple;
+$g-color-primary-dark-v1: darken($g-color-primary, 2%);
+$g-color-primary-dark-v2: darken($g-color-primary, 5%);
+$g-color-primary-dark-v3: darken($g-color-primary, 10%);
+$g-color-primary-light-v1: rgba($g-color-primary, .2);
+$g-color-primary-light-v2: rgba($g-color-primary, .8);
+
+// Main Colors
+$g-color-main: $rupieBlack;
 
 // Color Black
 $g-color-black: $rupieBlack;

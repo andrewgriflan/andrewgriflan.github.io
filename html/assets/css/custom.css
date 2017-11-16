@@ -1,15 +1,218 @@
 /* Add here all your css styles (customizations) */
 .h1, .h2, .h3, .h4, .h5, .h6, .h7,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+  font-family: "Catamaran", Helvetica, Arial, sans-serif;
 }
 
-.u-header__logo-img {
+.js-header-change-moment .u-header__logo img,
+.u-header__logo img {
   width: 70%;
 }
 
-@media all and (min-width: 576px) {
-  .u-header__logo-img {
-    width: 100%;
+@media all and (min-width: 768px) {
+  .u-header__logo img {
+    width: auto;
+  }
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.active .nav-link {
+  color: #5c239e;
+}
+
+.g-bg-darkpurple-lineargradient {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(225deg, #0d1f2d, #5c239e);
+}
+
+.g-bg-rupieLightRed-lineargradient {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(225deg, #f9b7eb, #fefeff);
+}
+
+.ruby-gem--empty {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTIyLjUgOTM2LjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkyMi41IDkzNi42IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBmaWxsPSIjOUUwMDVEIiBkPSJNNDU0LjQsMTA5LjlsODQsOTQuMWw5MS45LDEwM3YxNTguNXYxNTguNWwtOTEuOSwxMDNsLTg0LDk0LjJsLTg0LTk0LjJsLTkxLjktMTAzVjQ2NS41VjMwN2w5MS45LTEwM0w0NTQuNCwxMDkuOSBNNDU0LjQsODcuOWMtMS4xLDAtMi4yLDAuNC0zLDEuM2wtOTIuOSwxMDQuMmwtOTQuOSwxMDYuNGMtMC43LDAuNy0xLDEuNy0xLDIuN3YxNjMuMXYxNjMuMWMwLDEsMC40LDEuOSwxLDIuN2w5NC45LDEwNi40bDkyLjksMTA0LjJjMC44LDAuOSwxLjksMS4zLDMsMS4zczIuMi0wLjQsMy0xLjNsOTIuOS0xMDQuMmw5NC45LTEwNi40YzAuNy0wLjcsMS0xLjcsMS0yLjdWNDY1LjVWMzAyLjRjMC0xLTAuNC0xLjktMS0yLjdsLTk0LjktMTA2LjRMNDU3LjQsODkuMkM0NTYuNiw4OC4zLDQ1NS41LDg3LjksNDU0LjQsODcuOUw0NTQuNCw4Ny45eiIvPjwvZz48L2c+PC9zdmc+);
+}
+
+.ruby-gem--filled {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTIyLjUgOTM2LjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkyMi41IDkzNi42IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBmaWxsPSIjQTAyMjczIiBkPSJNNDU0LjQsODUxLjFjLTMuNCwwLTYuNy0xLjUtOS00TDI1Ny42LDYzNi41Yy0yLTIuMi0zLTUtMy04VjMwMi40YzAtMi45LDEuMS01LjgsMy04TDQ0NS40LDgzLjljMi4zLTIuNSw1LjUtNCw5LTRjMy40LDAsNi43LDEuNSw5LDRsMTg3LjksMjEwLjZjMiwyLjIsMyw1LDMsOHYzMjYuMWMwLDMtMS4xLDUuOC0zLDhMNDYzLjMsODQ3LjFDNDYxLjEsODQ5LjcsNDU3LjgsODUxLjEsNDU0LjQsODUxLjF6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ1NC40LDg3LjljMS4xLDAsMi4yLDAuNCwzLDEuM2w5Mi45LDEwNC4ybDk0LjksMTA2LjRjMC43LDAuNywxLDEuNywxLDIuN3YxNjMuMXYxNjMuMWMwLDEtMC40LDEuOS0xLDIuN2wtOTQuOSwxMDYuNGwtOTIuOSwxMDQuMmMtMC44LDAuOS0xLjksMS4zLTMsMS4zcy0yLjItMC40LTMtMS4zbC05Mi45LTEwNC4ybC05NC45LTEwNi40Yy0wLjctMC43LTEtMS43LTEtMi43VjQ2NS41VjMwMi40YzAtMSwwLjQtMS45LDEtMi43bDk0LjktMTA2LjRsOTIuOS0xMDQuMkM0NTIuMiw4OC4zLDQ1My4zLDg3LjksNDU0LjQsODcuOSBNNDU0LjQsNzEuOWMtNS43LDAtMTEuMSwyLjQtMTQuOSw2LjdsLTkyLjksMTA0LjJsLTk0LjksMTA2LjRjLTMuMywzLjctNS4xLDguNC01LjEsMTMuM3YxNjMuMXYxNjMuMWMwLDQuOSwxLjgsOS42LDUuMSwxMy4zbDk0LjksMTA2LjRsOTIuOSwxMDQuMmMzLjgsNC4zLDkuMiw2LjcsMTQuOSw2LjdzMTEuMS0yLjQsMTQuOS02LjdsOTIuOS0xMDQuMmw5NC45LTEwNi40YzMuMy0zLjcsNS4xLTguNCw1LjEtMTMuM1Y0NjUuNVYzMDIuNGMwLTQuOS0xLjgtOS42LTUuMS0xMy4zbC05NC45LTEwNi40TDQ2OS4zLDc4LjVDNDY1LjUsNzQuMyw0NjAuMSw3MS45LDQ1NC40LDcxLjlMNDU0LjQsNzEuOXoiLz48L2c+PC9nPjwvc3ZnPg==);
+}
+
+.rupie-invest {
+  width: 500px;
+}
+
+.rupie-invest__arrow-6 {
+  -webkit-transform: translateY(105px) translateX(-23px);
+      -ms-transform: translateY(105px) translateX(-23px);
+          transform: translateY(105px) translateX(-23px);
+}
+
+.rupie-invest__arrow-5 {
+  -webkit-transform: translateY(105px) translateX(53px);
+      -ms-transform: translateY(105px) translateX(53px);
+          transform: translateY(105px) translateX(53px);
+}
+
+.rupie-invest__arrow-4 {
+  -webkit-transform: translateY(5px) translateX(-83px);
+      -ms-transform: translateY(5px) translateX(-83px);
+          transform: translateY(5px) translateX(-83px);
+}
+
+.rupie-invest__arrow-3 {
+  -webkit-transform: translateY(-70px) translateX(-83px);
+      -ms-transform: translateY(-70px) translateX(-83px);
+          transform: translateY(-70px) translateX(-83px);
+}
+
+.rupie-invest__arrow-2 {
+  -webkit-transform: translateY(-95px) translateX(53px);
+      -ms-transform: translateY(-95px) translateX(53px);
+          transform: translateY(-95px) translateX(53px);
+}
+
+.rupie-invest__arrow-1 {
+  -webkit-transform: translateY(-15px) translateX(107px);
+      -ms-transform: translateY(-15px) translateX(107px);
+          transform: translateY(-15px) translateX(107px);
+}
+
+.rupie-invest--active .rupie-invest__arrow-1 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-invest--active .rupie-invest__arrow-2 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-invest--active .rupie-invest__arrow-3 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-invest--active .rupie-invest__arrow-4 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-invest--active .rupie-invest__arrow-5 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-invest--active .rupie-invest__arrow-6 {
+  -webkit-animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: investArrows 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes investArrows {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes investArrows {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.rupie-hardware__gem {
+  -webkit-transform: translateX(150px);
+  -ms-transform: translateX(150px);
+      transform: translateX(150px);
+}
+
+.rupie-hardware--animating .rupie-hardware__gem {
+  -webkit-animation: rupieSlider 1.22s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation: rupieSlider 1.22s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes rupieSlider {
+  to {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rupieSlider {
+  to {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+.animation__gamers-and-developers__lines line {
+  stroke-dasharray: 100;
+  -webkit-animation: dash 100s linear infinite;
+  animation: dash 100s linear infinite;
+}
+
+.animation__gamers-and-developers__rupie-gem {
+  -webkit-animation: colorChange 3s ease-in-out infinite alternate;
+  animation: colorChange 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: -2000;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -2000;
+  }
+}
+
+@-webkit-keyframes colorChange {
+  0% {
+    fill: #A02273;
+  }
+  100% {
+    fill: #7B3990;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    fill: #A02273;
+  }
+  100% {
+    fill: #7B3990;
   }
 }

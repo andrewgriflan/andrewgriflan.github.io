@@ -2,8 +2,7 @@
   Default Styles
 ------------------------------------*/
 html {
-  font-size: 16px;
-  overflow-x: hidden;
+  font-size: 18px;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   font-size: 1rem;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: #555;
+  color: #0d1f2d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
@@ -30,12 +29,12 @@ a:hover {
 }
 
 .nav-link {
-  color: #555;
+  color: #0d1f2d;
 }
 
 .nav-link:focus,
 .nav-link:hover {
-  color: #555;
+  color: #0d1f2d;
 }
 
 figure {
@@ -67,21 +66,21 @@ h1, h2, h3, h4, h5, h6 {
   Highlight Color
 ------------------------------------*/
 ::-moz-selection {
-  color: #fff;
+  color: #fefeff;
   background-color: #7b3990;
 }
 
 ::selection {
-  color: #fff;
+  color: #fefeff;
   background-color: #7b3990;
 }
 
 .g-bg-primary ::-moz-selection {
   color: #7b3990;
-  background-color: #fff;
+  background-color: #fefeff;
 }
 
 .g-bg-primary ::selection {
   color: #7b3990;
-  background-color: #fff;
+  background-color: #fefeff;
 }
