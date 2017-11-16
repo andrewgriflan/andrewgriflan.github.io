@@ -44,7 +44,7 @@
 <body id="home">
 
 	<!-- Header -->
-	<header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="500" data-header-fix-effect="slide">
+	<header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="100" data-header-fix-effect="slide">
 		<div class="u-header__section g-bg-white u-shadow-v18 g-transition-0_3 g-py-6 g-py-12--lg"
 				data-header-fix-moment-exclude="g-py-6 g-py-12--lg"
 				data-header-fix-moment-classes="g-py-6">
@@ -70,7 +70,7 @@
 
 					<!-- Navigation -->
 					<div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
-						<ul class="navbar-nav text-uppercase g-font-secondary g-font-weight-600 g-letter-spacing-1 g-font-size-12  g-pt-0--lg ml-auto">
+						<ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-secondary g-font-weight-600 g-letter-spacing-1 g-font-size-12  g-pt-0--lg ml-auto">
 							<li class="nav-item g-mr-12--lg active">
 								<a href="#home" class="nav-link px-0">Home
 									<span class="sr-only">(current)</span>
@@ -256,8 +256,6 @@
       </div>
     </section>
     <!-- End Promo Block -->
-
-
 
 
 
@@ -1930,6 +1928,7 @@
 	<script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
 	<script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
 	<script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
 	<!-- JS Unify -->
 	<script src="assets/js/hs.core.js"></script>
@@ -1963,13 +1962,12 @@
 
 			// initialization of HSScrollNav
 			$.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
-				duration: 2000,
+				duration: 800,
 				easing: 'easeOutExpo'
 			});
 
 			// // initialization of header's height equal offset
 			// $.HSCore.helpers.HSHeightCalc.init();
-
 
 			// initialization of scroll animation
 			$.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
@@ -1984,7 +1982,6 @@
 			$.HSCore.components.HSPopup.init('.js-fancybox');
 
 
-
 			// // initialization of countdowns within chart pies
 			// var countdowns = $.HSCore.components.HSCountdown.init('.js-countdown-pies', {
 			// 	yearsElSelector: '.js-cd-years',
@@ -1995,8 +1992,6 @@
 			// 	secondsElSelector: '.js-cd-seconds',
 			// 	circles: true
 			// });
-
-
 		});
 
 		$(window).on('load', function () {
