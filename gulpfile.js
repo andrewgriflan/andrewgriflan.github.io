@@ -35,6 +35,15 @@ gulp.task('sass-blog', function() {
     .pipe(gulp.dest('./html/blog-magazine/classic/assets/css/'))
 });
 
+// Multi Page (Marketing Demo example, please change this path if you are using other demos)
+gulp.task('sass-mp-marketing', function() {
+  return gulp.src('./html/multi-pages/marketing/assets/scss/**/*.scss')
+    .pipe(changed('./html/multi-pages/marketing/assets/css/'))
+    .pipe(sass({outputStyle:'expanded'}))
+    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
+    .pipe(gulp.dest('./html/multi-pages/marketing/assets/css/'))
+});
+
 // One Page (Accounting Demo example, please change this path if you are using other demos)
 gulp.task('sass-op', function() {
   return gulp.src('./html/one-pages/accounting/assets/scss/**/*.scss')
@@ -67,4 +76,4 @@ gulp.task('watch', function() {
 // Default
 //
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'sass']);

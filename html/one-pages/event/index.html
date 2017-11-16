@@ -41,11 +41,12 @@
               data-header-fix-moment="100">
         <div class="light-theme u-header__section g-bg-darkblue-opacity-0_7 g-transition-0_3 g-py-10"
              data-header-fix-moment-exclude="light-theme g-bg-darkblue-opacity-0_7"
-             data-header-fix-moment-classes="dark-theme g-bg-white-opacity-0_9">
+             data-header-fix-moment-classes="dark-theme u-shadow-v18 g-bg-white-opacity-0_9">
           <nav class="navbar navbar-expand-lg g-py-0">
             <div class="container g-pos-rel">
               <!-- Logo -->
-              <a href="#" class="navbar-brand u-header__logo">
+              <a href="#!" class="js-go-to navbar-brand u-header__logo"
+                 data-type="static">
                 <img class="u-header__logo-img u-header__logo-img--main d-block" src="assets/img/logo-light.png" alt="Image description"
                      data-header-fix-moment-exclude="d-block"
                      data-header-fix-moment-classes="d-none">
@@ -58,7 +59,7 @@
 
               <!-- Navigation -->
               <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
-                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 g-pt-20 g-pt-0--lg ml-auto">
+                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 g-pt-20 g-pt-5--lg ml-auto">
                   <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg active">
                     <a href="#home" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
                   </li>
@@ -140,37 +141,37 @@
           </div>
           <!-- End Countdown v4 -->
 
-          <h2 class="text-center text-uppercase h2 g-font-weight-700 g-font-size-40 g-font-size-60--md g-color-white g-mb-30 g-mb-70--md">UI & UX Design 2017</h2>
+          <h2 class="text-center text-uppercase h2 g-font-weight-700 g-font-size-40 g-font-size-60--md g-color-white g-mb-30 g-mb-70--md">UI &amp; UX Design 2017</h2>
 
-          <div class="row g-mx-minus-5">
-            <div class="col-md-4 g-px-5 g-mb-20 g-mb-0--md">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 text-center text-md-left g-mb-30 g-mb-0--md">
               <div class="media">
-                <div class="media-left d-flex align-self-center g-mr-20">
+                <div class="media-left d-flex align-self-center g-hidden-sm-down g-mr-20">
                   <i class="fa fa-calendar g-font-size-27 g-color-white-opacity-0_5"></i>
                 </div>
 
                 <div class="media-body text-uppercase">
                   <p class="g-mb-5"><strong class="g-font-size-14 g-color-white-opacity-0_5">When</strong></p>
-                  <h3 class="h3 text-uppercase g-font-size-15 g-color-white mb-0">18:30, 12 Jul, 2017</h3>
+                  <h3 class="h3 g-font-size-15 g-color-white mb-0">18:30, 12 Jul, 2017</h3>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-5 g-px-5 g-mb-20 g-mb-0--md">
+            <div class="col-sm-6 col-md-5 text-center text-md-left g-mb-30 g-mb-0--md">
               <div class="media">
-                <div class="media-left d-flex align-self-center g-mr-20">
+                <div class="media-left d-flex align-self-center g-hidden-sm-down g-mr-20">
                   <i class="fa fa-map-marker g-font-size-27 g-color-white-opacity-0_5"></i>
                 </div>
 
                 <div class="media-body text-uppercase">
                   <p class="g-mb-5"><strong class="g-font-size-14 g-color-white-opacity-0_5">Where</strong></p>
-                  <h3 class="h3 text-uppercase g-font-size-15 g-color-white mb-0">Concert Hall, Los Angeles, USA</h3>
+                  <h3 class="h3 g-font-size-15 g-color-white mb-0">Red Hall, Los Angeles, USA</h3>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-3 text-md-right g-px-5">
-              <a class="btn btn-lg text-uppercase u-btn-white g-font-weight-700 g-font-size-11 g-color-white--hover g-bg-primary--hover g-brd-none rounded-0 g-py-18" href="#">Register Now</a>
+            <div class="col-md-3 text-center text-md-right">
+              <a class="btn btn-lg text-uppercase u-btn-white g-font-weight-700 g-font-size-11 g-color-white--hover g-bg-primary--hover g-brd-none rounded-0 g-py-18 g-px-20" href="#!">Register Now</a>
             </div>
           </div>
         </div>
@@ -189,7 +190,7 @@
               </div>
             </div>
 
-            <div class="col-md-6 d-flex g-min-height-50vh g-theme-color-gray-dark-v1 g-py-80 g-py-20--md g-px-50">
+            <div class="col-md-6 d-flex g-min-height-50vh g-theme-color-gray-dark-v1 g-px-50 g-py-80 g-py-50--md g-py-20--lg">
               <div class="align-self-center w-100">
                 <h2 class="text-uppercase g-font-weight-700 g-font-size-30 g-color-primary g-mb-10">About The Event</h2>
                 <h3 class="text-uppercase g-font-weight-500 g-font-size-13 g-color-white g-mb-20">Fusce pretium augue quis sem consectetur</h3>
@@ -218,7 +219,7 @@
           <ul class="nav justify-content-center text-uppercase u-nav-v5-3 u-nav-primary g-line-height-1_4 g-font-weight-700 g-font-size-14 g-brd-bottom--md g-brd-gray-light-v4 g-mb-80--md" role="tablist"
               data-target="days"
               data-tabs-mobile-type="slide-up-down"
-              data-btn-classes="btn btn-md btn-block text-uppercase g-font-weight-700 u-btn-outline-primary">
+              data-btn-classes="btn btn-md btn-block text-uppercase rounded-0 g-font-weight-700 u-btn-outline-primary">
             <li class="nav-item g-mx-10--md">
               <a class="nav-link g-theme-color-gray-dark-v1 g-color-primary--hover g-pb-15--md active" data-toggle="tab" href="#day-1" role="tab">Day 1</a>
             </li>
@@ -235,7 +236,7 @@
           <div id="days" class="tab-content g-pt-20">
             <div class="tab-pane fade show active" id="day-1" role="tabpanel">
               <div class="u-timeline-v3-wrap">
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -243,7 +244,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">15:30 - 17:30</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">15:30 - 17:30</span>
                       </div>
                     </div>
 
@@ -263,7 +264,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -271,7 +272,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">17:45 - 18:45</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">17:45 - 18:45</span>
                       </div>
                     </div>
 
@@ -291,7 +292,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -299,7 +300,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">19:00 - 21:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">19:00 - 21:00</span>
                       </div>
                     </div>
 
@@ -319,7 +320,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -327,7 +328,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">21:15 - 22:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">21:15 - 22:00</span>
                       </div>
                     </div>
 
@@ -351,7 +352,7 @@
 
             <div class="tab-pane fade" id="day-2" role="tabpanel">
               <div class="u-timeline-v3-wrap">
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -359,7 +360,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">17:45 - 18:45</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">17:45 - 18:45</span>
                       </div>
                     </div>
 
@@ -379,7 +380,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -387,7 +388,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">19:00 - 21:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">19:00 - 21:00</span>
                       </div>
                     </div>
 
@@ -407,7 +408,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -415,7 +416,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">15:30 - 17:30</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">15:30 - 17:30</span>
                       </div>
                     </div>
 
@@ -435,7 +436,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -443,7 +444,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">21:15 - 22:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">21:15 - 22:00</span>
                       </div>
                     </div>
 
@@ -467,7 +468,7 @@
 
             <div class="tab-pane fade" id="day-3" role="tabpanel">
               <div class="u-timeline-v3-wrap">
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -475,7 +476,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">21:15 - 22:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">21:15 - 22:00</span>
                       </div>
                     </div>
 
@@ -495,7 +496,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -503,7 +504,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">15:30 - 17:30</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">15:30 - 17:30</span>
                       </div>
                     </div>
 
@@ -523,7 +524,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5 g-mb-50" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -531,7 +532,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">17:45 - 18:45</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">17:45 - 18:45</span>
                       </div>
                     </div>
 
@@ -551,7 +552,7 @@
                   </div>
                 </a>
 
-                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#">
+                <a class="u-timeline-v3 d-block text-center text-md-left g-parent u-link-v5" href="#!">
                   <div class="g-hidden-sm-down u-timeline-v3__icon g-absolute-centered--y g-z-index-3 g-line-height-0 g-width-16 g-height-16 g-ml-minus-8">
                     <i class="d-inline-block g-width-16 g-height-16 g-bg-white g-brd-5 g-brd-style-solid g-brd-gray-light-v4 g-rounded-50"></i>
                   </div>
@@ -559,7 +560,7 @@
                   <div class="row mx-0">
                     <div class="col-md-3 g-order-2 g-order-1--sm d-flex align-self-center px-0">
                       <div class="u-heading-v1-4 g-brd-gray-light-v2 w-100">
-                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in">19:00 - 21:00</span>
+                        <span class="text-center g-pos-rel d-block g-width-110 g-line-height-1_6 g-font-weight-600 g-color-white g-font-size-14 g-bg-gray-dark-v1 g-bg-primary--parent-hover g-py-5 g-px-10 mx-auto g-ml-0--md g-transition-0_2 g-transition--ease-in g-mb-10 g-mb-0--md">19:00 - 21:00</span>
                       </div>
                     </div>
 
@@ -618,7 +619,7 @@
           </div>
         </div>
 
-        <div id="carouselCus2" class="js-carousel u-carousel-v1 u-carousel-v3 g-pb-50"
+        <div class="js-carousel u-carousel-v1 u-carousel-v3 g-pb-50"
              data-infinite="true"
              data-center-mode="true"
              data-center-padding="50px"
@@ -626,7 +627,31 @@
              data-focus-on-select="true"
              data-arrows-classes="u-arrow-v1 g-absolute-centered--x g-bottom-0 g-width-40 g-height-40 g-font-size-20 g-color-white g-bg-primary g-bg-black--hover g-transition-0_2 g-transition--ease-in"
              data-arrow-left-classes="fa fa-angle-left g-ml-minus-25"
-             data-arrow-right-classes="fa fa-angle-right g-ml-30">
+             data-arrow-right-classes="fa fa-angle-right g-ml-30"
+             data-responsive='[{
+               "breakpoint": 1200,
+               "settings": {
+                 "slidesToShow": 3
+               }
+             }, {
+               "breakpoint": 992,
+               "settings": {
+                 "slidesToShow": 1,
+                 "centerPadding": "100px"
+               }
+             }, {
+               "breakpoint": 768,
+               "settings": {
+                 "slidesToShow": 1,
+                 "centerPadding": "60px"
+               }
+             }, {
+               "breakpoint": 576,
+               "settings": {
+                 "slidesToShow": 1,
+                 "centerPadding": "40px"
+               }
+             }]'>
           <div class="js-slide g-parent g-px-15 g-pb-30">
             <article>
               <img class="img-fluid" src="assets/img-temp/1000x667/img2.jpg" alt="Image description">
@@ -641,16 +666,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -671,16 +696,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -701,16 +726,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -731,16 +756,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -761,16 +786,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -791,16 +816,16 @@
 
                 <ul class="list-inline mb-0 g-ml-minus-5">
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-twitter g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-twitter g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-pinterest g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-pinterest g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-facebook g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-facebook g-absolute-centered"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><span class="fa fa-linkedin g-absolute-centered"></span></a>
+                    <a class="d-block g-pos-rel g-width-35 g-height-35 g-font-size-default g-theme-color-gray-dark-v1 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><span class="fa fa-linkedin g-absolute-centered"></span></a>
                   </li>
                 </ul>
               </div>
@@ -822,7 +847,7 @@
               <br> efficitur eros ut dui laoreet, ut blandit turpis tincidunt.</p>
           </div>
 
-          <div id="carouselCus3" class="js-carousel text-center g-line-height-0 g-pb-50"
+          <div class="js-carousel text-center g-line-height-0 g-pb-50"
                data-infinite="true"
                data-autoplay="true"
                data-speed="5000"
@@ -831,7 +856,28 @@
                data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-bottom-0 g-width-40 g-height-40 g-font-size-20 g-color-white g-color-primary--hover g-bg-primary g-bg-white--hover g-mt-minus-25 g-transition-0_2 g-transition--ease-in"
                data-arrow-left-classes="fa fa-angle-left g-left-0"
                data-arrow-right-classes="fa fa-angle-right g-right-0"
-               data-pagi-classes="u-carousel-indicators-v1--white g-absolute-centered--x g-bottom-0">
+               data-pagi-classes="u-carousel-indicators-v1--white g-absolute-centered--x g-bottom-0"
+               data-responsive='[{
+                 "breakpoint": 1200,
+                 "settings": {
+                   "slidesToShow": 5
+                 }
+               }, {
+                 "breakpoint": 992,
+                 "settings": {
+                   "slidesToShow": 4
+                 }
+               }, {
+                 "breakpoint": 768,
+                 "settings": {
+                   "slidesToShow": 3
+                 }
+               }, {
+                 "breakpoint": 576,
+                 "settings": {
+                   "slidesToShow": 2
+                 }
+               }]'>
             <a class="js-slide u-bg-overlay g-parent g-overflow-hidden g-bg-black-opacity-0_3--after" href="assets/img-temp/400x269/img1.jpg"
                data-fancybox="fancyGallery1">
               <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_3 g-transition--ease-in" src="assets/img-temp/200x200/img1.jpg" alt="Image description">
@@ -939,7 +985,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Mauris tellus magna, pretium</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Mauris tellus magna, pretium</a>
                     </h3>
                   </header>
 
@@ -964,7 +1010,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Sed arcu erat, facilisis at tortor vel, blandit tristique enim</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Sed arcu erat, facilisis at tortor vel, blandit tristique enim</a>
                     </h3>
                   </header>
 
@@ -989,7 +1035,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Donec euismod augue non quam finibus nec iaculis tellus gravida</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Donec euismod augue non quam finibus nec iaculis tellus gravida</a>
                     </h3>
                   </header>
 
@@ -1014,7 +1060,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Cras consequat nibh a viverra tempor</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Cras consequat nibh a viverra tempor</a>
                     </h3>
                   </header>
 
@@ -1039,7 +1085,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Sed consequat tristique metus</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Sed consequat tristique metus</a>
                     </h3>
                   </header>
 
@@ -1064,7 +1110,7 @@
                   <header class="g-mb-20">
                     <h4 class="g-font-weight-700 g-font-size-10 g-color-primary g-mb-5">April 25, 2017</h4>
                     <h3 class="text-uppercase g-font-weight-700 g-font-size-14 mb-0">
-                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#">Fusce nulla neque, luctus ac magna sit amet, sollicitudin blandit</a>
+                      <a class="g-theme-color-blue-dark-v2 g-color-primary--hover" href="#!">Fusce nulla neque, luctus ac magna sit amet, sollicitudin blandit</a>
                     </h3>
                   </header>
 
@@ -1189,9 +1235,15 @@
             </div>
           </div>
 
-          <div id="carouselCus1" class="js-carousel"
+          <div class="js-carousel"
                data-infinite="true"
-               data-slides-show="6">
+               data-slides-show="6"
+               data-responsive='[{
+                 "breakpoint": 768,
+                 "settings": {
+                   "slidesToShow": 2
+                 }
+               }]'>
             <div class="js-slide">
               <img class="mx-auto g-width-120" src="assets/img-temp/150x100/img1.png" alt="Image description">
             </div>
@@ -1283,30 +1335,24 @@
                    data-pin="true"
                    data-pin-icon="../../assets/img/icons/pin/red.png"></div>
 
-              <div class="g-pos-abs--md g-top-0 g-left-0 w-100 g-height-100x--md">
-                <div class="row h-100 mx-0">
-                  <div class="col-md-6 ml-lg-auto d-flex g-bg-darkblue-opacity-0_9 g-px-50 g-py-20">
-                    <div class="align-self-center w-100">
-                      <form>
-                        <div class="form-group g-mb-20">
-                          <input id="inputGroup1_1" class="form-control g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" type="text" placeholder="Your name">
-                        </div>
-
-                        <div class="form-group g-mb-20">
-                          <input id="inputGroup1_2" class="form-control g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" type="email" placeholder="Your email">
-                        </div>
-
-                        <div class="form-group g-mb-20">
-                          <textarea id="inputGroup1_3" class="form-control g-resize-none g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" rows="7" placeholder="Message"></textarea>
-                        </div>
-
-                        <div class="text-right">
-                          <button class="btn u-btn-primary btn-lg text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-20 g-py-15 mb-0" type="submit" role="button">Submit Message</button>
-                        </div>
-                      </form>
-                    </div>
+              <div class="g-pos-abs--md g-top-0 g-right-0 g-width-50x--md g-height-500 g-height-100x--md g-bg-darkblue-opacity-0_9 g-px-50 g-py-20">
+                <form class="g-relative-centered--y">
+                  <div class="form-group g-mb-20">
+                    <input id="inputGroup1_1" class="form-control g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" type="text" placeholder="Your name">
                   </div>
-                </div>
+
+                  <div class="form-group g-mb-20">
+                    <input id="inputGroup1_2" class="form-control g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" type="email" placeholder="Your email">
+                  </div>
+
+                  <div class="form-group g-mb-20">
+                    <textarea id="inputGroup1_3" class="form-control g-resize-none g-font-size-12 g-theme-color-gray-dark-v2 g-placeholder-inherit g-bg-darkblue-opacity-0_7 g-bg-gray-dark-v1--focus g-brd-none rounded-0 g-pa-20" rows="7" placeholder="Message"></textarea>
+                  </div>
+
+                  <div class="text-right">
+                    <button class="btn u-btn-primary btn-lg text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-20 g-py-15 mb-0" type="submit" role="button">Submit Message</button>
+                  </div>
+                </form>
               </div>
             </div>
             <!-- End Google (Map) [custom] -->
@@ -1322,16 +1368,16 @@
 
             <ul class="list-inline d-inline-block mb-0">
               <li class="list-inline-item g-mr-10">
-                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-twitter"></i></a>
               </li>
               <li class="list-inline-item g-mr-10">
-                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-pinterest"></i></a>
+                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-pinterest"></i></a>
               </li>
               <li class="list-inline-item g-mr-10">
-                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-facebook"></i></a>
               </li>
               <li class="list-inline-item">
-                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-linkedin"></i></a>
+                <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white--hover g-bg-white g-bg-primary--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-linkedin"></i></a>
               </li>
             </ul>
           </div>
@@ -1339,7 +1385,7 @@
       </footer>
       <!-- End Footer -->
 
-      <a class="js-go-to u-go-to-v1" href="#"
+      <a class="js-go-to rounded-0 u-go-to-v1" href="#!"
          data-type="fixed"
          data-position='{
            "bottom": 15,
@@ -1392,60 +1438,6 @@
       $(document).on('ready', function () {
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
-
-        $('#carouselCus1').slick('setOption', 'responsive', [{
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2
-          }
-        }], true);
-
-        $('#carouselCus2').slick('setOption', 'responsive', [{
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '100px'
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '60px'
-          }
-        }, {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '40px'
-          }
-        }], true);
-
-        $('#carouselCus3').slick('setOption', 'responsive', [{
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 5
-          }
-        }, {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 2
-          }
-        }], true);
 
         // initialization of header
         $.HSCore.components.HSHeader.init($('#js-header'));

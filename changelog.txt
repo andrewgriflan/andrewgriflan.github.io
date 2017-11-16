@@ -1,6 +1,66 @@
 --------------------------------------------------------------------------
+Version v2.3 - 14 November, 2017
+--------------------------------------------------------------------------
+
+- NEW: Introducing brand new Multi Page Package in Unify Template and now Unify includes 6 complete packages. This package includes beautiful demos with its inner pages. Currently, it comes with two new demos.
+
+- NEW: Real Estate Multi Page Demo html/multipage/real-estate/..
+ - home-page-1.html
+ - page-list-view-1.html
+ - page-grid-view-1.html
+ - page-single-item-1.html
+ - page-agents-list-view-1.html
+ - page-agents-grid-view-1.html
+ - page-agents-single-page-1.html
+ - page-share-1.html
+ - page-help-1.html
+ - page-contacts-1.html
+ - page-login-1.html
+ - page-register-1.html
+ - page-forgot-password-1.html
+
+- NEW: Marketing Multi Page Demo html/multipage/marketing/..
+ - home-page-1.html
+ - page-about-1.html
+ - page-services-1.html
+ - page-consultants-1.html
+ - page-works-1.html
+ - page-hire-us-1.html
+ - page-careers-1.html
+ - page-help-1.html
+ - page-pricing-1.html
+ - page-contacts-1.html
+
+- NEW: Material Icons html/unify-main/shortcodes/icons/shortcode-base-icon-material.html
+- NEW: Clients (demo 13) html/unify-main/shortcodes/shortcode-blocks-clients.html
+- NEW: Testimonials Advanced (demo 16) html/unify-main/shortcodes/shortcode-blocks-testimonials-advanced.html
+- NEW: 4 new Hero Info Sections html/unify-main/shortcodes/shortcode-blocks-hero-info.html
+- NEW: 4 new Hero Contents (demo 13, 14, 15 and 16) html/unify-main/shortcodes/shortcode-blocks-hero-content.html
+- NEW: Heading (demo 27) html/unify-main/shortcodes/shortcode-base-headings.html
+- NEW: 3 new Promo Block (demo 35, 36 and 37) html/unify-main/shortcodes/promo/shortcode-blocks-promo-demo-35.html
+- NEW: 2 new Footers (demo 15 and 16) html/unify-main/shortcodes/footers/shortcode-blocks-footer-classic.html
+
+- ENHANCED: SASS files
+- ENHANCED: Improved UX in shortcodes sidebar's panel, now it has a brand new look.
+- ENHANCED: Minor improvements in gMap (Google Map)
+- ENHANCED: Slick Carousel: added a new data attribute for responsive modes
+- ENHANCED: Some minor improvements in One Pages (Accounting, Agency, Architecture, Business, Charity, Consulting, Courses, Construction, Event, Gym, Lawyer, App, Music), E-Commerce and Blog & Magazine packages.
+
+- FIXED: Dropdowns onload appearance in topbars
+- FIXED: Cubeportfolio minor fixes
+- FIXED: Tabs minor fixes
+- FIXED: package.json file
+- FIXED: Onload scrolling
+- FIXED: Thumbnail issue on Slick Carousel
+- FIXED: Misc pages (tether.js to popper.js)
+
+- UPDATED: Bootstrap - v4.0.0-beta-2
+- UPDATED: Animate CSS - v3.5.2
+
+--------------------------------------------------------------------------
 Version v2.2 - 08 September, 2017
 --------------------------------------------------------------------------
+
 - NEW: Style Switcher (Beta) - choose unlimited colors, change layout styles (wide, boxed, semi-boxed), select predefined Google Fonts and outer spaces then instantly download your custom styles right froStyle Switcher.
 - NEW: Nunjucks templating language (Beta)
 - NEW: Promo Block (demo 34) html/unify-main/shortcodes/promo/shortcode-blocks-promo-demo-34.html
@@ -63,7 +123,9 @@ Version v2.2 - 08 September, 2017
 - ENHANCED: Show/Copy Code in shortcodes pages
 - ENHANCED: Promo block of the Jobs Page - changed the form layout page-jobs-1.html
 - ENHANCED: Promo block demo #1 - improved the form layout shortcode-blocks-promo-demo-1.html, home-page-8.html
+
 - FIXED: Custombox (modals) -  newspaper and hashlink demos
+
 - UPDATED: Bootstrap - v4.0.0-beta
 - UPDATED: Custombox - v4.0.3
 

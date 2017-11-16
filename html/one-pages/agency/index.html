@@ -53,39 +53,42 @@
           <nav class="navbar navbar-expand-lg p-0 g-px-15">
             <div class="container g-pos-rel">
               <!-- Logo -->
-              <a href="#" class="navbar-brand u-header__logo">
+              <a href="#!" class="js-go-to navbar-brand u-header__logo"
+                 data-type="static">
                 <img class="u-header__logo-img u-header__logo-img--main g-width-130" src="assets/img/logo-dark.png" alt="Image Description">
               </a>
               <!-- End Logo -->
 
               <!-- Navigation -->
-              <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
-                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 ml-auto g-pt-20 g-pt-0--lg">
-                  <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg active">
-                    <a href="#about" class="nav-link p-0">About <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#whyWe" class="nav-link p-0">Why we</a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#services" class="nav-link p-0">Services</a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#workProcess" class="nav-link p-0">Work process</a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#skills" class="nav-link p-0">Skills</a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#team" class="nav-link p-0">Team</a>
-                  </li>
-                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                    <a href="#testimonials" class="nav-link p-0">Testimonials</a>
-                  </li>
-                  <li class="nav-item g-ml-15--lg">
-                    <a href="#contact" class="nav-link p-0">Contact</a>
-                  </li>
-                </ul>
+              <div id="navBar" class="collapse navbar-collapse w-100 align-items-center flex-sm-row" data-mobile-scroll-hide="true">
+                <div class="navbar-collapse">
+                  <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 ml-auto g-pt-20 g-pt-3--lg">
+                    <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg active">
+                      <a href="#about" class="nav-link p-0">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#whyWe" class="nav-link p-0">Why we</a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#services" class="nav-link p-0">Services</a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#workProcess" class="nav-link p-0">Work process</a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#skills" class="nav-link p-0">Skills</a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#team" class="nav-link p-0">Team</a>
+                    </li>
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                      <a href="#testimonials" class="nav-link p-0">Testimonials</a>
+                    </li>
+                    <li class="nav-item g-ml-15--lg">
+                      <a href="#contact" class="nav-link p-0">Contact</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- End Navigation -->
 
@@ -620,14 +623,14 @@
             <div class="col-md-6 d-flex g-theme-bg-gray-light-v4 g-py-30 g-py-80--md g-px-30">
               <div class="align-self-center">
                 <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-30">
-                  <h3 class="g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Why we</h3>
+                  <h3 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Why we</h3>
                   <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-2 g-font-weight-700 g-font-size-30 g-font-size-40--md g-theme-color-gray-dark-v1 mb-0">We as magicians</h2>
                 </div>
 
                 <p class="g-mb-30">Donec ut diam risus. Nunc cursus turpis ac erat mollis maximus. Donec erat urna, tincidunt at leo non, blandit finibus ante. Nunc venenatis risus in finibus dapibus. Ut ac massa sodales, mattis enim id, efficitur tortor. Nullam faucibus iaculis laoreet. Phasellus ac ipsum odio.</p>
                 <p class="g-mb-30">Nulla cursus orci sed ipsum scelerisque volutpat. Integer quis dapibus leo, maximus ultrices dui. Mauris facilisis, ex sed scelerisque bibendum, tellus leo pharetra augue.</p>
                 <p class="g-mb-30">Mauris aliquet, magna nec gravida interdum, magna nibh fringilla nulla, eget egestas sapien orci eget tellus. Pellentesque vulputate posuere libero a varius. Duis feugiat.</p>
-                <a class="btn u-btn-primary btn-md text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-25 g-py-10 mb-0" href="#">Get in touch</a>
+                <a class="btn u-btn-primary btn-md text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-25 g-py-10 mb-0" href="#!">Get in touch</a>
               </div>
             </div>
 
@@ -638,13 +641,13 @@
                          data-animation="fadeInRight"
                          data-animation-duration="1750">
                   <div class="d-md-flex align-self-center g-mb-30 g-mb-0--md g-mr-30--md">
-                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary-dark-v1 g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
+                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
                       <i class="icon-line icon-magnet g-font-size-35"></i>
                     </span>
                   </div>
 
                   <div class="media-body align-self-center">
-                    <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white">Branding and identity</h3>
+                    <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white">Branding and identity</h3>
                     <p class="g-color-white-opacity-0_5 mb-0">Sed in laoreet purus. Nunc sagittis suscipit ultrices. Proin suscipit facilisis ultrices. Phasellus arcu risus, semper quis elementum eget.</p>
                   </div>
                 </article>
@@ -657,13 +660,13 @@
                          data-animation="fadeInRight"
                          data-animation-duration="1750">
                   <div class="d-md-flex align-self-center g-mb-30 g-mb-0--md g-mr-30--md">
-                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary-dark-v1 g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
+                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
                       <i class="icon-line icon-magic-wand g-font-size-35"></i>
                     </span>
                   </div>
 
                   <div class="media-body align-self-center">
-                    <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white">UI/UX and graphic design</h3>
+                    <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white">UI/UX and graphic design</h3>
                     <p class="g-color-white-opacity-0_5 mb-0">Mauris aliquet, magna nec gravida interdum, magna nibh fringilla nulla, eget egestas sapien orci eget tellusa varius.</p>
                   </div>
                 </article>
@@ -676,13 +679,13 @@
                          data-animation="fadeInRight"
                          data-animation-duration="1750">
                   <div class="d-md-flex align-self-center g-mb-30 g-mb-0--md g-mr-30--md">
-                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary-dark-v1 g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
+                    <span class="u-icon-v2 u-icon-size--2xl g-color-primary g-brd-4 g-theme-brd-gray-dark-v3 g-brd-primary-dark--parent-hover g-rounded-50x">
                       <i class="icon-line icon-calculator g-font-size-35"></i>
                     </span>
                   </div>
 
                   <div class="media-body align-self-center">
-                    <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white">Web and software development</h3>
+                    <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white">Web and software development</h3>
                     <p class="g-color-white-opacity-0_5 mb-0">Aliquam dignissim, leo sit amet pulvinar dapibus, neque sapien bibendum massa, a efficitur massa mauris a augue. Suspendisse faucibus.</p>
                   </div>
                 </article>
@@ -698,7 +701,7 @@
       <section id="services" class="g-py-30 g-py-80--md">
         <div class="container text-center u-bg-overlay__inner g-max-width-770 g-mb-30 g-mb-70--md">
           <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-30">
-            <h3 class="g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Services</h3>
+            <h3 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Services</h3>
             <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-2 g-font-weight-700 g-font-size-30 g-font-size-40--md g-theme-color-gray-dark-v1 mb-0">What we do</h2>
           </div>
 
@@ -712,8 +715,8 @@
               <div class="text-center"
                    data-animation="fadeInUp"
                    data-animation-duration="1500">
-                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary-dark-v1 g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-magic-wand"></i></span>
-                <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-black g-mb-15">Web Design</h3>
+                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-magic-wand"></i></span>
+                <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-black g-mb-15">Web Design</h3>
                 <p class="mb-0">Quisque rhoncus euismod pulvinar. Nulla non arcu at lectus. Vestibulum fringilla velit rhoncus euismod rhoncus turpis</p>
               </div>
             </div>
@@ -722,8 +725,8 @@
               <div class="text-center"
                    data-animation="fadeInUp"
                    data-animation-duration="1750">
-                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary-dark-v1 g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-diamond"></i></span>
-                <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-black g-mb-15">Graphic Design</h3>
+                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-diamond"></i></span>
+                <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-black g-mb-15">Graphic Design</h3>
                 <p class="mb-0">Quisque rhoncus euismod pulvinar. Nulla non arcu at lectus. Vestibulum fringilla velit rhoncus euismod rhoncus turpis</p>
               </div>
             </div>
@@ -732,8 +735,8 @@
               <div class="text-center"
                    data-animation="fadeInUp"
                    data-animation-duration="2000">
-                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary-dark-v1 g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-calculator"></i></span>
-                <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-black g-mb-15">UI/UX</h3>
+                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-calculator"></i></span>
+                <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-black g-mb-15">UI/UX</h3>
                 <p class="mb-0">Quisque rhoncus euismod pulvinar. Nulla non arcu at lectus. Vestibulum fringilla velit rhoncus euismod rhoncus turpis</p>
               </div>
             </div>
@@ -742,8 +745,8 @@
               <div class="text-center"
                    data-animation="fadeInUp"
                    data-animation-duration="2250">
-                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary-dark-v1 g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-badge"></i></span>
-                <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-black g-mb-15">Branding</h3>
+                <span class="u-icon-v2 u-icon-size--3xl g-font-size-30 g-font-size-40--md g-color-primary g-brd-10 g-brd-gray-light-v5 g-rounded-50x g-mb-25"><i class="icon-badge"></i></span>
+                <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-black g-mb-15">Branding</h3>
                 <p class="mb-0">Quisque rhoncus euismod pulvinar. Nulla non arcu at lectus. Vestibulum fringilla velit rhoncus euismod rhoncus turpis</p>
               </div>
             </div>
@@ -757,7 +760,7 @@
       <section id="workProcess" class="u-bg-overlay g-theme-bg-gray-dark-v1-opacity-0_95--after g-py-30 g-py-80--md" style="background-image: url(assets/img-temp/1400x1033/img1.jpg);">
         <div class="container text-center u-bg-overlay__inner g-max-width-770 g-mb-30 g-mb-70--md">
           <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-30">
-            <h3 class="g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Work process</h3>
+            <h3 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Work process</h3>
             <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-2 g-font-weight-700 g-font-size-30 g-font-size-40--md g-color-white mb-0">How we work</h2>
           </div>
 
@@ -768,7 +771,7 @@
           <div class="row">
             <div class="col-md-3">
               <!-- Nav tabs -->
-              <ul class="nav flex-column text-uppercase u-nav-v1-1 u-nav-primary g-font-weight-600 g-font-size-11" role="tablist"
+              <ul class="nav flex-column text-uppercase u-nav-v1-1 u-nav-primary g-font-weight-700 g-font-size-11" role="tablist"
                   data-target="workProcessTabs"
                   data-tabs-mobile-type="accordion"
                   data-btn-classes="btn btn-md btn-block text-uppercase u-btn-outline-primary g-font-weight-700 rounded-0 g-mb-20">
@@ -801,7 +804,7 @@
                         </div>
 
                         <div class="media-body align-self-center">
-                          <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white mb-0">Discuss with client</h3>
+                          <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white mb-0">Discuss with client</h3>
                         </div>
                       </div>
 
@@ -817,7 +820,7 @@
                         </div>
 
                         <div class="media-body align-self-center">
-                          <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white mb-0">Wireframe</h3>
+                          <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white mb-0">Wireframe</h3>
                         </div>
                       </div>
 
@@ -833,7 +836,7 @@
                         </div>
 
                         <div class="media-body align-self-center">
-                          <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white mb-0">Creative concept</h3>
+                          <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white mb-0">Creative concept</h3>
                         </div>
                       </div>
 
@@ -855,7 +858,7 @@
                         </div>
 
                         <div class="media-body align-self-center">
-                          <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white mb-0">Discuss with client</h3>
+                          <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white mb-0">Discuss with client</h3>
                         </div>
                       </div>
 
@@ -871,7 +874,7 @@
                         </div>
 
                         <div class="media-body align-self-center">
-                          <h3 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-color-white mb-0">Wireframe</h3>
+                          <h3 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-color-white mb-0">Wireframe</h3>
                         </div>
                       </div>
 
@@ -896,7 +899,7 @@
       <section id="skills" class="g-py-30 g-py-80--md">
         <div class="container text-center u-bg-overlay__inner g-max-width-770 g-mb-30 g-mb-70--md">
           <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-30">
-            <h3 class="g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Skills</h3>
+            <h3 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Skills</h3>
             <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-2 g-font-weight-700 g-font-size-30 g-font-size-40--md g-theme-color-gray-dark-v1 mb-0">Our best side</h2>
           </div>
 
@@ -907,7 +910,7 @@
           <div class="row g-mb-50">
             <!-- Counter Pie Chart -->
             <div class="col-md-6 col-lg-3 text-center g-mb-50 g-mb-0--lg">
-              <div class="js-pie g-font-weight-600 g-mb-35"
+              <div class="js-pie g-font-weight-700 g-mb-35"
                    data-circles-value="84"
                    data-circles-max-value="100"
                    data-circles-bg-color="#f8f8f8"
@@ -920,14 +923,14 @@
                    data-circles-color="#000">
               </div>
 
-              <h4 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Happy Clients</h4>
+              <h4 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Happy Clients</h4>
               <p class="mb-0">Integer accumsan maximus leo, et consectetur metus vestibulum in. Vestibulum viverra justo odio maximus efficitur</p>
             </div>
             <!-- End Counter Pie Chart -->
 
             <!-- Counter Pie Chart -->
             <div class="col-md-6 col-lg-3 text-center g-mb-50 g-mb-0--lg">
-              <div class="js-pie g-font-weight-600 g-mb-35"
+              <div class="js-pie g-font-weight-700 g-mb-35"
                    data-circles-value="34"
                    data-circles-max-value="100"
                    data-circles-bg-color="#f8f8f8"
@@ -940,14 +943,14 @@
                    data-circles-color="#000">
               </div>
 
-              <h4 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Completed Projects</h4>
+              <h4 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Completed Projects</h4>
               <p class="mb-0">Quisque vestibulum sem eget nibh commodo, non elementum nibh pulvinar. Duis mattis venenatis tortor iaculis ultricies</p>
             </div>
             <!-- End Counter Pie Chart -->
 
             <!-- Counter Pie Chart -->
             <div class="col-md-6 col-lg-3 text-center g-mb-50 g-mb-0--md">
-              <div class="js-pie g-font-weight-600 g-mb-35"
+              <div class="js-pie g-font-weight-700 g-mb-35"
                    data-circles-value="35"
                    data-circles-max-value="100"
                    data-circles-bg-color="#f8f8f8"
@@ -960,14 +963,14 @@
                    data-circles-color="#000">
               </div>
 
-              <h4 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Our Team</h4>
+              <h4 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Our Team</h4>
               <p class="mb-0">Nullam in diam arcu. Etiam nisl justo, tempor scelerisque sagittis vel, bibendum vestibulum metus. Donec eget nunc neque</p>
             </div>
             <!-- End Counter Pie Chart -->
 
             <!-- Counter Pie Chart -->
             <div class="col-md-6 col-lg-3 text-center">
-              <div class="js-pie g-font-weight-600 g-mb-35"
+              <div class="js-pie g-font-weight-700 g-mb-35"
                    data-circles-value="67"
                    data-circles-max-value="100"
                    data-circles-bg-color="#f8f8f8"
@@ -980,7 +983,7 @@
                    data-circles-color="#000">
               </div>
 
-              <h4 class="h6 text-uppercase g-font-weight-600 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Countries</h4>
+              <h4 class="h6 text-uppercase g-font-weight-700 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Countries</h4>
               <p class="mb-0">Rhoncus euismod pulvinar. Nulla non arcu at lectus. Vestibulum fringilla velit rhoncus euismod rhoncus turpis</p>
             </div>
             <!-- End Counter Pie Chart -->
@@ -988,60 +991,66 @@
 
           <div class="row">
             <div class="col-md-6 g-px-30 g-px-15--md g-mb-30">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Web development</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Web development</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">85%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">85%</div>
+                </div>
               </div>
             </div>
 
             <div class="col-md-6 g-px-30 g-px-15--md g-mb-30">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">App development</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">App development</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">75%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">75%</div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-6 g-px-30 g-px-15--md g-mb-30">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">CSS3 and HTML5</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">CSS3 and HTML5</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">70%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">70%</div>
+                </div>
               </div>
             </div>
 
             <div class="col-md-6 g-px-30 g-px-15--md g-mb-30">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Branding</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Branding</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">95%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">95%</div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-6 g-px-30 g-px-15--md g-mb-30 g-mb-0--md">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Social media</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Social media</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">90%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">90%</div>
+                </div>
               </div>
             </div>
 
             <div class="col-md-6 g-px-30 g-px-15--md">
-              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-600 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Wordpress</h6>
+              <h6 class="text-uppercase g-letter-spacing-0_5 g-font-weight-700 g-font-size-11 g-font-secondary g-theme-color-gray-dark-v1 g-mb-15">Wordpress</h6>
 
-              <div class="js-hr-progress-bar progress g-pos-rel g-height-10 rounded-0 g-overflow-visible g-mb-20">
-                <div class="js-hr-progress-bar-indicator progress-bar g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">70%</div>
+              <div class="js-hr-progress-bar progress g-height-10 rounded-0 g-overflow-visible g-mb-20">
+                <div class="js-hr-progress-bar-indicator progress-bar g-pos-rel g-theme-bg-gray-dark-v1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                  <div class="text-center u-progress__pointer-v1 g-font-weight-700 g-font-size-11 g-color-white g-bg-primary-dark-v1 g-rounded-50x">70%</div>
+                </div>
               </div>
             </div>
           </div>
@@ -1054,7 +1063,7 @@
         <div class="u-bg-overlay g-theme-bg-gray-dark-v1-opacity-0_95--after g-pt-30 g-pt-80--md g-pb-250" style="background-image: url(assets/img-temp/1400x585/img1.jpg);">
           <div class="container text-center u-bg-overlay__inner g-max-width-770">
             <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary g-mb-30">
-              <h3 class="g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Our team</h3>
+              <h3 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Our team</h3>
               <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-2 g-font-weight-700 g-font-size-30 g-font-size-40--md g-color-white mb-0">Work with professionals</h2>
             </div>
 
@@ -1079,22 +1088,22 @@
                     <!-- Figure Social Icons -->
                     <ul class="list-inline g-flex-middle-item--bottom g-mb-30 mt-0">
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-pinterest"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-linkedin"></i>
                         </a>
                       </li>
@@ -1127,22 +1136,22 @@
                     <!-- Figure Social Icons -->
                     <ul class="list-inline g-flex-middle-item--bottom g-mb-30 mt-0">
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-pinterest"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-linkedin"></i>
                         </a>
                       </li>
@@ -1175,22 +1184,22 @@
                     <!-- Figure Social Icons -->
                     <ul class="list-inline g-flex-middle-item--bottom g-mb-30 mt-0">
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-pinterest"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-linkedin"></i>
                         </a>
                       </li>
@@ -1223,22 +1232,22 @@
                     <!-- Figure Social Icons -->
                     <ul class="list-inline g-flex-middle-item--bottom g-mb-30 mt-0">
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-twitter"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-pinterest"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-facebook"></i>
                         </a>
                       </li>
                       <li class="list-inline-item g-mx-5">
-                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-primary--hover" href="#!">
                           <i class="fa fa-linkedin"></i>
                         </a>
                       </li>
@@ -1270,7 +1279,7 @@
             <p class="mb-0">Sed eget aliquet nisl. Proin laoreet accumsan nisl non vestibulum. Donec molestie, lorem nec sollicitudin elementum, mi justo posuere lectus, vitae ullamcorper orci mi vel massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
           </div>
 
-          <a class="btn u-btn-primary btn-md text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-25 g-py-10 mb-0" href="#">Send your resume</a>
+          <a class="btn u-btn-primary btn-md text-uppercase g-font-weight-700 g-font-size-12 rounded-0 g-px-25 g-py-10 mb-0" href="#!">Send your resume</a>
         </div>
 
         <div class="container-fluid px-0">
@@ -1322,7 +1331,23 @@
             <section class="col-lg-6 d-flex g-theme-bg-gray-dark-v2 g-py-30 g-py-70--md g-px-30">
               <div id="carouselCus1" class="js-carousel w-100 align-self-center"
                    data-autoplay="true"
-                   data-slides-show="4">
+                   data-slides-show="4"
+                   data-responsive='[{
+                     "breakpoint": 1200,
+                     "settings": {
+                       "slidesToShow": 4
+                     }
+                   }, {
+                     "breakpoint": 768,
+                     "settings": {
+                       "slidesToShow": 2
+                     }
+                   }, {
+                     "breakpoint": 576,
+                     "settings": {
+                       "slidesToShow": 1
+                     }
+                   }]'>
                 <div class="js-slide">
                   <img class="img-fluid mx-auto" src="assets/img-temp/200x150/img1.png" alt="Image description">
                 </div>
@@ -1358,8 +1383,8 @@
         <div class="g-py-30 g-py-80--md">
           <div class="container">
             <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary">
-              <h4 class="g-line-height-1 g-font-weight-600 g-font-size-12 g-color-primary g-mb-20">Contact us</h4>
-              <h2 class="u-heading-v2__title g-font-weight-600 g-font-size-30 g-font-size-40--md g-theme-color-gray-dark-v1">Get in touch</h2>
+              <h4 class="g-line-height-1 g-font-weight-700 g-font-size-12 g-color-primary g-mb-20">Contact us</h4>
+              <h2 class="u-heading-v2__title g-font-weight-700 g-font-size-30 g-font-size-40--md g-theme-color-gray-dark-v1">Get in touch</h2>
             </div>
           </div>
         </div>
@@ -1463,49 +1488,49 @@
           <p class="g-color-white-opacity-0_7 g-mb-30">Integer accumsan maximus leo, et consectetur metus vestibulum in. Vestibulum viverra justo odio maximus efficitur</p>
           <ul class="list-inline d-inline-block g-mb-30">
             <li class="list-inline-item g-mr-10">
-              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-twitter"></i></a>
+              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-twitter"></i></a>
             </li>
             <li class="list-inline-item g-mr-10">
-              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-pinterest"></i></a>
+              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-pinterest"></i></a>
             </li>
             <li class="list-inline-item g-mr-10">
-              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-facebook"></i></a>
+              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-facebook"></i></a>
             </li>
             <li class="list-inline-item">
-              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#"><i class="fa fa-linkedin"></i></a>
+              <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-16 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-linkedin"></i></a>
             </li>
           </ul>
-          <ul class="list-inline text-uppercase g-font-weight-600 g-font-size-11 mb-0">
+          <ul class="list-inline text-uppercase g-font-weight-700 g-font-size-11 mb-0">
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">About</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">About</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Why we</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Why we</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Services</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Services</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Work process</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Work process</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Skills</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Skills</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Team</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Team</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Testimonials</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Testimonials</a>
             </li>
             <li class="list-inline-item g-px-12--md">
-              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#">Contact</a>
+              <a class="g-color-white-opacity-0_7 g-color-white--hover g-text-underline--none--hover" href="#!">Contact</a>
             </li>
           </ul>
         </div>
       </footer>
       <!-- End Footer -->
 
-      <a class="js-go-to u-go-to-v1" href="#"
+      <a class="js-go-to u-go-to-v1" href="#!"
          data-type="fixed"
          data-position='{
            "bottom": 15,
@@ -1675,23 +1700,6 @@
       $(document).on('ready', function () {
         // initialization of carousel
         $.HSCore.components.HSCarousel.init('.js-carousel');
-
-        $('#carouselCus1').slick('setOption', 'responsive', [{
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 4
-          }
-        }, {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2
-          }
-        }, {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1
-          }
-        }], true);
 
         // initialization of header
         $.HSCore.components.HSHeader.init($('#js-header'));

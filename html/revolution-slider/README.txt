@@ -9,7 +9,7 @@
 
 You can download the Revolution Slider demos (full package) from the following link:
 
-Download Link: https://www.dropbox.com/s/tac4nexjcsyhy32/revolution-slider.zip?dl=0
+Download Link: https://www.dropbox.com/s/gops9njcg2dmwb1/u-revolution-slider.zip?dl=0
 
 Password: UnIFy_rEVo-l_utioN__sLI_er_59_@!38
 
