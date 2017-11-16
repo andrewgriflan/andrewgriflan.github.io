@@ -21,8 +21,8 @@ $rupieWhite: #fefeff;
 // Primary Color
 $g-color-primary: $rupiePurple;
 $g-color-primary-dark-v1: darken($g-color-primary, 2%);
-$g-color-primary-dark-v2: darken($g-color-primary, 5%);
-$g-color-primary-dark-v3: darken($g-color-primary, 10%);
+$g-color-primary-dark-v2: $rupiePurple;
+$g-color-primary-dark-v3: $rupieDarkPurple;
 $g-color-primary-light-v1: rgba($g-color-primary, .2);
 $g-color-primary-light-v2: rgba($g-color-primary, .8);
 
@@ -34,5 +34,18 @@ $g-color-black: $rupieBlack;
 
 // Color White
 $g-color-white: $rupieWhite;
+
+// Color Red
+$g-color-red: $rupieRed;
+
+// Color Light Red
+$g-color-lightred: $rupieLightRed;
+
+// Color Dark Red
+$g-color-darkred: darken($rupieRed, 10%);
+
+// Color Purple
+$g-color-purple: $rupieDarkPurple;
+
 
 

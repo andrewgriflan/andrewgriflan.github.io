@@ -7,12 +7,17 @@
 @import "custom.mixins";
 
 
+
+
 // Base Mods
+.g-font-secondary {
+	font-family: $g-font-secondary;
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, .h7,
 h1, h2, h3, h4, h5, h6 {
   font-family: $g-font-secondary;
 }
-
 
 // Header
 .js-header-change-moment .u-header__logo,
@@ -20,16 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	img {
 		width: 70%;
-	}
-}
-
-@media all and (min-width: $g-md) {
-
-	.u-header__logo {
-
-		img {
-			width: auto;
-		}
 	}
 }
 
@@ -100,33 +95,24 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.rupie-hardware {
+	width: 50%;
 
+	&__gem {
+		transform: translateX(150px);
+	}
 
-.rupie-hardware__gem {
-  -webkit-transform: translateX(150px);
-          transform: translateX(150px);
+	&--animating .rupie-hardware__gem {
+		animation: rupieSlider 1.22s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
+	}
 }
 
-.rupie-hardware--animating .rupie-hardware__gem {
-  -webkit-animation: rupieSlider 1.22s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          animation: rupieSlider 1.22s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-@-webkit-keyframes rupieSlider {
-  to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
 
 @keyframes rupieSlider {
   to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+		transform: translateX(0px);
   }
 }
 
@@ -153,5 +139,20 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	100% {
 		fill: #7B3990;
+	}
+}
+
+
+
+// media queries
+@media all and (min-width: $g-md) {
+	.u-header__logo {
+		img {
+			width: auto;
+		}
+	}
+
+	.rupie-hardware {
+		width: 90%;
 	}
 }

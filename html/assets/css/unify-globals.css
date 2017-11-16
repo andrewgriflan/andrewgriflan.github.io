@@ -368,11 +368,11 @@
 }
 
 .g-bg-primary-dark-v2 {
-  background-color: #6b327e !important;
+  background-color: #7b3990 !important;
 }
 
 .g-bg-primary-dark-v3 {
-  background-color: #5c2b6b !important;
+  background-color: #5c239e !important;
 }
 
 .g-bg-primary-opacity-0_1 {
@@ -898,74 +898,74 @@
 
 /* Color Red */
 .g-bg-red {
-  background-color: #f00 !important;
+  background-color: #a02273 !important;
 }
 
 .g-bg-red-opacity-0_1 {
-  background-color: rgba(255, 0, 0, 0.1) !important;
+  background-color: rgba(160, 34, 115, 0.1) !important;
 }
 
 .g-bg-red-opacity-0_2 {
-  background-color: rgba(255, 0, 0, 0.2) !important;
+  background-color: rgba(160, 34, 115, 0.2) !important;
 }
 
 .g-bg-red-opacity-0_5 {
-  background-color: rgba(255, 0, 0, 0.5) !important;
+  background-color: rgba(160, 34, 115, 0.5) !important;
 }
 
 .g-bg-red-opacity-0_8 {
-  background-color: rgba(255, 0, 0, 0.8) !important;
+  background-color: rgba(160, 34, 115, 0.8) !important;
 }
 
 .g-bg-red--hover:hover {
-  background-color: #f00 !important;
+  background-color: #a02273 !important;
 }
 
 /* Color Light Red */
 .g-bg-lightred {
-  background-color: #e64b3b !important;
+  background-color: #f9b7eb !important;
 }
 
 .g-bg-lightred-opacity-0_1 {
-  background-color: rgba(230, 75, 59, 0.1) !important;
+  background-color: rgba(249, 183, 235, 0.1) !important;
 }
 
 .g-bg-lightred--hover:hover {
-  background-color: #e64b3b !important;
+  background-color: #f9b7eb !important;
 }
 
 /* Color Dark Red */
 .g-bg-darkred {
-  background-color: #a10f2b !important;
+  background-color: #761955 !important;
 }
 
 .g-bg-darkred-opacity-0_1 {
-  background-color: rgba(161, 15, 43, 0.1) !important;
+  background-color: rgba(118, 25, 85, 0.1) !important;
 }
 
 /* Color Purple */
 .g-bg-purple {
-  background-color: #9a69cb !important;
+  background-color: #5c239e !important;
 }
 
 .g-bg-purple-opacity-0_1 {
-  background-color: rgba(154, 105, 203, 0.1) !important;
+  background-color: rgba(92, 35, 158, 0.1) !important;
 }
 
 .g-bg-purple-opacity-0_7 {
-  background-color: rgba(154, 105, 203, 0.7) !important;
+  background-color: rgba(92, 35, 158, 0.7) !important;
 }
 
 .g-bg-purple-opacity-0_9 {
-  background-color: rgba(154, 105, 203, 0.9) !important;
+  background-color: rgba(92, 35, 158, 0.9) !important;
 }
 
 .g-bg-purple-opacity-0_9--after::after {
-  background-color: rgba(154, 105, 203, 0.9) !important;
+  background-color: rgba(92, 35, 158, 0.9) !important;
 }
 
 .g-bg-purple--hover:hover {
-  background-color: #9a69cb !important;
+  background-color: #5c239e !important;
 }
 
 /* Color Dark Purple */
@@ -1517,27 +1517,27 @@
 
 .g-fill-red path,
 .g-fill-red polygon {
-  fill: #f00 !important;
+  fill: #a02273 !important;
 }
 
 .g-fill-red--hover:hover path,
 .g-fill-red--hover:hover polygon {
-  fill: #f00 !important;
+  fill: #a02273 !important;
 }
 
 *:hover > * > .g-fill-red--hover-parent path,
 *:hover > * > .g-fill-red--hover-parent polygon {
-  fill: #f00 !important;
+  fill: #a02273 !important;
 }
 
 *:hover > .g-fill-red--parent-hover path,
 *:hover > .g-fill-red--parent-hover polygon {
-  fill: #f00 !important;
+  fill: #a02273 !important;
 }
 
 *:hover > * > * > .g-fill-red--parent-parent-parent-hover path,
 *:hover > * > * > .g-fill-red--parent-parent-parent-hover polygon {
-  fill: #f00 !important;
+  fill: #a02273 !important;
 }
 
 /*------------------------------------
@@ -2306,27 +2306,27 @@
 }
 
 .g-brd-primary-dark-dark-v2 {
-  border-color: #6b327e !important;
+  border-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v2--hover:hover, .g-brd-primary-dark-dark-v2--active.active {
-  border-color: #6b327e !important;
+  border-color: #7b3990 !important;
 }
 
 *:hover > .g-brd-primary-dark-dark-v2--hover-parent {
-  border-color: #6b327e !important;
+  border-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v3 {
-  border-color: #5c2b6b !important;
+  border-color: #5c239e !important;
 }
 
 .g-brd-primary-dark-dark-v3--hover:hover, .g-brd-primary-dark-dark-v3--active.active {
-  border-color: #5c2b6b !important;
+  border-color: #5c239e !important;
 }
 
 *:hover > .g-brd-primary-dark-dark-v3--hover-parent {
-  border-color: #5c2b6b !important;
+  border-color: #5c239e !important;
 }
 
 .g-brd-bottom-primary--hover:hover {
@@ -2687,54 +2687,54 @@
 
 /* Color Red */
 .g-brd-red {
-  border-color: #f00 !important;
+  border-color: #a02273 !important;
 }
 
 .g-brd-red--hover:hover, .g-brd-red--active.active {
-  border-color: #f00 !important;
+  border-color: #a02273 !important;
 }
 
 *:hover > .g-brd-red--hover-parent {
-  border-color: #f00 !important;
+  border-color: #a02273 !important;
 }
 
 /* Color Light Red */
 .g-brd-lightred {
-  border-color: #e64b3b !important;
+  border-color: #f9b7eb !important;
 }
 
 .g-brd-lightred--hover:hover, .g-brd-lightred--active.active {
-  border-color: #e64b3b !important;
+  border-color: #f9b7eb !important;
 }
 
 *:hover > .g-brd-lightred--hover-parent {
-  border-color: #e64b3b !important;
+  border-color: #f9b7eb !important;
 }
 
 /* Color Dark Red */
 .g-brd-darkred {
-  border-color: #a10f2b !important;
+  border-color: #761955 !important;
 }
 
 .g-brd-darkred--hover:hover, .g-brd-darkred--active.active {
-  border-color: #a10f2b !important;
+  border-color: #761955 !important;
 }
 
 *:hover > .g-brd-darkred--hover-parent {
-  border-color: #a10f2b !important;
+  border-color: #761955 !important;
 }
 
 /* Color Purple */
 .g-brd-purple {
-  border-color: #9a69cb !important;
+  border-color: #5c239e !important;
 }
 
 .g-brd-purple--hover:hover, .g-brd-purple--active.active {
-  border-color: #9a69cb !important;
+  border-color: #5c239e !important;
 }
 
 *:hover > .g-brd-purple--hover-parent {
-  border-color: #9a69cb !important;
+  border-color: #5c239e !important;
 }
 
 /* Color Dark Purple */
@@ -2933,35 +2933,35 @@
 }
 
 .g-brd-primary-dark-dark-v2-top {
-  border-top-color: #6b327e !important;
+  border-top-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v2-bottom {
-  border-bottom-color: #6b327e !important;
+  border-bottom-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v2-left {
-  border-left-color: #6b327e !important;
+  border-left-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v2-right {
-  border-right-color: #6b327e !important;
+  border-right-color: #7b3990 !important;
 }
 
 .g-brd-primary-dark-dark-v3-top {
-  border-top-color: #5c2b6b !important;
+  border-top-color: #5c239e !important;
 }
 
 .g-brd-primary-dark-dark-v3-bottom {
-  border-bottom-color: #5c2b6b !important;
+  border-bottom-color: #5c239e !important;
 }
 
 .g-brd-primary-dark-dark-v3-left {
-  border-left-color: #5c2b6b !important;
+  border-left-color: #5c239e !important;
 }
 
 .g-brd-primary-dark-dark-v3-right {
-  border-right-color: #5c2b6b !important;
+  border-right-color: #5c239e !important;
 }
 
 /* Black Colors */
@@ -3377,70 +3377,70 @@
 
 /* Color Red */
 .g-brd-red-top {
-  border-top-color: #f00 !important;
+  border-top-color: #a02273 !important;
 }
 
 .g-brd-red-bottom {
-  border-bottom-color: #f00 !important;
+  border-bottom-color: #a02273 !important;
 }
 
 .g-brd-red-left {
-  border-left-color: #f00 !important;
+  border-left-color: #a02273 !important;
 }
 
 .g-brd-red-right {
-  border-right-color: #f00 !important;
+  border-right-color: #a02273 !important;
 }
 
 /* Color Light Red */
 .g-brd-lightred-top {
-  border-top-color: #e64b3b !important;
+  border-top-color: #f9b7eb !important;
 }
 
 .g-brd-lightred-bottom {
-  border-bottom-color: #e64b3b !important;
+  border-bottom-color: #f9b7eb !important;
 }
 
 .g-brd-lightred-left {
-  border-left-color: #e64b3b !important;
+  border-left-color: #f9b7eb !important;
 }
 
 .g-brd-lightred-right {
-  border-right-color: #e64b3b !important;
+  border-right-color: #f9b7eb !important;
 }
 
 /* Color Dark Red */
 .g-brd-darkred-top {
-  border-top-color: #a10f2b !important;
+  border-top-color: #761955 !important;
 }
 
 .g-brd-darkred-bottom {
-  border-bottom-color: #a10f2b !important;
+  border-bottom-color: #761955 !important;
 }
 
 .g-brd-darkred-left {
-  border-left-color: #a10f2b !important;
+  border-left-color: #761955 !important;
 }
 
 .g-brd-darkred-right {
-  border-right-color: #a10f2b !important;
+  border-right-color: #761955 !important;
 }
 
 /* Color Purple */
 .g-brd-purple-top {
-  border-top-color: #9a69cb !important;
+  border-top-color: #5c239e !important;
 }
 
 .g-brd-purple-bottom {
-  border-bottom-color: #9a69cb !important;
+  border-bottom-color: #5c239e !important;
 }
 
 .g-brd-purple-left {
-  border-left-color: #9a69cb !important;
+  border-left-color: #5c239e !important;
 }
 
 .g-brd-purple-right {
-  border-right-color: #9a69cb !important;
+  border-right-color: #5c239e !important;
 }
 
 /* Color Dark Purple */
@@ -6439,42 +6439,42 @@
 
 /* Color Red */
 .g-color-red {
-  color: #f00 !important;
+  color: #a02273 !important;
 }
 
 .g-color-red--hover:hover {
-  color: #f00 !important;
+  color: #a02273 !important;
 }
 
 *:hover > .g-color-red--parent-hover {
-  color: #f00 !important;
+  color: #a02273 !important;
 }
 
 /* Color Light Red */
 .g-color-lightred {
-  color: #e64b3b !important;
+  color: #f9b7eb !important;
 }
 
 .g-color-lightred--hover:hover {
-  color: #e64b3b !important;
+  color: #f9b7eb !important;
 }
 
 /* Color Dark Red */
 .g-color-darkred {
-  color: #a10f2b !important;
+  color: #761955 !important;
 }
 
 .g-color-darkred--hover:hover {
-  color: #a10f2b !important;
+  color: #761955 !important;
 }
 
 /* Color Purple */
 .g-color-purple {
-  color: #9a69cb;
+  color: #5c239e;
 }
 
 .g-color-purple--hover:hover {
-  color: #9a69cb !important;
+  color: #5c239e !important;
 }
 
 .g-color-purple-dark-v1 {
