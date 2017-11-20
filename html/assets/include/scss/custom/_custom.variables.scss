@@ -20,8 +20,8 @@ $rupieWhite: #fefeff;
 
 // Primary Color
 $g-color-primary: $rupiePurple;
-$g-color-primary-dark-v1: darken($g-color-primary, 2%);
-$g-color-primary-dark-v2: $rupiePurple;
+$g-color-primary-dark-v1: darken($g-color-primary, 4%);
+$g-color-primary-dark-v2: darken($g-color-primary, 8%);
 $g-color-primary-dark-v3: $rupieDarkPurple;
 $g-color-primary-light-v1: rgba($g-color-primary, .2);
 $g-color-primary-light-v2: rgba($g-color-primary, .8);

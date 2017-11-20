@@ -364,11 +364,11 @@
 }
 
 .g-bg-primary-dark-v1 {
-  background-color: #753689 !important;
+  background-color: #6f3381 !important;
 }
 
 .g-bg-primary-dark-v2 {
-  background-color: #7b3990 !important;
+  background-color: #622d73 !important;
 }
 
 .g-bg-primary-dark-v3 {
@@ -2294,27 +2294,27 @@
 }
 
 .g-brd-primary-dark-dark-v1 {
-  border-color: #753689 !important;
+  border-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v1--hover:hover, .g-brd-primary-dark-dark-v1--active.active {
-  border-color: #753689 !important;
+  border-color: #6f3381 !important;
 }
 
 *:hover > .g-brd-primary-dark-dark-v1--hover-parent {
-  border-color: #753689 !important;
+  border-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v2 {
-  border-color: #7b3990 !important;
+  border-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v2--hover:hover, .g-brd-primary-dark-dark-v2--active.active {
-  border-color: #7b3990 !important;
+  border-color: #622d73 !important;
 }
 
 *:hover > .g-brd-primary-dark-dark-v2--hover-parent {
-  border-color: #7b3990 !important;
+  border-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v3 {
@@ -2917,35 +2917,35 @@
 }
 
 .g-brd-primary-dark-dark-v1-top {
-  border-top-color: #753689 !important;
+  border-top-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v1-bottom {
-  border-bottom-color: #753689 !important;
+  border-bottom-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v1-left {
-  border-left-color: #753689 !important;
+  border-left-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v1-right {
-  border-right-color: #753689 !important;
+  border-right-color: #6f3381 !important;
 }
 
 .g-brd-primary-dark-dark-v2-top {
-  border-top-color: #7b3990 !important;
+  border-top-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v2-bottom {
-  border-bottom-color: #7b3990 !important;
+  border-bottom-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v2-left {
-  border-left-color: #7b3990 !important;
+  border-left-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v2-right {
-  border-right-color: #7b3990 !important;
+  border-right-color: #622d73 !important;
 }
 
 .g-brd-primary-dark-dark-v3-top {

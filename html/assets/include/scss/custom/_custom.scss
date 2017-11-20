@@ -6,8 +6,22 @@
 // Mixins
 @import "custom.mixins";
 
-
-
+// Primary Color
+.g-bg-color-primary-dark-v1 {
+	background-color: $g-color-primary-dark-v1 !important;
+}
+.g-bg-color-primary-dark-v2 {
+	background-color: $g-color-primary-dark-v2 !important;
+}
+.g-bg-color-primary-dark-v3 {
+	background-color: $g-color-primary-dark-v3 !important;
+}
+.g-bg-color-primary-light-v1 {
+	background-color: $g-color-primary-light-v1 !important;
+}
+.g-bg-color-primary-light-v2 {
+	background-color: $g-color-primary-light-v2 !important;
+}
 
 // Base Mods
 .g-font-secondary {
@@ -41,12 +55,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .g-bg-rupieLightRed-lineargradient {
 	background-repeat: repeat-x;
-	background-image: linear-gradient(225deg, $rupieLightRed, $rupieWhite);
+	background-image: linear-gradient(225deg, lighten($rupieLightRed, 10%), $rupieWhite);
+}
+
+.g-bg-rupieRed {
+	background-repeat: repeat-x;
+	background-image: linear-gradient(225deg, $rupieRed, darken($rupieRed,10%));
+}
+
+.u-timeline-v2-wrap::before {
+	background-color: $rupieRed;
 }
 
 
 // Rupie SVG & Animations
 .ruby-gem {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 	&--empty {
 		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTIyLjUgOTM2LjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkyMi41IDkzNi42IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Zz48cGF0aCBmaWxsPSIjOUUwMDVEIiBkPSJNNDU0LjQsMTA5LjlsODQsOTQuMWw5MS45LDEwM3YxNTguNXYxNTguNWwtOTEuOSwxMDNsLTg0LDk0LjJsLTg0LTk0LjJsLTkxLjktMTAzVjQ2NS41VjMwN2w5MS45LTEwM0w0NTQuNCwxMDkuOSBNNDU0LjQsODcuOWMtMS4xLDAtMi4yLDAuNC0zLDEuM2wtOTIuOSwxMDQuMmwtOTQuOSwxMDYuNGMtMC43LDAuNy0xLDEuNy0xLDIuN3YxNjMuMXYxNjMuMWMwLDEsMC40LDEuOSwxLDIuN2w5NC45LDEwNi40bDkyLjksMTA0LjJjMC44LDAuOSwxLjksMS4zLDMsMS4zczIuMi0wLjQsMy0xLjNsOTIuOS0xMDQuMmw5NC45LTEwNi40YzAuNy0wLjcsMS0xLjcsMS0yLjdWNDY1LjVWMzAyLjRjMC0xLTAuNC0xLjktMS0yLjdsLTk0LjktMTA2LjRMNDU3LjQsODkuMkM0NTYuNiw4OC4zLDQ1NS41LDg3LjksNDU0LjQsODcuOUw0NTQuNCw4Ny45eiIvPjwvZz48L2c+PC9zdmc+);
@@ -109,7 +137,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-
 @keyframes rupieSlider {
   to {
 		transform: translateX(0px);
@@ -142,6 +169,116 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.rupie-puzzle {
+	width: 60%;
+
+	&__piece1 {
+		transform: translateY(73px) translateX(-79px);
+	}
+	&__piece2 {
+		transform: translateY(-73px) translateX(-79px);
+	}
+	&__piece3 {
+		transform: translateY(83px) translateX(79px);
+	}
+	&__piece4 {
+		transform: translateY(-73px) translateX(79px);
+	}
+	&__blip {
+		transform-origin: center center;
+		opacity: 0;
+	}
+
+	$parent: &;
+
+	&--active {
+		#{$parent}__blip {
+			animation: blipResize 0.66s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 1;
+		}
+		@for $i from 1 through 4 {
+			#{$parent}__piece#{$i} {
+				animation: puzzleIntro 1.00s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+				animation-fill-mode: forwards;
+				animation-iteration-count: 1;
+			}
+		}
+	}
+}
+
+@keyframes puzzleIntro {
+	100% {
+		transform: none;
+		transform: translateX(10px);
+	}
+}
+
+@keyframes blipResize {
+	0% {
+		transform: scaleX(0.2) scaleY(0.2);
+	}
+	100% {
+		opacity: 1;
+		transform-origin: center center;
+		;
+		transform: scaleX(1) scaleY(1);
+	}
+}
+
+$seconds: 1s, 3s, 5s;
+
+.rupie-assets {
+  width: 400px;
+
+  $parent: &;
+
+  &--active {
+
+    #{$parent}__game2 {
+      transform-origin: center;
+      transform: scale(1);
+      animation: rupieAssetsEnlarge 2s infinite;
+      animation-delay: 3s;
+    }
+
+    @for $i from 1 through 3 {
+     #{$parent}__item#{$i} {
+       transform: translateY(10px);
+       animation: rupieAssetsMoveUp 6s linear infinite;
+       animation-delay: nth($seconds, $i);
+      }
+    }
+  }
+}
+@keyframes rupieAssetsEnlarge {
+  0% {
+    transform-origin: center;
+    transform: scale(1);
+  }
+  10%, 60% {
+    transform-origin: center;
+    transform: scale(1.05);
+  }
+  70%, 100% {
+    transform-origin: center;
+    transform: scale(1);
+  }
+}
+
+@keyframes rupieAssetsMoveUp {
+  0% {
+    transform: none;
+  }
+  60% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(-160px);
+  }
+}
+
 
 
 // media queries
@@ -154,5 +291,16 @@ h1, h2, h3, h4, h5, h6 {
 
 	.rupie-hardware {
 		width: 90%;
+	}
+}
+
+@media all and (max-width: $g-md) {
+	.progress--stack {
+		height: 100% !important;
+		flex-direction: column;
+		.progress-bar {
+			width: 100% !important;
+		}
+
 	}
 }

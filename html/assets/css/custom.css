@@ -1,4 +1,24 @@
 /* Add here all your css styles (customizations) */
+.g-bg-color-primary-dark-v1 {
+  background-color: #6f3381 !important;
+}
+
+.g-bg-color-primary-dark-v2 {
+  background-color: #622d73 !important;
+}
+
+.g-bg-color-primary-dark-v3 {
+  background-color: #5c239e !important;
+}
+
+.g-bg-color-primary-light-v1 {
+  background-color: rgba(123, 57, 144, 0.2) !important;
+}
+
+.g-bg-color-primary-light-v2 {
+  background-color: rgba(123, 57, 144, 0.8) !important;
+}
+
 .g-font-secondary {
   font-family: "Catamaran", Helvetica, Arial, sans-serif;
 }
@@ -26,7 +46,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .g-bg-rupieLightRed-lineargradient {
   background-repeat: repeat-x;
-  background-image: linear-gradient(225deg, #f9b7eb, #fefeff);
+  background-image: linear-gradient(225deg, #fde6f8, #fefeff);
+}
+
+.g-bg-rupieRed {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(225deg, #a02273, #761955);
+}
+
+.u-timeline-v2-wrap::before {
+  background-color: #a02273;
+}
+
+.ruby-gem {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ruby-gem--empty {
@@ -219,11 +256,271 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.rupie-puzzle {
+  width: 60%;
+}
+
+.rupie-puzzle__piece1 {
+  -webkit-transform: translateY(73px) translateX(-79px);
+      -ms-transform: translateY(73px) translateX(-79px);
+          transform: translateY(73px) translateX(-79px);
+}
+
+.rupie-puzzle__piece2 {
+  -webkit-transform: translateY(-73px) translateX(-79px);
+      -ms-transform: translateY(-73px) translateX(-79px);
+          transform: translateY(-73px) translateX(-79px);
+}
+
+.rupie-puzzle__piece3 {
+  -webkit-transform: translateY(83px) translateX(79px);
+      -ms-transform: translateY(83px) translateX(79px);
+          transform: translateY(83px) translateX(79px);
+}
+
+.rupie-puzzle__piece4 {
+  -webkit-transform: translateY(-73px) translateX(79px);
+      -ms-transform: translateY(-73px) translateX(79px);
+          transform: translateY(-73px) translateX(79px);
+}
+
+.rupie-puzzle__blip {
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  opacity: 0;
+}
+
+.rupie-puzzle--active .rupie-puzzle__blip {
+  -webkit-animation: blipResize 0.66s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: blipResize 0.66s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-puzzle--active .rupie-puzzle__piece1 {
+  -webkit-animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-puzzle--active .rupie-puzzle__piece2 {
+  -webkit-animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-puzzle--active .rupie-puzzle__piece3 {
+  -webkit-animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.rupie-puzzle--active .rupie-puzzle__piece4 {
+  -webkit-animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: puzzleIntro 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes puzzleIntro {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes puzzleIntro {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes blipResize {
+  0% {
+    -webkit-transform: scaleX(0.2) scaleY(0.2);
+            transform: scaleX(0.2) scaleY(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes blipResize {
+  0% {
+    -webkit-transform: scaleX(0.2) scaleY(0.2);
+            transform: scaleX(0.2) scaleY(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: scaleX(1) scaleY(1);
+            transform: scaleX(1) scaleY(1);
+  }
+}
+
+.rupie-assets {
+  width: 400px;
+}
+
+.rupie-assets--active .rupie-assets__game2 {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: rupieAssetsEnlarge 2s infinite;
+          animation: rupieAssetsEnlarge 2s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.rupie-assets--active .rupie-assets__item1 {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-animation: rupieAssetsMoveUp 6s linear infinite;
+          animation: rupieAssetsMoveUp 6s linear infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.rupie-assets--active .rupie-assets__item2 {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-animation: rupieAssetsMoveUp 6s linear infinite;
+          animation: rupieAssetsMoveUp 6s linear infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.rupie-assets--active .rupie-assets__item3 {
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-animation: rupieAssetsMoveUp 6s linear infinite;
+          animation: rupieAssetsMoveUp 6s linear infinite;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes rupieAssetsEnlarge {
+  0% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10%, 60% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70%, 100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes rupieAssetsEnlarge {
+  0% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10%, 60% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70%, 100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rupieAssetsMoveUp {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  60% {
+    -webkit-transform: translateY(-160px);
+            transform: translateY(-160px);
+  }
+  100% {
+    -webkit-transform: translateY(-160px);
+            transform: translateY(-160px);
+  }
+}
+
+@keyframes rupieAssetsMoveUp {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  60% {
+    -webkit-transform: translateY(-160px);
+            transform: translateY(-160px);
+  }
+  100% {
+    -webkit-transform: translateY(-160px);
+            transform: translateY(-160px);
+  }
+}
+
 @media all and (min-width: 768px) {
   .u-header__logo img {
     width: auto;
   }
   .rupie-hardware {
     width: 90%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .progress--stack {
+    height: 100% !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .progress--stack .progress-bar {
+    width: 100% !important;
   }
 }
