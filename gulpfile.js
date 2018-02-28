@@ -1,79 +1,99 @@
-var gulp           = require('gulp'), // Gulp
-    sass           = require('gulp-sass'), // SASS,
-    changed        = require('gulp-changed'),
-    autoprefixer   = require('gulp-autoprefixer'); // Add the desired vendor prefixes and remove unnecessary in SASS-files
+const autoprefixer = require('gulp-autoprefixer'),
+      babel = require('gulp-babel'),
+      cleancss = require('gulp-clean-css'),
+      concat = require('gulp-concat'),
+      gulp = require('gulp'),
+      imagemin = require('gulp-imagemin'),
+      notify = require('gulp-notify'),
+      plumber = require('gulp-plumber'),
+      rename = require('gulp-rename'),
+      sass = require('gulp-ruby-sass'),
+      sourcemaps = require('gulp-sourcemaps'),
+      svgsprite = require('gulp-svg-sprite'),
+      uglify = require('gulp-uglify');
 
-
-//
-// SASS
-//
-
-// Unify Main
-gulp.task('sass', function() {
-  return gulp.src('./html/assets/include/scss/**/*.scss')
-    .pipe(changed('./html/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/assets/css/'))
+gulp.task('scripts', function() {
+    return gulp.src([
+        'src/scripts/*.js'
+    ])
+    .pipe(plumber())
+    .pipe(concat('scripts.js'))
+    .pipe(babel({
+        presets: ['es2015']
+    }))
+    // .pipe(uglify())
+    .pipe(rename({
+        suffix: '.min'
+    }))
+    .pipe(gulp.dest('dist/js'))
+    .pipe(notify({
+        message: 'Scripts Compiled',
+        onLast: true
+    }));
 });
 
-// E-commerce
-gulp.task('sass-shop', function() {
-  return gulp.src('./html/e-commerce/assets/scss/**/*.scss')
-    .pipe(changed('./html/e-commerce/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/e-commerce/assets/css/'))
+gulp.task('styles', function() {
+    return sass([
+        'src/styles/styles.scss'
+    ], {
+        noCache: true,
+        style: 'compact',
+        sourcemap: true
+    })
+    .pipe(plumber())
+    .pipe(cleancss({
+        keepSpecialComments: false,
+        processImport: false
+    }))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions', 'IE 11', 'Safari 8']
+    }))
+    .pipe(rename({
+        suffix: '.min'
+    }))
+    .pipe(sourcemaps.write('maps', {
+        includeContent: false,
+        sourceRoot: '/src/scss'
+    }))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(notify({
+        message: '"Styles" Task Completed'
+    }));
 });
 
-// Blog & Magazine
-gulp.task('sass-blog', function() {
-  return gulp.src('./html/blog-magazine/classic/assets/scss/**/*.scss')
-    .pipe(changed('./html/blog-magazine/classic/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/blog-magazine/classic/assets/css/'))
+gulp.task('svg-sprite', function() {
+    const config = {
+        mode: {
+            symbol: { // symbol mode to build the SVG
+                render: {
+                    scss: {
+                        dest: '../src/scss/partial/_iconography.scss'
+                    }
+                },
+                prefix: '.u-icon-%s',
+                sprite: '../images/sprite-ui.svg', //generated sprite name
+            }
+        }
+    };
+
+    gulp.src('images/svg/*.svg', {
+        cwd: ''
+    })
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(svgsprite(config))
+    .pipe(gulp.dest(''))
+    .pipe(notify({
+        message: '"SVG Sprite" Task Completed'
+    }));
 });
 
-// Multi Page (Marketing Demo example, please change this path if you are using other demos)
-gulp.task('sass-mp-marketing', function() {
-  return gulp.src('./html/multi-pages/marketing/assets/scss/**/*.scss')
-    .pipe(changed('./html/multi-pages/marketing/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/multi-pages/marketing/assets/css/'))
-});
-
-// One Page (Accounting Demo example, please change this path if you are using other demos)
-gulp.task('sass-op', function() {
-  return gulp.src('./html/one-pages/accounting/assets/scss/**/*.scss')
-    .pipe(changed('./html/one-pages/accounting/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/one-pages/accounting/assets/css/'))
-});
-
-// Dark Theme
-gulp.task('sass-dt', function() {
-  return gulp.src('./html/unify-main/misc/dark-theme/assets/scss/**/*.scss')
-    .pipe(changed('./html/unify-main/misc/dark-theme/assets/css/'))
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(autoprefixer(['last 3 versions', '> 1%'], { cascade: true }))
-    .pipe(gulp.dest('./html/unify-main/misc/dark-theme/assets/css/'))
-});
-
-
-//
-// Watch
-//
 
 gulp.task('watch', function() {
-  gulp.watch('./html/assets/include/scss/**/*.scss', ['sass']);
+    gulp.watch(['src/*.scss', 'src/**/*.scss'], ['styles']);
+    gulp.watch('images/svg/*.svg', ['svg-sprite']);
+    gulp.watch('src/scripts/*.js', ['scripts']);
+
 });
 
-
-//
-// Default
-//
-
-gulp.task('default', ['watch', 'sass']);
+gulp.task( 'default', [ 'styles', 'scripts', 'svg-sprite'] );
