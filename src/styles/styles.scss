@@ -542,3 +542,30 @@ nav {
 
     font-size: 22px;
 }
+
+.alertSlide {
+    visibility: visible !important;
+
+    transform: translateY(-100%);
+    animation: slideDown 0.6s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.btn-outline-primary {
+    color: $color-secondary;
+    border-color: $color-secondary;
+    &:hover,
+    &:active {
+        border-color: $color-secondary;
+        background-color: $color-secondary;
+    }
+}
