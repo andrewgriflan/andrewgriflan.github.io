@@ -569,3 +569,11 @@ nav {
         background-color: $color-secondary;
     }
 }
+
+.alert-info {
+    border-color: lighten($color-secondary, 46%);
+    background-color: lighten($color-secondary, 50%);
+    .alert-link {
+        color: $color-secondary;
+    }
+}
