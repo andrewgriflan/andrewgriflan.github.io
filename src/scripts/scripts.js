@@ -1,5 +1,3 @@
-var headlineOptions = ['Build', 'Fund', 'Play', 'Ideate', 'Evolve', 'Launch', 'Ship'];
-
 jQuery(document).ready(function () {
 	jQuery('.menuToggle input').change(function () {
 		jQuery('.menu').toggleClass('is-active');
@@ -7,6 +5,8 @@ jQuery(document).ready(function () {
 
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 	toggleHeadlines();
+
+	initAnimations();
 });
 
 jQuery(window).resize(function () {
@@ -19,6 +19,8 @@ jQuery('#mc-embedded-subscribe-form').on('submit', function () {
 		jQuery(this).find('input, button').fadeOut();
 	}
 });
+
+var headlineOptions = ['Build', 'Fund', 'Play', 'Ideate', 'Evolve', 'Launch', 'Ship'];
 
 function toggleHeadlines() {
 	var headlineTimeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
@@ -229,5 +231,3 @@ function initAnimations() {
 	TweenMax.fromTo('.illustration__game-meteor-md[data-num="2"]', 5.5, { x: 160, y: 29, rotation: 0 }, { x: 33, y: -66, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
 	TweenMax.fromTo('.illustration__game-meteor-sm[data-num="1"]', 6, { x: -3, y: -59, rotation: 0 }, { x: 93, y: 58, rotation: -210, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
 }
-
-initAnimations();
