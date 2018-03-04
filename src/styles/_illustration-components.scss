@@ -94,6 +94,7 @@
         &-spinner {
             transform: translateX(259px) translateY(233px);
             transform-origin: 84px 118px;
+            width: 100%;
         }
 
         &-cart {
@@ -182,6 +183,7 @@
     &__tubes {
         transform: translateX(389px) translateY(330px);
         opacity: 0.5;
+        width: 100%;
 
         &-top-top {
             transform: translateX(105px) translateY(-184px);
@@ -243,6 +245,7 @@
     }
 
     &__game {
+        width: 100%;
         transform: translateX(510px) translateY(161px);
 
         &-health {
