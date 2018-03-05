@@ -98,6 +98,11 @@
         }
 
         &-cart {
+
+            img {
+                transform-origin: 10px 22px;
+            }
+
             [data-num="1"] {
                 transform: translateX(18px) translateY(44px);
             }
