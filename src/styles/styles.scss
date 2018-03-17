@@ -561,6 +561,16 @@ nav {
     }
 }
 
+.btn-primary {
+  border-color: #0f1f2c;
+  background-color: #544b9f;
+}
+
+.btn-primary:hover {
+  border-color: #0f1f2c;
+  background-color: #0f1f2c;
+}
+
 .btn-outline-primary {
     color: $color-secondary;
     border-color: $color-secondary;
