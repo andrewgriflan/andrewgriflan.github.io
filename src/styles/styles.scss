@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'utility';
 @import 'illustration-components';
 @import 'typography';
 @import 'sections';
@@ -8,6 +9,8 @@
 *:before,
 *:after {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale
 }
 
 body,

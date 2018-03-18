@@ -1,5 +1,15 @@
 .section {
 
+    &--has-bg {
+        .section__title {
+            color: $color-white;
+        }
+
+        .section__text {
+            color: $color-white;
+        }
+    }
+
     &__outer {
         padding-top: 75px;
     }
@@ -32,11 +42,6 @@
 
 .bg-highlight {
     background-color: $color-main;
-
-
-    p, a, h1, h2, h3, span {
-        color: $color-white;
-    }
 }
 
 
