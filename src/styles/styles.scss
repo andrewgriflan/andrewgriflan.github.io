@@ -1,11 +1,9 @@
+@import 'variables';
 @import 'mixins';
 @import 'illustration-components';
-$fontfamily: "expressway",
-sans-serif;
-$color-main: #0f1f2c;
-$color-highlight: #ed217c;
-$color-highlight-alt: #a02373;
-$color-secondary: #544b9f;
+@import 'typography';
+@import 'sections';
+
 *,
 *:before,
 *:after {
@@ -20,29 +18,6 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-i,
-span,
-div,
-li,
-label,
-a {
-    color: $color-main;
-
-    font-family: $fontfamily;
-}
-
-em {
-    color: $color-highlight;
-
-    font-style: normal;
 }
 
 .container {
@@ -83,23 +58,16 @@ em {
     }
 }
 
-.content {
+.top-section {
     margin-top: 35px;
     @media (min-width: 768px) {
         margin-top: 160px;
     }
     &__head {
         position: relative;
-
         margin-top: 0;
         margin-bottom: 25px;
 
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1;
-        @media (min-width: 560px) {
-            font-size: 38px;
-        }
         span {
             font-weight: 800;
         }
@@ -110,7 +78,7 @@ em {
         font-size: 18px;
         font-weight: 500;
     }
-    &__form {
+    &__contact {
         display: flex;
         flex-flow: column nowrap;
         @media (min-width: 768px) {
@@ -132,10 +100,8 @@ em {
 
 #headline-swap {
     position: relative;
-
     display: inline-block;
     overflow: hidden;
-
     width: 145px;
     height: 38px;
     @media (min-width: 576px) {

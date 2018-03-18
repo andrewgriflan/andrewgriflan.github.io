@@ -1,0 +1,56 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+p,
+i,
+span,
+div,
+li,
+label,
+a {
+    color: $color-main;
+    font-family: $fontfamily;
+}
+
+em {
+    color: $color-highlight;
+
+    font-style: normal;
+}
+
+a {
+    color: $color-secondary;
+    transition: color 0.2s ease-in-out;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-highlight;
+    }
+}
+
+p {
+    font-weight: 500;
+
+}
+
+h1, .h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    @media (min-width: 560px) {
+        font-size: 38px;
+    }
+}
+
+
+h2, .h2 {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+
+    em {
+        font-weight: 800;
+    }
+}

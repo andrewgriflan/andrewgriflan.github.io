@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 	toggleHeadlines();
 
-	// initAnimations();
+	initAnimations();
 });
 
 jQuery(window).resize(function () {
@@ -93,6 +93,7 @@ function setHeadlineIndex(currentHeadlineIndex) {
 
 //animations
 function initAnimations() {
+	//////// Main illustration/////////
 	//hot air balloon
 	TweenMax.to('.illustration__hot-air-balloon', 5, { x: 520, y: 100, repeat: -1, yoyo: true, ease: Power2.easeInOut });
 	TweenMax.fromTo('.illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
@@ -230,4 +231,11 @@ function initAnimations() {
 	TweenMax.fromTo('.illustration__game-meteor-md[data-num="1"]', 4, { x: -47, y: -31, rotation: 0 }, { x: 27, y: 101, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
 	TweenMax.fromTo('.illustration__game-meteor-md[data-num="2"]', 5.5, { x: 160, y: 29, rotation: 0 }, { x: 33, y: -66, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
 	TweenMax.fromTo('.illustration__game-meteor-sm[data-num="1"]', 6, { x: -3, y: -59, rotation: 0 }, { x: 93, y: 58, rotation: -210, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+
+
+
+	///////Hey, Listen///////
+	//hot air balloon
+	TweenMax.staggerTo(['.section__illustration__hot-air-balloon[data-num=1]', '.section__illustration__hot-air-balloon[data-num=2]', '.section__illustration__hot-air-balloon[data-num=3]'], 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
+	TweenMax.fromTo('.section__illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
 }
