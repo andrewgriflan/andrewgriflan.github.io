@@ -7,6 +7,8 @@ jQuery(document).ready(function () {
 	toggleHeadlines();
 
 	initAnimations();
+
+	initCardFlipInteraction();
 });
 
 jQuery(window).resize(function () {
@@ -89,6 +91,13 @@ function setHeadlineIndex(currentHeadlineIndex) {
 	return currentHeadlineIndex;
 }
 
+function initCardFlipInteraction() {
+	if (jQuery('.card--flip')) {
+		jQuery('.card--flip').on('click', function() {
+			jQuery(this).toggleClass('is-active');
+		})
+	}
+}
 
 
 //animations

@@ -22,7 +22,7 @@
 
         &[data-num="3"] {
             transform: scale(0.9) translateY(20px) translateX(70px);
-            display: none;
+            // display: none;
 
             @media (min-width: 1200px) {
                 display: inline-block;

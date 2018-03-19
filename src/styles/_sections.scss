@@ -1,5 +1,4 @@
 .section {
-
     &--has-bg {
         .section__title {
             color: $color-white;
@@ -8,7 +7,12 @@
         .section__text {
             color: $color-white;
         }
+
+        i {
+            color: $color-white;
+        }
     }
+
 
     &__outer {
         padding-top: 75px;
@@ -22,6 +26,10 @@
 
     }
 
+    &__text {
+        margin-bottom: 25px;
+    }
+
     &__image {
     display: block;
 
@@ -30,6 +38,11 @@
             &:first-child {
                 transform: translateX(-90px);
             }
+        }
+
+        &--centered {
+            margin-top: 25px;
+            margin-bottom: 25px;
         }
     }
 
@@ -40,8 +53,18 @@
 
 }
 
+
 .bg-highlight {
     background-color: $color-main;
+
+    &--clouds {
+        background-color: $color-offwhite;
+    }
+
+    &--cards + .bg-highlight--clouds {
+        padding-top: 135px;
+        padding-bottom: 135px;
+    }
 }
 
 

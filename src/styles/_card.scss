@@ -1,0 +1,65 @@
+.card {
+    border-radius: 0;
+
+    &--flip {
+        border: 1px solid $color-secondary;
+        padding: 30px;
+        position: relative;
+        perspective: 800px;
+        margin-bottom: -55px;
+        margin-top: 25px;
+        box-shadow: 10px 10px 0px 0px $color-secondary;
+
+        .card__inner {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-out;
+            min-height: 400px;
+            // background-color: $color-white;
+        }
+
+        .card__front {
+            position: absolute;
+            backface-visibility: hidden;
+
+        }
+
+        .card__back {
+            position: absolute;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+
+        .card__title {
+            line-height: 1.3;
+            color: $color-secondary;
+            margin-bottom: 25px;
+        }
+
+        &.is-active {
+            .card__inner {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    &__read-more-button {
+        color: $color-secondary;
+        font-size: 18px;
+        font-weight: 600;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            font-size: 30px;
+            border: 2px solid $color-secondary;
+            border-radius: 50%;
+            margin-right: 8px;
+            margin-bottom: -16px;
+            background-image: url('../../img/plus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
