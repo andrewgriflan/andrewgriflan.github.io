@@ -13,6 +13,23 @@
         }
     }
 
+    &--child-section {
+        height: 100%;
+
+        .section__title {
+            margin-bottom: 20px;
+        }
+
+        .section__sub-title {
+            margin-bottom: 20px;
+        }
+
+        img {
+            // max-width: 100%;
+        }
+    }
+
+
 
     &__outer {
         padding-top: 75px;
@@ -23,7 +40,12 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 25px;
+    }
 
+    &__sub-title {
+        font-size: 20px;
+        color: $color-highlight;
+        margin-bottom: 25px;
     }
 
     &__text {
@@ -34,7 +56,8 @@
     display: block;
 
         &--split {
-            margin-bottom: -75px;
+
+            max-width: 100%;
             &:first-child {
                 transform: translateX(-90px);
             }
@@ -46,11 +69,84 @@
         }
     }
 
+    &__diagram {
+        margin-top: 50px;
+    }
+
     //Hey, Listen styles
     &[data-section="2"] {
         padding-bottom: 25px;
+
+        .section__image {
+            margin-bottom: -75px;
+        }
     }
 
+    //Asset Marketplace styles
+    &[data-section="5"] {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.diagram {
+
+    &__top-left {
+        img {
+            transform: translateX(-40px);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 168px;
+            height: 40px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            left: calc(100% - 60px);
+            top: -40px;
+        }
+    }
+
+    &__top-right {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 168px;
+            height: 40px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            right: 20%;
+            bottom: -180px;
+            transform: rotate(135deg);
+        }
+    }
+
+    &__lower {
+        margin-top: 50px;
+
+        img {
+            transform: translateX(-40px);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 168px;
+            height: 40px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            left: -35%;
+            top: 140px;
+            transform: rotate(-135deg);
+        }
+    }
 }
 
 
