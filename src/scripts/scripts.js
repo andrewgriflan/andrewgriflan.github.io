@@ -247,4 +247,13 @@ function initAnimations() {
 	//hot air balloon
 	TweenMax.staggerTo(['.section__illustration__hot-air-balloon[data-num=1]', '.section__illustration__hot-air-balloon[data-num=2]', '.section__illustration__hot-air-balloon[data-num=3]'], 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 	TweenMax.fromTo('.section__illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
+
+
+	////////Bounty System/////////////
+	//helicopter
+	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
+	helicopter2Timeline.fromTo('.section__illustration__helicopter', 4, { x: 165, y: 224 }, { x: 167, y: 241 })
+		.to('.section__illustration__helicopter', 4, { x: 141, y: 296 })
+		.to('.section__illustration__helicopter', 4, { x: 151, y: 240 })
+		.to('.section__illustration__helicopter', 4, { x: 165, y: 224 });
 }

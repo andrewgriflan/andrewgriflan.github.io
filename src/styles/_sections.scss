@@ -66,6 +66,8 @@
         &--centered {
             margin-top: 25px;
             margin-bottom: 25px;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 
@@ -86,6 +88,21 @@
     &[data-section="5"] {
         padding-top: 100px;
         padding-bottom: 50px;
+    }
+
+    //Bounty System
+    &[data-section="6"] {
+        padding-bottom: 75px;
+    }
+
+    //Rupie Token
+    &[data-section="7"] {
+        padding-bottom: 75px;
+
+        .section__image--centered {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
     }
 }
 

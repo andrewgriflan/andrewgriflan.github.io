@@ -29,4 +29,8 @@
             }
         }
     }
+
+    &__helicopter {
+        transform: scale(1.33) rotateY(180deg);
+    }
 }
