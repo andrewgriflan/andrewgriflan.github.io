@@ -64,19 +64,24 @@
         font-weight: 600;
 
         &::after {
-            content: "&#2714";
+            content: "\2714";
             display: block;
+            // width:
 
         }
     }
 
     //specific styles
     &--info {
-        margin-bottom: -55px;
+        margin-bottom:25px;
         margin-top: 25px;
         box-shadow: 10px 10px 0px 0px $color-secondary;
         border: 1px solid $color-secondary;
         padding: 30px;
+
+        @media (min-width: 992px) {
+            margin-bottom: -55px;
+        }
 
         .card__inner {
             min-height: 400px;
@@ -164,6 +169,56 @@
     position: relative;
 
     &__step {
-        margin-top: 163px;
+        padding-top: 163px;
+
+        &[data-step="1"] {
+            transform: translateX(-60px);
+        }
+
+        &[data-step="2"] {
+            margin-top: 115px;
+        }
+
+        &[data-step="3"] {
+            margin-top: 200px;
+            transform: translateX(60px);
+        }
+
+        &[data-step="4"] {
+            margin-top: 50px;
+            transform: translateX(60px);
+        }
+
+        &[data-step="5"] {
+            margin-top: 85px;
+        }
+
+        &[data-step="6"] {
+            margin-top: 170px;
+            transform: translateX(-60px);
+        }
+
+        &[data-step="7"] {
+            margin-top: 50px;
+            transform: translateX(-60px);
+        }
+
+        &[data-step="8"] {
+            margin-top: 85px;
+        }
+
+        &[data-step="9"] {
+            margin-top: 170px;
+            transform: translateX(60px);
+        }
+
+        &[data-step="10"] {
+            margin-top: 50px;
+            transform: translateX(60px);
+        }
+
+        &[data-step="11"] {
+            margin-top: 85px;
+        }
     }
 }

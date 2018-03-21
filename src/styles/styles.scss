@@ -530,6 +530,10 @@ nav {
 .btn {
     text-decoration: none;
     border-radius: 19px;
+
+    &--footer {
+        margin-bottom: 25px;
+    }
 }
 
 .btn-primary {
