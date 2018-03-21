@@ -69,6 +69,16 @@
             margin-right: auto;
             margin-left: auto;
         }
+
+        &--left {
+            margin-right: 20px;
+            float: right;
+        }
+
+        &--right {
+            margin-left: 20px;
+            float: left;
+        }
     }
 
     &__diagram {
@@ -101,6 +111,20 @@
 
         .section__image--centered {
             margin-top: 30px;
+            margin-bottom: 50px;
+        }
+    }
+
+    //Team
+    &[data-section="8"] {
+        padding-bottom: 25px;
+    }
+
+    //Partners
+    &[data-section="9"] {
+        padding-bottom: 75px;
+
+        .section__title {
             margin-bottom: 50px;
         }
     }

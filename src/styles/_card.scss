@@ -1,21 +1,98 @@
 .card {
     border-radius: 0;
+    border: 0;
 
-    &--flip {
-        border: 1px solid $color-secondary;
-        padding: 30px;
-        position: relative;
-        perspective: 800px;
+    //common styles
+    &__read-more-button {
+        color: $color-secondary;
+        font-size: 18px;
+        font-weight: 600;
+        appearance: none !important;
+        background: none;
+        border: 0;
+        backface-visibility: hidden;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            font-size: 30px;
+            background-color: $color-white;
+            border: 2px solid $color-secondary;
+            border-radius: 50%;
+            margin-right: 8px;
+            margin-bottom: -16px;
+            background-image: url('../../img/plus.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__team-photo {
+        box-shadow: 7px 7px 0px 0px $color-secondary;
+        border: 2px solid $color-secondary;
+        border-radius: 50%;
+        margin: 0 auto;
+        width: 235px;
+        margin-bottom: 25px;
+    }
+
+    &__team-member-name {
+        color: $color-white;
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__team-member-title {
+        color: $color-white;
+        display: block;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    &__img-support {
+        position: absolute;
+        top: -163px;
+        left: calc(50% - 33.5px);
+    }
+
+    &__achievement {
+        color: $color-green;
+        font-size: 16px;
+        font-weight: 600;
+
+        &::after {
+            content: "&#2714";
+            display: block;
+
+        }
+    }
+
+    //specific styles
+    &--info {
         margin-bottom: -55px;
         margin-top: 25px;
         box-shadow: 10px 10px 0px 0px $color-secondary;
+        border: 1px solid $color-secondary;
+        padding: 30px;
+
+        .card__inner {
+            min-height: 400px;
+        }
+    }
+
+    &--flip {
+
+        position: relative;
+        perspective: 800px;
+
         cursor: pointer;
 
         .card__inner {
             transform-style: preserve-3d;
             transition: transform 0.5s ease-out;
-            min-height: 400px;
-            // background-color: $color-white;
         }
 
         .card__front {
@@ -44,27 +121,49 @@
         }
     }
 
-    &__read-more-button {
-        color: $color-secondary;
-        font-size: 18px;
-        font-weight: 600;
-        appearance: none !important;
-        background: none;
-        border: 0;
+    &--round {
+        background-color: transparent;
 
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 45px;
-            height: 45px;
-            font-size: 30px;
-            border: 2px solid $color-secondary;
-            border-radius: 50%;
-            margin-right: 8px;
-            margin-bottom: -16px;
-            background-image: url('../../img/plus.svg');
-            background-repeat: no-repeat;
-            background-position: center;
+        .card__inner {
+            min-height: 315px;
+            margin-bottom: 50px;
         }
+
+        .card__front {
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-text {
+            color: $color-white;
+        }
+
+        .card__read-more-button::before {
+            position: absolute;
+            right: 20px;
+            top: calc(50% - 40px);
+        }
+    }
+
+
+    &--roadmap {
+        // width: 340px;
+        padding: 15px;
+        border: 1px solid $color-highlight;
+
+        &-unlocked {
+            border-color: $color-green;
+        }
+    }
+}
+
+.roadmap {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &__step {
+        margin-top: 163px;
     }
 }
