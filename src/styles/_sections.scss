@@ -29,6 +29,12 @@
         }
     }
 
+    &--footer {
+        background-image: url('../../img/placeholder-illustrations/water.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+
 
 
     &__outer {
@@ -93,13 +99,19 @@
         }
 
         &--left {
-            margin-right: 20px;
-            float: right;
+            margin: 20px auto;
+            @media (min-width: 556px) {
+                margin-right: 20px;
+                float: right;
+            }
         }
 
         &--right {
-            margin-left: 20px;
-            float: left;
+            margin: 20px auto;
+            @media (min-width: 556px) {
+                margin-right: 20px;
+                float: right;
+            }
         }
     }
 
@@ -169,6 +181,7 @@
             .section__image--centered {
                 margin-top: 30px;
                 margin-bottom: 50px;
+                transform: scale(1);
             }
         }
     }
