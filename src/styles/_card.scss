@@ -54,7 +54,7 @@
 
     &__img-support {
         position: absolute;
-        top: -163px;
+        top: -165px;
         left: calc(50% - 33.5px);
     }
 
@@ -65,8 +65,16 @@
 
         &::after {
             content: "\2714";
-            display: block;
-            // width:
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background-color: $color-green;
+            border-radius: 50%;
+            color: $color-white;
+            padding-left: 6px;
+            margin-left: 7px;
+            font-size: 14px;
+            line-height: 1.5;
 
         }
     }
@@ -79,12 +87,16 @@
         border: 1px solid $color-secondary;
         padding: 30px;
 
-        @media (min-width: 992px) {
-            margin-bottom: -55px;
+        @media (min-width: 576px) {
+            padding: 20px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 30px;
         }
 
         .card__inner {
-            min-height: 400px;
+            min-height: 325px;
         }
     }
 
@@ -155,70 +167,10 @@
         // width: 340px;
         padding: 15px;
         border: 1px solid $color-highlight;
+        z-index: 2;
 
         &-unlocked {
             border-color: $color-green;
-        }
-    }
-}
-
-.roadmap {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-
-    &__step {
-        padding-top: 163px;
-
-        &[data-step="1"] {
-            transform: translateX(-60px);
-        }
-
-        &[data-step="2"] {
-            margin-top: 115px;
-        }
-
-        &[data-step="3"] {
-            margin-top: 200px;
-            transform: translateX(60px);
-        }
-
-        &[data-step="4"] {
-            margin-top: 50px;
-            transform: translateX(60px);
-        }
-
-        &[data-step="5"] {
-            margin-top: 85px;
-        }
-
-        &[data-step="6"] {
-            margin-top: 170px;
-            transform: translateX(-60px);
-        }
-
-        &[data-step="7"] {
-            margin-top: 50px;
-            transform: translateX(-60px);
-        }
-
-        &[data-step="8"] {
-            margin-top: 85px;
-        }
-
-        &[data-step="9"] {
-            margin-top: 170px;
-            transform: translateX(60px);
-        }
-
-        &[data-step="10"] {
-            margin-top: 50px;
-            transform: translateX(60px);
-        }
-
-        &[data-step="11"] {
-            margin-top: 85px;
         }
     }
 }

@@ -32,7 +32,11 @@
 
 
     &__outer {
-        padding-top: 75px;
+        padding-top: 50px;
+
+        @media (min-width: 992px) {
+            padding-top: 75px;
+        }
     }
 
 
@@ -56,8 +60,11 @@
     display: block;
 
         &--split {
-
-            max-width: 100%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            max-width: 115%;
+            margin-right: -7.5%;
+            margin-left: -7.5%;
             &:first-child {
                 @media (min-width: 992px) {
                     transform: translateX(-90px);
@@ -118,20 +125,51 @@
     &[data-section="5"] {
         padding-top: 100px;
         padding-bottom: 50px;
+
+        .section__image {
+            margin-bottom: 60px;
+
+            @media (min-width: 992px) {
+                margin-bottom: 25px;
+            }
+        }
     }
 
     //Bounty System
     &[data-section="6"] {
-        padding-bottom: 75px;
+        padding-bottom: 10px;
+
+        @media (min-width: 992px) {
+            padding-bottom: 75px;
+        }
     }
 
     //Rupie Token
     &[data-section="7"] {
-        padding-bottom: 75px;
+        padding-bottom: 50px;
 
         .section__image--centered {
-            margin-top: 30px;
+            margin-top: 50px;
             margin-bottom: 50px;
+            transform: scale(1.5);
+        }
+
+        @media (min-width: 576px) {
+
+            .section__image--centered {
+                margin-top: 60px;
+                margin-bottom: 60px;
+                transform: scale(1.2);
+            }
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 75px;
+
+            .section__image--centered {
+                margin-top: 30px;
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -160,66 +198,6 @@
     }
 }
 
-.diagram {
-
-    &__top-left {
-        img {
-            transform: translateX(-40px);
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 168px;
-            height: 40px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            left: calc(100% - 60px);
-            top: -40px;
-        }
-    }
-
-    &__top-right {
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 168px;
-            height: 40px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            right: 20%;
-            bottom: -180px;
-            transform: rotate(135deg);
-        }
-    }
-
-    &__lower {
-        margin-top: 50px;
-
-        img {
-            transform: translateX(-40px);
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 168px;
-            height: 40px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            left: -35%;
-            top: 140px;
-            transform: rotate(-135deg);
-        }
-    }
-}
-
 
 .bg-highlight {
     background-color: $color-main;
@@ -229,8 +207,13 @@
     }
 
     &--cards + .bg-highlight--clouds {
-        padding-top: 135px;
-        padding-bottom: 135px;
+        padding-top: 100px;
+        padding-bottom: 75px;
+
+        @media (min-width: 768px) {
+            padding-top: 135px;
+            padding-bottom: 135px;
+        }
     }
 
     &--cards {

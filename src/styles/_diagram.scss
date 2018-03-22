@@ -1,0 +1,121 @@
+.diagram {
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+                max-width: none;
+        }
+    }
+
+    &__top-left {
+        padding-bottom: 120px;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 23px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(90deg);
+            bottom: 66px;
+            right: 25%;
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 0;
+
+            &::after {
+                left: calc(100% - 60px);
+                top: -40px;
+                width: 168px;
+                height: 40px;
+                transform: rotate(0deg);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            img {
+                transform: translateX(-40px);
+            }
+        }
+    }
+
+    &__top-right {
+        padding-bottom: 120px;
+
+        img {
+            margin: 0 auto;
+            margin-bottom: 25px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 23px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 25%;
+            bottom: 46px;
+            transform: rotate(-90deg) rotateY(180deg);
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 0;
+
+            &::after {
+                right: 20%;
+                left: 50%;
+                bottom: -180px;
+                width: 168px;
+                height: 40px;
+                transform: rotate(135deg);
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+        }
+    }
+
+    &__lower {
+        margin-top: 50px;
+
+        &::after {
+            content: "";
+            display: none;
+            position: absolute;
+            width: 168px;
+            height: 40px;
+            background-image: url('../../img/diagram-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            left: -35%;
+            top: 140px;
+            transform: rotate(-135deg);
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 0;
+
+            &::after {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            img {
+                transform: translateX(-40px);
+            }
+        }
+    }
+}
