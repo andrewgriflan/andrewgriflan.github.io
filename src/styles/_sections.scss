@@ -136,7 +136,14 @@
         padding-bottom: 25px;
 
         .section__image {
-            margin-bottom: -75px;
+            margin-bottom: -55px;
+        }
+
+
+        @media (min-width: 922px) {
+            .section__image {
+                margin-bottom: -75px;
+            }
         }
     }
 
