@@ -29,6 +29,31 @@
         }
     }
 
+    &--img-split {
+
+        .section__image {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            max-width: 115%;
+            margin-right: -7.5%;
+            margin-left: -7.5%;
+
+            &--left {
+                @media (min-width: 992px) {
+                    transform: translateX(-90px);
+                    float: none;
+                }
+            }
+
+            &--right {
+                @media (min-width: 992px) {
+                    transform: translateX(90px);
+                    float: none;
+                }
+            }
+        }
+    }
+
     &--footer {
         background-image: url('../../img/placeholder-illustrations/water.png');
         background-repeat: no-repeat;
@@ -65,19 +90,6 @@
     &__image {
     display: block;
 
-        &--split {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            max-width: 115%;
-            margin-right: -7.5%;
-            margin-left: -7.5%;
-            &:first-child {
-                @media (min-width: 992px) {
-                    transform: translateX(-90px);
-                }
-            }
-        }
-
         &--centered {
             margin-top: 25px;
             margin-bottom: 25px;
@@ -92,9 +104,9 @@
             }
 
             @media (min-width: 1200px) {
-                margin-right: -10%;
-                margin-left: -10%;
-                max-width: 120%;
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 100%;
             }
         }
 
@@ -110,7 +122,7 @@
             margin: 20px auto;
             @media (min-width: 556px) {
                 margin-right: 20px;
-                float: right;
+                float: left;
             }
         }
     }

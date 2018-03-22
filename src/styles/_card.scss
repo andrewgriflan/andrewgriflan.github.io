@@ -173,9 +173,26 @@
         padding: 15px;
         border: 1px solid $color-highlight;
         z-index: 2;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
 
         &-unlocked {
             border-color: $color-green;
+
+            .roadmap__date {
+                color: $color-mid-gray;
+            }
+
+            .roadmap__step-number {
+                color: $color-mid-gray;
+                border-color: $color-mid-gray;
+            }
+        }
+
+        .card__text {
+            margin-bottom: 10px;
         }
     }
 }

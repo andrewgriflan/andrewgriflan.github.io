@@ -9,6 +9,33 @@
         padding-top: 0;
     }
 
+    &__meta {
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    &__step-number {
+        font-size: 40px;
+        font-weight:800;
+        line-height: 1;
+        padding-bottom: 8px;
+        margin-bottom: 6px;
+        border-bottom: 2px solid $color-main;
+    }
+
+    &__date {
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    &__body {
+        flex: 1 1 calc(100% - 100px);
+    }
+
     &__step {
 
         .card__img-support {
@@ -48,7 +75,7 @@
             }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             padding-top: 163px;
 
             &::before, &::after {
