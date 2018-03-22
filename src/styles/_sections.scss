@@ -1,4 +1,6 @@
 .section {
+    position: relative;
+    
     &--has-bg {
         .section__title {
             color: $color-white;
