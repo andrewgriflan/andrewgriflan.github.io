@@ -250,8 +250,17 @@ function initAnimations() {
 
 	//spacehship
 	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
-	TweenMax.to('.section__illustration__spaceship-nav-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+	TweenMax.to('.section__illustration__spaceship-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
 
+	//spaceships with block
+	TweenMax.to('.section__illustration__spaceship-block', 7, {x: '+=30', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 4 });
+
+	//crane
+	TweenMax.to('.section__illustration__crane', 4, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+	TweenMax.to('.section__illustration__crane-rope', 4, {scaleY: '1.8', y: '-=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+
+	//car
+	TweenMax.fromTo('.section__illustration__tower-car', 8, {x: -125, y: -100}, {x: 700, y: -100, repeat: -1, ease: Power0.easeNone});
 
 	////////Bounty System/////////////
 	//helicopter

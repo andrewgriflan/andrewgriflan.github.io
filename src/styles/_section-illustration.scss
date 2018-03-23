@@ -34,18 +34,62 @@
         transform: scale(1.33) rotateY(180deg);
     }
 
+
+    //section 2
     &__spaceship-nav {
         display: none;
         transform: translateX(60px) translateY(-150px);
 
-        &-blades {
+        @media (min-width: 992px) {
+            display: block;
+        }
+    }
+
+    &__tower-cloud {
+        transform: translateX(406px) translateY(367px);
+
+        z-index: 2;
+    }
+
+    &__tower-path {
+        clip-path: url(#tower-clip);
+        transform: translateX(-80px) translateY(641px);
+        z-index: 2;
+    }
+
+    &__tower-car {
+        transform: translateY(-50px);
+
+    }
+
+    &__crane {
+        transform: translateX(403px) translateY(377px);
+
+        &-block {
+            transform: translateY(9px);
+        }
+
+        &-rope {
+            transform: translateX(-58px) translateY(-70px);
+            transform-origin: top;
+        }
+    }
+
+    &__spaceship-block {
+        transform: translateX(-84px) translateY(313px) scale(.95);
+    }
+
+    &__spaceship-blades {
+        &[data-num="1"] {
             transform: translateX(78px);
             transform-origin: 30px 1px;
             perspective: 500px;
         }
 
-        @media (min-width: 992px) {
-            display: block;
+        &[data-num="2"] {
+            transform: translateX(128px) translateY(-121px);
+            perspective: 500px;
+            transform-origin: 58px 1px;
         }
     }
 }
