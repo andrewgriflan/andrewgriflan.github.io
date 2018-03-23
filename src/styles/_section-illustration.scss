@@ -45,6 +45,10 @@
         }
     }
 
+    &__tower {
+        transform: translateX(-133px) translateY(26px);
+    }
+
     &__tower-cloud {
         transform: translateX(406px) translateY(367px);
 

@@ -1,6 +1,6 @@
 .section {
     position: relative;
-    
+
     &--has-bg {
         .section__title {
             color: $color-white;
@@ -34,16 +34,16 @@
     &--img-split {
 
         .section__image {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            max-width: 115%;
-            margin-right: -7.5%;
-            margin-left: -7.5%;
+            // margin-top: 25px;
+            // margin-bottom: 25px;
+            // max-width: 115%;
+            // margin-right: -7.5%;
+            // margin-left: -7.5%;
 
             &--left {
                 @media (min-width: 992px) {
-                    transform: translateX(-90px);
-                    float: none;
+                    // transform: translateX(-90px);
+                    // float: none;
                 }
             }
 
@@ -137,13 +137,12 @@
     &[data-section="2"] {
         padding-bottom: 25px;
 
-        .section__image {
+
+        .illustration {
+            min-height: 725px;
             margin-bottom: -55px;
-        }
 
-
-        @media (min-width: 922px) {
-            .section__image {
+            @media (min-width: 922px) {
                 margin-bottom: -75px;
             }
         }
