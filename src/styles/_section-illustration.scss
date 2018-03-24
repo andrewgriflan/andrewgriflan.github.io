@@ -160,4 +160,98 @@
             }
         }
     }
+
+    //section 4
+    &__fund {
+        &-coin {
+            perspective: 500px;
+            &[data-num="1"] {
+                transform: translateX(180px) translateY(114px);
+            }
+
+            &[data-num="2"] {
+                transform: translateX(75px) translateY(112px);
+            }
+
+            &[data-num="3"] {
+                transform: translateX(127px) translateY(11px);
+            }
+
+            &[data-num="4"] {
+                transform: translateX(231px) translateY(162px);
+            }
+        }
+    }
+
+    &__build {
+        &-crane {
+            &[data-num="1"] {
+                transform: translateX(171px) translateY(102px);
+
+                .section__illustration__build-crane-arm {
+                    transform: translateX(-28px) translateY(46px);
+                }
+
+                .section__illustration__build-crane-rope {
+                    transform-origin: top;
+                    // transform: translateX(-40px) translateY(-20px);
+                }
+            }
+
+            &[data-num="2"] {
+                transform: translateX(99px) translateY(108px);
+
+                .section__illustration__build-crane-arm {
+                    transform: translateX(-30px) translateY(25px);
+                }
+
+                .section__illustration__build-crane-rope {
+                    transform-origin: top;
+                    transform: scaleY(0.6);
+                }
+            }
+        }
+    }
+
+    &__connect {
+        &-checkbox {
+            &[data-num="1"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(80px);
+            }
+
+            &[data-num="2"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(103px);
+            }
+
+            &[data-num="3"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(125px);
+            }
+
+            &[data-num="4"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(147px);
+            }
+
+            &[data-num="5"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(169.5px);
+            }
+
+            &[data-num="6"] {
+                clip-path: url(#check-clip);
+                transform: translateX(51.25px) translateY(192px);
+            }
+        }
+
+        &-unchecked {
+            transform: translateX(-20px) translateY(-6px);
+        }
+
+        &-checked {
+            transform: translateX(-16px) translateY(-20px);
+        }
+    }
 }

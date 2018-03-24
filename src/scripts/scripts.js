@@ -1,21 +1,3 @@
-jQuery(document).ready(function () {
-	jQuery('.menuToggle input').change(function () {
-		jQuery('.menu').toggleClass('is-active');
-	});
-
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
-	toggleHeadlines();
-
-	initAnimations();
-
-	initCardFlipInteraction();
-});
-
-jQuery(window).resize(function () {
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
-
-});
-
 jQuery('#mc-embedded-subscribe-form').on('submit', function () {
 	if (jQuery(this).find('input').hasClass('valid') && !jQuery(this).find('input').hasClass('mce_inline_error')) {
 		jQuery(this).find('input, button').fadeOut();
@@ -239,7 +221,7 @@ function initAnimations() {
 
 
 
-	///////Hey, Listen///////
+	///////Hey, Listen  -- section 2///////
 	//hot air balloon
 	TweenMax.staggerTo(['.section__illustration__hot-air-balloon[data-num=1]', '.section__illustration__hot-air-balloon[data-num=2]', '.section__illustration__hot-air-balloon[data-num=3]'], 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 	TweenMax.fromTo('.section__illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
@@ -275,6 +257,30 @@ function initAnimations() {
 	//speaker lines
 	TweenMax.staggerFromTo(['.section__illustration__speaker-lines-1', '.section__illustration__speaker-lines-2'], 1, {alpha: 1}, {alpha: 0, repeat: -1, yoyo: true, ease: Power2.easeInOut }, 1);
 
+
+
+	////////Introducing: Community Game Incubation -- section 4 //////////
+	//fund
+	TweenMax.staggerTo(['.section__illustration__fund-coin[data-num="1"]', '.section__illustration__fund-coin[data-num="3"]', '.section__illustration__fund-coin[data-num="4"]', '.section__illustration__fund-coin[data-num="2"]'], 4, { rotationY: -360, repeat: -1, ease: Power0.easeNone, repeatDelay: 1 }, 1.25);
+
+	//build
+	TweenMax.to('.section__illustration__build-crane[data-num="1"]', 5, {y: '+=40', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+	TweenMax.to('.section__illustration__build-crane[data-num="1"] .section__illustration__build-crane-rope', 5, {scaleY: '1.92', y: '-=40', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+
+	TweenMax.to('.section__illustration__build-crane[data-num="2"]', 4, {y: '+=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
+	TweenMax.to('.section__illustration__build-crane[data-num="2"] .section__illustration__build-crane-rope', 4, {scaleY: '1.2', y: '-=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
+
+
+	//connect
+	var connectCheckBoxesTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 6});
+	// connectCheckBoxesTimeline.staggerFromTo(['.section__illustration__connect-unchecked[data-num="1"]', '.section__illustration__connect-unchecked[data-num="2"]', '.section__illustration__connect-unchecked[data-num="3"]', '.section__illustration__connect-unchecked[data-num="4"]', '.section__illustration__connect-unchecked[data-num="5"]',
+	// '.section__illustration__connect-unchecked[data-num="6"]'], 2, {y:-6},  {y: 10}, 1);
+	connectCheckBoxesTimeline.staggerTo(['.section__illustration__connect-checked[data-num="1"]', '.section__illustration__connect-checked[data-num="2"]', '.section__illustration__connect-checked[data-num="3"]', '.section__illustration__connect-checked[data-num="4"]', '.section__illustration__connect-checked[data-num="5"]',
+	'.section__illustration__connect-checked[data-num="6"]'], 2,  {y: -6, ease: Power2.easeInOut}, 1, "-=2");
+
+
+
+
 	////////Bounty System/////////////
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
@@ -283,3 +289,21 @@ function initAnimations() {
 		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 151, y: 240 })
 		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 });
 }
+
+jQuery(document).ready(function () {
+	jQuery('.menuToggle input').change(function () {
+		jQuery('.menu').toggleClass('is-active');
+	});
+
+	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
+	toggleHeadlines();
+
+	initAnimations();
+
+	initCardFlipInteraction();
+});
+
+jQuery(window).resize(function () {
+	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
+
+});

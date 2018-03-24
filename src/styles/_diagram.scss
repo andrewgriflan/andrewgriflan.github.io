@@ -1,14 +1,14 @@
 .diagram {
 
     img {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
-        margin-bottom: 25px;
-
-        @media (min-width: 768px) {
-                max-width: none;
-        }
+        // display: block;
+        // max-width: 100%;
+        // margin: 0 auto;
+        // margin-bottom: 25px;
+        //
+        // @media (min-width: 768px) {
+        //         max-width: none;
+        // }
     }
 
     &__top-left {
@@ -40,20 +40,16 @@
             }
         }
 
-        @media (min-width: 1200px) {
-            img {
-                transform: translateX(-40px);
-            }
-        }
+        // @media (min-width: 1200px) {
+        //     img {
+        //         transform: translateX(-40px);
+        //     }
+        // }
     }
 
     &__top-right {
         padding-bottom: 120px;
 
-        img {
-            margin: 0 auto;
-            margin-bottom: 25px;
-        }
 
         &::after {
             content: "";
@@ -109,12 +105,6 @@
 
             &::after {
                 display: block;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            img {
-                transform: translateX(-40px);
             }
         }
     }
