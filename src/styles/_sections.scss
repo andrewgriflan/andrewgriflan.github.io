@@ -136,8 +136,6 @@
     //Hey, Listen styles
     &[data-section="2"] {
         padding-bottom: 25px;
-
-
         .illustration {
             min-height: 725px;
             margin-bottom: -55px;
@@ -151,6 +149,14 @@
     //Why is this needed
     &[data-section="3"] {
         margin-bottom: -75px;
+
+        .illustration {
+            height: 521px;
+
+            @media (min-width: 922px) {
+
+            }
+        }
     }
 
     //Asset Marketplace styles

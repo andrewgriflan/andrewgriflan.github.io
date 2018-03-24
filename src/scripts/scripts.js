@@ -131,10 +131,6 @@ function initAnimations() {
 
 	TweenMax.staggerFromTo(['.illustration__cars-car2[data-num="2"]', '.illustration__cars-car2[data-num="3"]'], 12, { x: 3, y: -216 }, { x: 815, y: -216, repeat: -1, ease: Power0.easeNone, delay: 1 }, 2);
 
-	// var car2Timeline1 = new TimelineMax({ repeat: -1 });
-	// car2Timeline1.fromTo('.illustration__cars-car2[data-num="4"]', 4, { x: 723, y: -302 }, { x: 923, y: -302, ease: Power0.easeNone });
-	// car2Timeline1.fromTo('.illustration__cars-car2[data-num="4"]', 15, { x: 0, y: -302 }, { x: 723, y: -302, ease: Power0.easeNone });
-
 	var car2Timeline2 = new TimelineMax({ repeat: -1 });
 	car2Timeline2.fromTo('.illustration__cars-car2[data-num="5"]', 15, { x: 133, y: -352 }, { x: 923, y: -352, ease: Power0.easeNone });
 	car2Timeline2.fromTo('.illustration__cars-car2[data-num="5"]', 3, { x: 0, y: -352 }, { x: 133, y: -352, ease: Power0.easeNone });
@@ -262,11 +258,28 @@ function initAnimations() {
 	//car
 	TweenMax.fromTo('.section__illustration__tower-car', 8, {x: -125, y: -100}, {x: 700, y: -100, repeat: -1, ease: Power0.easeNone});
 
+
+	////////Why is this needed -- section 3 //////////
+	//Helicopter
+	var helicopter3Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
+	helicopter3Timeline.fromTo('.section__illustration__helicopter[data-num="2"]', 6, { x: 316, y: -40 }, { x: 361, y: -19 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 331, y: -2 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 285, y: -6 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 316, y: -40 });
+
+	TweenMax.to('.section__illustration__helicopter-blades', .75, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+
+	//heart mask
+	TweenMax.fromTo('#heart-clip', 8, {y: 27}, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+
+	//speaker lines
+	TweenMax.staggerFromTo(['.section__illustration__speaker-lines-1', '.section__illustration__speaker-lines-2'], 1, {alpha: 1}, {alpha: 0, repeat: -1, yoyo: true, ease: Power2.easeInOut }, 1);
+
 	////////Bounty System/////////////
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
-	helicopter2Timeline.fromTo('.section__illustration__helicopter', 4, { x: 165, y: 224 }, { x: 167, y: 241 })
-		.to('.section__illustration__helicopter', 4, { x: 141, y: 296 })
-		.to('.section__illustration__helicopter', 4, { x: 151, y: 240 })
-		.to('.section__illustration__helicopter', 4, { x: 165, y: 224 });
+	helicopter2Timeline.fromTo('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 }, { x: 167, y: 241 })
+		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 141, y: 296 })
+		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 151, y: 240 })
+		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 });
 }

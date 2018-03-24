@@ -30,9 +30,6 @@
         }
     }
 
-    &__helicopter {
-        transform: scale(1.33) rotateY(180deg);
-    }
 
 
     //section 2
@@ -94,6 +91,73 @@
             transform: translateX(128px) translateY(-121px);
             perspective: 500px;
             transform-origin: 58px 1px;
+        }
+    }
+
+
+    //section 3
+    &__helicopter {
+        transform: scale(1.33) rotateY(180deg);
+
+        &[data-num="2"] {
+            z-index: 2;
+            transform: scale(1.25);
+
+            .illustration__helicopter-ruby {
+                text-align: left;
+            }
+        }
+    }
+
+    &__helicopter[data-num="2"] {
+        .illustration__helicopter-blades {
+            transform: translateX(15px) translateY(19px);
+            transform-origin: 49px 5px;
+        }
+    }
+
+    &__helicopter-blades[data-num="3"] {
+        transform: translateX(107px) translateY(191px);
+        transform-origin: 77px 0;
+        perspective: 500px;
+    }
+
+    &__helicopter-blades[data-num="4"] {
+        transform: translateX(740px) translateY(191px);
+        transform-origin: 77px 0;
+        perspective: 500px;
+    }
+
+    &__hearts {
+        transform: translateX(25px) translateY(167px);
+    }
+
+    &__heart-outline {
+        z-index: 5;
+    }
+
+    &__heart-mask {
+        clip-path: url(#heart-clip);
+        z-index: 2;
+    }
+
+    &__speaker-lines {
+        // height: 43px;
+        z-index: 2;
+        &[data-num="1"] {
+            transform: translateX(237px) translateY(200px) scale(0.9) rotate(-20deg);
+
+            .section__illustration__speaker-lines-2 {
+                transform: translateX(-34px);
+            }
+        }
+
+        &[data-num="2"] {
+            transform: translateX(732px) translateY(207px);
+
+            .section__illustration__speaker-lines-2 {
+                transform: translateX(-34px);
+            }
         }
     }
 }
