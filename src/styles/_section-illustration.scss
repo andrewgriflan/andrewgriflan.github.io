@@ -303,4 +303,22 @@
              transform: translateX(423px) translateY(56px) rotate(-8deg);
          }
      }
+
+
+     //Footer
+     &__footer {
+         bottom: 0;
+         top: auto;
+
+         &-path {
+             transform-origin: left;
+             margin-bottom: -10px;
+         }
+
+         &-car {
+             transform: translateX(-210px) translateY(60px);
+             z-index: 2;
+             position: relative;
+         }
+     }
 }

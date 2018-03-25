@@ -336,6 +336,43 @@ function initAnimations() {
 
 	//robot leg
 	TweenMax.to('.section__illustration__robot #robot-leg', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut});
+
+
+
+	//////////////Roadmap -- section 9////
+	//////////////Roadmap -- section 9////
+	TweenMax.staggerTo('.roadmap__step', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut}, 0.5);
+
+
+	///////////Footer//////////////////////
+	//////////////Roadmap -- section 9////
+	TweenMax.set('.section__illustration__footer-path', {
+		scaleX: function() {
+			var screenWidth = jQuery(window).outerWidth();
+			var scale = screenWidth/1600;
+			return scale;
+		}
+	});
+
+
+}
+
+function initFooterAnimation() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
+	if (footerCar) {
+		footerCar.kill();
+	}
+
+	var footerCar = new TweenMax.fromTo('.section__illustration__footer-car', 10, {x: -210}, {
+		x: function() {
+			return screenWidth + 210;
+		}, repeat: -1, ease: Power0.easeNone
+	});
+
+	footerCar.timeScale(1/scale);
+	footerCar.play(1);
 }
 
 jQuery(document).ready(function () {
@@ -348,10 +385,24 @@ jQuery(document).ready(function () {
 
 	initAnimations();
 
+	initFooterAnimation();
+
 	initCardFlipInteraction();
 });
 
 jQuery(window).resize(function () {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 
+	TweenMax.set('.section__illustration__footer-path', {
+		scaleX: function() {
+			// var screenWidth = jQuery(window).outerWidth();
+			// var scale = screenWidth/1600;
+			return scale;
+		}
+	});
+
+	initFooterAnimation();
 });
