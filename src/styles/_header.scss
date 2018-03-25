@@ -1,0 +1,269 @@
+.header {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    @media (min-width: 768px) {
+        position: absolute;
+
+        width: 220px;
+    }
+    &__logo {
+        width: 120px;
+        @media (min-width: 992px) {
+            width: 180px; // margin-top: 20px;
+        }
+    }
+}
+
+.top-section {
+    margin-top: 35px;
+    @media (min-width: 768px) {
+        margin-top: 160px;
+    }
+    &__head {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 25px;
+
+        span {
+            font-weight: 800;
+        }
+    }
+    &__description {
+    }
+    &__contact {
+        display: flex;
+        flex-flow: column nowrap;
+        @media (min-width: 768px) {
+            display: block;
+
+            margin-bottom: 25px;
+        }
+    }
+    &__form-support {
+        margin-top: 10px;
+
+        font-size: 12px;
+        font-weight: 500;
+    }
+    &__social-media {
+        margin-bottom: 25px;
+    }
+}
+
+//nav menu markup and styles from
+.menuToggle {
+    position: relative;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+    padding-top: 12px;
+
+    -webkit-user-select: none;
+    user-select: none;
+    @media (min-width: 768px) {
+        top: 41px;
+    }
+    &__hamburger {
+        position: relative;
+        top: 0;
+        right: 0;
+
+        width: 30px;
+        height: 30px;
+        margin-top: 14px;
+        margin-right: 2px;
+        margin-left: auto;
+        span {
+            position: absolute;
+
+            display: block;
+
+            width: 20px;
+            height: 2px;
+
+            transition: .25s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            transform-origin: left center;
+
+            background: #FFF;
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 7px;
+            }
+            &:nth-child(3) {
+                top: 14px;
+            }
+        }
+    }
+    &::after {
+        position: absolute;
+        z-index: -10;
+        top: 12px;
+        right: 15px;
+
+        display: block;
+
+        width: 45px;
+        height: 45px;
+
+        content: "";
+
+        border-radius: 50%;
+        background-color: $color-main;
+    }
+    & input:checked~.menuToggle__hamburger span {
+        &:nth-child(1) {
+            left: 2px;
+
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            width: 0%;
+
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            left: 2px;
+
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.menuToggle input {
+    position: absolute;
+    /* hide this */
+    z-index: 2;
+    top: 0;
+    right: 15px;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+    @media (min-width: 580px) {
+        right: 2px;
+    }
+}
+
+/*
+ * But let's hide the middle one.
+ */
+
+.menuToggle input:checked~span:nth-last-child(3) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+
+    opacity: 0;
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+
+.menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+
+.menu {
+    position: absolute;
+    z-index: 1000;
+    top: 165px;
+    right: 0;
+    left: 100%;
+    display: block;
+    width: 100%;
+    height: 900px;
+    margin: 0;
+    padding: 15px;
+    padding-top: 25px;
+    list-style-type: none;
+    transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+
+    &.is-active {
+        left: 0;
+    }
+    @media (min-width: 540px) {
+        width: 100%;
+        padding: 50px 15px;
+    }
+    @media (min-width: 992px) {
+        display: none;
+    }
+
+    &__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .social-media__list {
+
+    }
+
+    .social-media__button {
+        margin: 20px 0;
+    }
+}
+
+//custom nav styles
+nav {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+
+    width: 100%; // max-width: 540px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.alertSlide {
+    visibility: visible !important;
+
+    transform: translateY(-100%);
+    animation: slideDown 0.6s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
