@@ -270,18 +270,45 @@ function initAnimations() {
 	TweenMax.to('.section__illustration__build-crane[data-num="2"]', 4, {y: '+=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
 	TweenMax.to('.section__illustration__build-crane[data-num="2"] .section__illustration__build-crane-rope', 4, {scaleY: '1.2', y: '-=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
 
-
 	//connect
-	var connectCheckBoxesTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 6});
+	var connectCheckBoxesTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
 	// connectCheckBoxesTimeline.staggerFromTo(['.section__illustration__connect-unchecked[data-num="1"]', '.section__illustration__connect-unchecked[data-num="2"]', '.section__illustration__connect-unchecked[data-num="3"]', '.section__illustration__connect-unchecked[data-num="4"]', '.section__illustration__connect-unchecked[data-num="5"]',
 	// '.section__illustration__connect-unchecked[data-num="6"]'], 2, {y:-6},  {y: 10}, 1);
 	connectCheckBoxesTimeline.staggerTo(['.section__illustration__connect-checked[data-num="1"]', '.section__illustration__connect-checked[data-num="2"]', '.section__illustration__connect-checked[data-num="3"]', '.section__illustration__connect-checked[data-num="4"]', '.section__illustration__connect-checked[data-num="5"]',
-	'.section__illustration__connect-checked[data-num="6"]'], 2,  {y: -6, ease: Power2.easeInOut}, 1, "-=2");
+	'.section__illustration__connect-checked[data-num="6"]'], 1,  {y: -6, ease: Power2.easeInOut}, 1);
+
+
+	////////Aset Marketplace -- section 5 //////////
+	//spaceship
+	TweenMax.to('.section__illustration__spaceship-rupie', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
+	TweenMax.to('.section__illustration__spaceship-rupie-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+
+	//rocketship
+	TweenMax.to('.section__illustration__space-rocketship', 6, {y: '+=35', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 });
+
+	//Tube coins
+	TweenMax.set('.section__illustration__space-coins[data-num="1"] img', {
+		x: function (i) {
+			return -(i * 24);
+		}
+	});
+	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="1"] [data-num="1"]', '.section__illustration__space-coins[data-num="1"] [data-num="2"]', '.section__illustration__space-coins[data-num="1"] [data-num="3"]', '.section__illustration__space-coins[data-num="1"] [data-num="4"]', '.section__illustration__space-coins[data-num="1"] [data-num="5"]'], 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+
+	TweenMax.set('.section__illustration__space-coins[data-num="2"] img', {
+		x: function (i) {
+			return -(i * 24) - 130;
+		}
+	});
+	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="2"] [data-num="1"]', '.section__illustration__space-coins[data-num="2"] [data-num="2"]', '.section__illustration__space-coins[data-num="2"] [data-num="3"]', '.section__illustration__space-coins[data-num="2"] [data-num="4"]', '.section__illustration__space-coins[data-num="2"] [data-num="5"]'], 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+
+	//buttons
+
+	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.25, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.75);
 
 
 
 
-	////////Bounty System/////////////
+	////////Bounty System  -- Section 6 /////////////
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
 	helicopter2Timeline.fromTo('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 }, { x: 167, y: 241 })

@@ -254,4 +254,43 @@
             transform: translateX(-16px) translateY(-20px);
         }
     }
+
+    //section 5
+    &__space {
+        &-rocketship {
+            transform: translateX(308px) translateY(-86px);
+        }
+
+        &-coins {
+            &[data-num="1"] {
+                transform: translateX(192px) translateY(314px);
+                clip-path: url(#space-clip);
+
+                img {
+                    opacity: 0.8;
+                    transform: translateY(-6px);
+                }
+            }
+
+            &[data-num="2"] {
+                transform: translateX(416px) translateY(314px);
+                clip-path: url(#space-clip);
+
+                img {
+                    opacity: 0.8;
+                    transform: translateY(-6px);
+                }
+            }
+        }
+    }
+
+    &__spaceship-rupie {
+        position: relative;
+        transform: translateX(20px) translateY(10px);
+
+        &-blades {
+            transform: translateX(-11px) translateY(2px) rotateY(60deg);
+            perspective: 500px;
+        }
+     }
 }
