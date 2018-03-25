@@ -309,12 +309,30 @@ function initAnimations() {
 
 
 	////////Bounty System  -- Section 6 /////////////
+	//Arm Boat
+	var armboatTimeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn, repeatDelay: 1});
+	armboatTimeline.to('.section__illustration__robot #arm-boat', 6, {x: '+=50'})
+	.to('.section__illustration__robot #arm-boat', 4, {y: '+=10'}, '-=2')
+	.to('.section__illustration__robot #arm-boat', 12, {x: '-=100'})
+	.to('.section__illustration__robot #arm-boat', 4, {y: '-=10'}, '-=2')
+	.to('.section__illustration__robot #arm-boat', 6, {x: '+=50'});
+
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
 	helicopter2Timeline.fromTo('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 }, { x: 167, y: 241 })
-		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 141, y: 296 })
-		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 151, y: 240 })
-		.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 });
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 141, y: 296 })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 151, y: 240 })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 });
+
+	//robot helicopter
+	var helicopter3Timeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeInOut });
+	helicopter3Timeline.to('.section__illustration__robot #helicopter', 4, { x: '+=20', y: '+=40' })
+		.to('.section__illustration__robot #helicopter', 6, { x: '+=10', y: '-=20' })
+		.to('.section__illustration__robot #helicopter', 6, { x: '-=30', y: '-=20' });
+	TweenMax.to('.section__illustration__robot #tail-blades', 2, {rotate: '+=180', repeat: -1});
+
+	//robot leg
+	TweenMax.to('.section__illustration__robot #robot-leg', 6, {y: '+=20', repeat: -1, yoyo: true, ease: Power2.easeInOut});
 }
 
 jQuery(document).ready(function () {
