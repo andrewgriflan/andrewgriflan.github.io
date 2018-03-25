@@ -289,8 +289,18 @@
         transform: translateX(20px) translateY(10px);
 
         &-blades {
-            transform: translateX(-11px) translateY(2px) rotateY(60deg);
+            transform: translateX(-11px) translateY(2px);
             perspective: 500px;
         }
+     }
+
+
+     //section 6
+     &__robot {
+         &-helicopter-blades {
+             transform-origin: 80px;
+             perspective: 500px;
+             transform: translateX(423px) translateY(56px) rotate(-8deg);
+         }
      }
 }

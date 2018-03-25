@@ -326,13 +326,16 @@ function initAnimations() {
 
 	//robot helicopter
 	var helicopter3Timeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeInOut });
-	helicopter3Timeline.to('.section__illustration__robot #helicopter', 4, { x: '+=20', y: '+=40' })
-		.to('.section__illustration__robot #helicopter', 6, { x: '+=10', y: '-=20' })
-		.to('.section__illustration__robot #helicopter', 6, { x: '-=30', y: '-=20' });
-	TweenMax.to('.section__illustration__robot #tail-blades', 2, {rotate: '+=180', repeat: -1});
+	helicopter3Timeline.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 4, { x: '+=20', y: '+=40' })
+		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '+=10', y: '-=20' })
+		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '-=30', y: '-=20' });
+
+	TweenMax.to('.section__illustration__robot #tail-blades', 1, {rotation: 180, transformOrigin: "center", repeat: -1, ease: Power0.easeNone });
+
+	TweenMax.to('.section__illustration__robot-helicopter-blades', 1.5, {rotationY: 360, repeat: -1, ease: Power0.easeNone });
 
 	//robot leg
-	TweenMax.to('.section__illustration__robot #robot-leg', 6, {y: '+=20', repeat: -1, yoyo: true, ease: Power2.easeInOut});
+	TweenMax.to('.section__illustration__robot #robot-leg', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut});
 }
 
 jQuery(document).ready(function () {
