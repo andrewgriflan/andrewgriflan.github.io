@@ -223,8 +223,7 @@ function initAnimations() {
 
 	///////Hey, Listen  -- section 2///////
 	//hot air balloon
-	TweenMax.staggerTo(['.section__illustration__hot-air-balloon[data-num=1]', '.section__illustration__hot-air-balloon[data-num=2]', '.section__illustration__hot-air-balloon[data-num=3]'], 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
-	TweenMax.fromTo('.section__illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
+	TweenMax.staggerTo('.section__illustration__hot-air-balloon', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 
 	//spacehship
 	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
@@ -238,7 +237,7 @@ function initAnimations() {
 	TweenMax.to('.section__illustration__crane-rope', 4, {scaleY: '1.8', y: '-=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
 
 	//car
-	TweenMax.fromTo('.section__illustration__tower-car', 8, {x: -125, y: -100}, {x: 700, y: -100, repeat: -1, ease: Power0.easeNone});
+	TweenMax.fromTo('.section__illustration__tower-car', 8, {x: -125}, {x: 700, repeat: -1, ease: Power0.easeNone});
 
 
 	////////Why is this needed -- section 3 //////////

@@ -1,5 +1,41 @@
 .section__illustration {
 
+    //global positioning
+    &__container {
+        width: 100%;
+        @media (min-width: 300px) {
+            transform: none;
+        }
+
+        @media (min-width: 346px) {
+            transform: none;
+        }
+
+        @media (min-width: 480px) {
+            transform: none;
+        }
+
+        @media (min-width: 576px) {
+            transform: none;
+        }
+
+        @media (min-width: 768px) {
+            transform: none;
+        }
+
+        @media (min-width: 992px) {
+            transform: none;
+        }
+
+        @media (min-width: 1200px) {
+            transform: none;
+        }
+
+        @media (min-width: 1400px) {
+            transform: none;
+        }
+    }
+
     &__hot-air-balloon {
 
         &[data-num="1"] {
@@ -35,7 +71,7 @@
     //section 2
     &__spaceship-nav {
         display: none;
-        transform: translateX(60px) translateY(-150px);
+        transform: translateX(-300px) translateY(-200px);
 
         @media (min-width: 992px) {
             display: block;
@@ -43,28 +79,28 @@
     }
 
     &__tower {
-        transform: translateX(-133px) translateY(26px);
+        // transform: translateX(-133px) translateY(26px);
     }
 
     &__tower-cloud {
-        transform: translateX(406px) translateY(367px);
+        transform: translateX(551px) translateY(367px);
 
         z-index: 2;
     }
 
     &__tower-path {
         clip-path: url(#tower-clip);
-        transform: translateX(-80px) translateY(641px);
+        transform: translateX(51px) translateY(615px);
         z-index: 2;
     }
 
     &__tower-car {
-        transform: translateY(-50px);
+        // transform: translateY(-50px);
 
     }
 
     &__crane {
-        transform: translateX(403px) translateY(377px);
+        transform: translateX(536px) translateY(352px);
 
         &-block {
             transform: translateY(9px);
@@ -77,7 +113,7 @@
     }
 
     &__spaceship-block {
-        transform: translateX(-84px) translateY(313px) scale(.95);
+        transform: translateX(44px) translateY(288px) scale(.95);
     }
 
     &__spaceship-blades {
