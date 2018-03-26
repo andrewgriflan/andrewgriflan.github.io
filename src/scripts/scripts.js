@@ -302,7 +302,7 @@ function initAnimations() {
 
 	//buttons
 
-	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.25, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.75);
+	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
 
 
 
@@ -382,7 +382,7 @@ jQuery(document).ready(function () {
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 	toggleHeadlines();
 
-	// initAnimations();
+	initAnimations();
 
 	initFooterAnimation();
 

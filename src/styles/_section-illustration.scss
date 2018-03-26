@@ -309,12 +309,12 @@
     //section 5
     &__space {
         &-rocketship {
-            transform: translateX(308px) translateY(-86px);
+            transform: translateX(308px) translateY(575px);
         }
 
         &-coins {
             &[data-num="1"] {
-                transform: translateX(192px) translateY(314px);
+                transform: translateX(179px) translateY(314px);
                 clip-path: url(#space-clip);
 
                 img {
@@ -324,7 +324,7 @@
             }
 
             &[data-num="2"] {
-                transform: translateX(416px) translateY(314px);
+                transform: translateX(400px) translateY(314px);
                 clip-path: url(#space-clip);
 
                 img {

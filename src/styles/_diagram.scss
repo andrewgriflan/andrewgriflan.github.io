@@ -25,11 +25,17 @@
             padding-bottom: 0;
 
             &::after {
-                left: 80%;
+                left: 90%;
                 top: -30px;
                 width: 168px;
                 height: 40px;
                 transform: rotate(0deg);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            &::after {
+                left: 90%;
             }
         }
 
