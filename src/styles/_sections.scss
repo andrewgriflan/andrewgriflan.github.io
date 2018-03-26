@@ -138,43 +138,78 @@
         padding-bottom: 25px;
 
         .illustration {
-            min-height: 725px;
+            height: 385px;
             margin-bottom: -75px;
-
-            @media (min-width: 922px) {
-                margin-bottom: -100px;
-            }
         }
-
 
         //illustration responsive positioning
         .section__illustration__container {
             transform: translateX(-50%) scale(0.5);
+        }
 
-            @media (min-width: 346px) {
-                transform: none;
+        @media (min-width: 346px) {
+            .illustration {
+                height: 495px;
             }
 
-            @media (min-width: 480px) {
-                transform: none;
+            .section__illustration__container {
+                transform: translateX(-40%) scale(0.66);
             }
 
-            @media (min-width: 576px) {
-                transform: none;
+        }
+
+        //illustration responsive positioning
+        @media (min-width: 480px) {
+            .illustration {
+                height: 555px;
             }
 
-            @media (min-width: 768px) {
-                transform: none;
+            .section__illustration__container {
+                transform: translateX(-25%) scale(0.75);
             }
 
-            @media (min-width: 992px) {
-                transform: none;
+        }
+
+        @media (min-width: 576px) {
+            .illustration {
+                height: 555px;
             }
 
-            @media (min-width: 1200px) {
-                transform: translateX(-150px);
+        }
+
+        @media (min-width: 768px) {
+            .illustration {
+                height: 724px;
             }
 
+            .section__illustration__container {
+                transform: translateX(-10%) scale(1);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .illustration {
+                height: 680px;
+            }
+
+            .section__illustration__container {
+                transform: translateX(-45%) scale(0.9);
+            }
+
+            .illustration {
+                // min-height: 725px;
+                margin-bottom: -100px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .section__illustration__container {
+                transform: translateX(-150px) scale(1);
+            }
+
+            .illustration {
+                min-height: 725px;
+            }
         }
     }
 
