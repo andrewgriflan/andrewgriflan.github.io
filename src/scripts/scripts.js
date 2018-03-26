@@ -382,7 +382,7 @@ jQuery(document).ready(function () {
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 	toggleHeadlines();
 
-	initAnimations();
+	// initAnimations();
 
 	initFooterAnimation();
 
@@ -397,8 +397,6 @@ jQuery(window).resize(function () {
 
 	TweenMax.set('.section__illustration__footer-path', {
 		scaleX: function() {
-			// var screenWidth = jQuery(window).outerWidth();
-			// var scale = screenWidth/1600;
 			return scale;
 		}
 	});
