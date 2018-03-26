@@ -88,9 +88,28 @@
     &--info {
         margin-bottom:25px;
         margin-top: 25px;
-        box-shadow: 10px 10px 0px 0px $color-secondary;
-        border: 1px solid $color-secondary;
-        padding: 30px;
+        background-color: transparent;
+
+        &::before {
+            content: "";
+            display: block;
+            margin: 30px;
+            background-color: $color-secondary;
+            position: absolute;
+            top: 0;
+            bottom: -10px;
+            left: 0;
+            right: -10px;
+            z-index: 1;
+            animation-name: animateTransition2;
+            animation-duration: 0.7s;
+            transition: transform 0.8s $transition-curve;
+        }
+
+        @keyframes animateTransition2 {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+        }
 
         @media (min-width: 576px) {
             padding: 20px;
@@ -102,6 +121,11 @@
 
         .card__inner {
             min-height: 325px;
+            background-color: $color-white;
+            border: 1px solid $color-secondary;
+            padding: 30px;
+            position: relative;
+            z-index: 2;
         }
     }
 
@@ -114,19 +138,31 @@
 
         .card__inner {
             transform-style: preserve-3d;
-            transition: transform 0.5s ease-out;
+            transition: transform 0.8s $transition-curve;
         }
 
         .card__front {
             position: absolute;
             backface-visibility: hidden;
+            z-index: 2;
 
         }
 
         .card__back {
-            position: absolute;
             transform: rotateY(180deg);
             backface-visibility: hidden;
+            position: relative;
+            z-index: 2;
+
+            ul  {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                padding: 0;
+            }
         }
 
         .card__title {
@@ -140,7 +176,18 @@
             .card__inner {
                 transform: rotateY(180deg);
             }
+
+            &::before {
+                animation-name: animateTransition;
+                animation-duration: 0.7s;
+                animation-timing-function: $transition-curve;
+            }
         }
+    }
+
+    @keyframes animateTransition {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
     }
 
     &--round {
