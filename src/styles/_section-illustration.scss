@@ -150,6 +150,14 @@
     &__helicopter {
         transform: scale(1.33) rotateY(180deg);
 
+        &[data-num="1"] {
+            display: none;
+
+            @media (min-width: 992px) {
+                display: block;
+            }
+        }
+
         &[data-num="2"] {
             z-index: 2;
             transform: scale(1.25);
@@ -314,7 +322,7 @@
 
         &-coins {
             &[data-num="1"] {
-                transform: translateX(179px) translateY(314px);
+                transform: translateX(177px) translateY(314px);
                 clip-path: url(#space-clip);
 
                 img {
@@ -338,6 +346,7 @@
     &__spaceship-rupie {
         position: relative;
         transform: translateX(20px) translateY(10px);
+        height: 95px;
 
         &-blades {
             transform: translateX(-11px) translateY(2px);
