@@ -81,8 +81,15 @@ function initCardFlipInteraction() {
 	}
 
 	if (jQuery('.card--expand')) {
-		jQuery('.card--expand').on('click', function() {
-			jQuery(this).toggleClass('is-active');
+		jQuery('.card--expand').on('click', function(e) {
+			if (jQuery(this).hasClass('is-active')) {
+
+				jQuery(this).removeClass('is-active');
+			} else {
+				jQuery('.card--expand').removeClass('is-active');
+				jQuery(this).addClass('is-active');
+			}
+
 		})
 	}
 }

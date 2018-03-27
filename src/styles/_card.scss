@@ -16,6 +16,8 @@
         position: absolute;
         display: flex;
         align-items: center;
+        padding: 0;
+        margin: 0;
 
         span {
             color: $color-secondary;
@@ -31,7 +33,6 @@
             background-color: $color-white;
             border: 2px solid $color-secondary;
             border-radius: 50%;
-            margin-right: 8px;
             background-repeat: no-repeat;
             background-position: center;
             order: 1;
@@ -40,12 +41,14 @@
 
     &__read-more-button {
         &::after {
+            margin-right: 8px;
             background-image: url('../../img/plus.svg');
         }
     }
 
     &__flip-back-button {
         &::after {
+            margin-right: 8px;
             background-image: url('../../img/minus.svg');
         }
     }
@@ -99,6 +102,12 @@
             line-height: 1.5;
 
         }
+    }
+
+    &__team-attribute {
+        font-weight: 600;
+        font-size: 18px;
+        color: $color-main;
     }
 
     //specific styles
@@ -229,7 +238,7 @@
 
         .card__read-more-button {
             position: absolute;
-            right: 0;
+            right: 15px;
             top: calc(50% - 80px);
             z-index: 2;
             // width: 45px;
@@ -239,8 +248,10 @@
                 background-color: $color-white;
                 width: 45px;
                 height: 45px;
+                margin-right: 0;
             }
-            &::before{
+
+            &::before {
                 z-index: 1;
                 width: 45px;
                 height: 45px;
@@ -279,14 +290,12 @@
     }
 
     &--expand {
-        .card__front {
-            cursor: pointer;
-        }
+        cursor: pointer;
 
         .card__back {
             opacity: 0;
             background-color: $color-white;
-            border: 1px solid $color-secondary;
+            border: 2px solid $color-secondary;
             transition: opacity 0.5s $transition-curve, transform 0.4s $transition-curve;
             transform: scale(0.5);
             position: absolute;
@@ -295,16 +304,37 @@
             z-index: 5;
             width: 550px;
             height: 550px;
-            padding: 110px;
-            // height: 100%;
+            padding: 100px 70px;
             border-radius: 50%;
+
+            .card__team-member-name, .card__team-member-title {
+                color: $color-main;
+            }
+
+            .card__team-member-title {
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
         }
 
-        .card-text {
-            color: $color-main;
-            transition: color 0.3s $transition-curve;
-            transition-delay: 0.1s;
+        .card__flip-back-button {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 45px;
+
+            &::after {
+                margin-right: 0;
+            }
         }
+
+        // .card-text {
+        //     color: $color-main;
+        //     transition: color 0.3s $transition-curve;
+        //     transition-delay: 0.1s;
+        // }
 
         &.is-active {
             .card__back {
@@ -313,10 +343,6 @@
                 background-color: $color-white;
                 border: 1px solid $color-secondary;
             }
-
-            // &::before {
-            //     animation-timing-function: $transition-curve;
-            // }
         }
     }
 
