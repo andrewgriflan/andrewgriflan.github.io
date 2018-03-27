@@ -6,7 +6,7 @@
     //common styles
 
     .flip-btn {
-        color: $color-secondary;
+
         font-size: 18px;
         font-weight: 600;
         appearance: none !important;
@@ -14,8 +14,15 @@
         border: 0;
         backface-visibility: hidden;
         position: absolute;
+        display: flex;
+        align-items: center;
 
-        &::before {
+        span {
+            color: $color-secondary;
+            order: 2;
+        }
+
+        &::after {
             content: "";
             display: inline-block;
             width: 45px;
@@ -25,20 +32,20 @@
             border: 2px solid $color-secondary;
             border-radius: 50%;
             margin-right: 8px;
-            margin-bottom: -16px;
             background-repeat: no-repeat;
             background-position: center;
+            order: 1;
         }
     }
 
     &__read-more-button {
-        &::before {
+        &::after {
             background-image: url('../../img/plus.svg');
         }
     }
 
     &__flip-back-button {
-        &::before {
+        &::after {
             background-image: url('../../img/minus.svg');
         }
     }
@@ -202,6 +209,7 @@
             100% { transform: scaleX(1); }
     }
 
+
     &--round {
         background-color: transparent;
 
@@ -219,10 +227,25 @@
             color: $color-white;
         }
 
-        .card__read-more-button::before {
+        .card__read-more-button {
             position: absolute;
-            right: 20px;
-            top: calc(50% - 40px);
+            right: 0;
+            top: calc(50% - 80px);
+            z-index: 2;
+            // width: 45px;
+            // height: 45px;
+
+            &::after {
+                background-color: $color-white;
+                width: 45px;
+                height: 45px;
+            }
+            &::before{
+                z-index: 1;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
         }
     }
 
@@ -254,4 +277,47 @@
             margin-bottom: 10px;
         }
     }
+
+    &--expand {
+        .card__front {
+            cursor: pointer;
+        }
+
+        .card__back {
+            opacity: 0;
+            background-color: $color-white;
+            border: 1px solid $color-secondary;
+            transition: opacity 0.5s $transition-curve, transform 0.4s $transition-curve;
+            transform: scale(0.5);
+            position: absolute;
+            top: -30%;
+            left: -36%;
+            z-index: 5;
+            width: 550px;
+            height: 550px;
+            padding: 110px;
+            // height: 100%;
+            border-radius: 50%;
+        }
+
+        .card-text {
+            color: $color-main;
+            transition: color 0.3s $transition-curve;
+            transition-delay: 0.1s;
+        }
+
+        &.is-active {
+            .card__back {
+                opacity: 1;
+                transform: scale(1);
+                background-color: $color-white;
+                border: 1px solid $color-secondary;
+            }
+
+            // &::before {
+            //     animation-timing-function: $transition-curve;
+            // }
+        }
+    }
+
 }

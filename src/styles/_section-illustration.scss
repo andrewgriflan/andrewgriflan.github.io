@@ -110,7 +110,7 @@
     }
 
     &__tower-car {
-        // transform: translateY(-50px);
+        transform: translateY(10px);
 
     }
 
@@ -148,7 +148,7 @@
 
     //section 3
     &__helicopter {
-        transform: scale(1.33) rotateY(180deg);
+        transform:scale(1.33) rotateY(180deg) translateX(70px);
 
         &[data-num="1"] {
             display: none;
@@ -365,6 +365,11 @@
      }
 
 
+     &__rupie-token {
+         margin: 50px -15px;
+     }
+
+
      //Footer
      &__footer {
          bottom: 0;
@@ -372,11 +377,12 @@
 
          &-path {
              transform-origin: left;
-             margin-bottom: -10px;
+            bottom: 0;
+            top: unset;
          }
 
          &-car {
-             transform: translateX(-210px) translateY(60px);
+             transform: translateX(-210px) translateY(-30px) scale(0.7);
              z-index: 2;
              position: relative;
          }

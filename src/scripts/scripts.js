@@ -79,6 +79,12 @@ function initCardFlipInteraction() {
 			jQuery(this).toggleClass('is-active');
 		})
 	}
+
+	if (jQuery('.card--expand')) {
+		jQuery('.card--expand').on('click', function() {
+			jQuery(this).toggleClass('is-active');
+		})
+	}
 }
 
 
@@ -318,10 +324,10 @@ function initAnimations() {
 
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
-	helicopter2Timeline.fromTo('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 }, { x: 167, y: 241 })
-	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 141, y: 296 })
-	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 151, y: 240 })
-	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: 165, y: 224 });
+	helicopter2Timeline.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=2', y: '+=20' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=10', y: '+=10' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '-=18', y: '-=15' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=6', y: '-=15' });
 
 	//robot helicopter
 	var helicopter3Timeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeInOut });
@@ -343,6 +349,15 @@ function initAnimations() {
 	TweenMax.staggerTo('.roadmap__step', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut}, 0.5);
 
 
+
+
+
+}
+
+function initFooterAnimation() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
 	///////////Footer//////////////////////
 	//////////////Roadmap -- section 9////
 	TweenMax.set('.section__illustration__footer-path', {
@@ -352,13 +367,6 @@ function initAnimations() {
 			return scale;
 		}
 	});
-
-
-}
-
-function initFooterAnimation() {
-	var screenWidth = jQuery(window).outerWidth();
-	var scale = screenWidth/1600;
 
 	if (footerCar) {
 		footerCar.kill();
@@ -374,6 +382,50 @@ function initFooterAnimation() {
 	footerCar.play(1);
 }
 
+function initRupieTokenAnimation() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect', {
+		transformOrigin: "right"
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-right rect', {
+		transformOrigin: "right"
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, .section__illustration__rupie-token #tube-right rect', {
+		scaleX: function() {
+			return scale*2.5;
+		}
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', {
+		x: function (i) {
+			return (i * 53) + 21;
+		}
+	});
+	TweenMax.staggerTo('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', 4, {
+		x: function(i) {
+			var distance = 700*scale;
+			return '-=' + distance.toString();
+		},
+		 ease: Power0.easeNone, repeat: -1 }, 1);
+
+	 TweenMax.set('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', {
+		x: function (i) {
+			return -(i * 52) - 21;
+		}
+	});
+
+	 TweenMax.staggerTo('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', 4, {
+		 x: function(i) {
+			 var distance = 700*scale;
+			 return '+=' + distance.toString();
+		 },
+		  ease: Power0.easeNone, repeat: -1 }, 1);
+}
+
 jQuery(document).ready(function () {
 	jQuery('.menuToggle input').change(function () {
 		jQuery('.menu').toggleClass('is-active');
@@ -385,6 +437,8 @@ jQuery(document).ready(function () {
 	// initAnimations();
 
 	initFooterAnimation();
+
+	initRupieTokenAnimation();
 
 	initCardFlipInteraction();
 });
@@ -398,6 +452,12 @@ jQuery(window).resize(function () {
 	TweenMax.set('.section__illustration__footer-path', {
 		scaleX: function() {
 			return scale;
+		}
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, section__illustration__rupie-token #tube-right rect', {
+		scaleX: function() {
+			return scale*2;
 		}
 	});
 

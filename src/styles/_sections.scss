@@ -41,16 +41,17 @@
             // margin-left: -7.5%;
 
             &--left {
+                float: none;
                 @media (min-width: 992px) {
-                    // transform: translateX(-90px);
-                    // float: none;
+
+                    float: right;
+                    // margin-right: 30px;
                 }
             }
 
             &--right {
                 @media (min-width: 992px) {
-                    transform: translateX(90px);
-                    float: none;
+                    // margin-left: 30px;
                 }
             }
         }
@@ -98,11 +99,18 @@
     &__image {
     display: block;
 
+        &--left {
+            margin: 20px auto;
+            @media (min-width: 556px) {
+                margin-right: 20px;
+                float: right;
+            }
+        }
 
         &--right {
             margin: 20px auto;
             @media (min-width: 556px) {
-                margin-right: 20px;
+                margin-left: 20px;
                 float: left;
             }
         }
@@ -485,28 +493,18 @@
     &[data-section="7"] {
         padding-bottom: 50px;
 
-        .section__image--centered {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            transform: scale(1.5);
-        }
+        #rupie-tokens {
+            width: 200%;
+            margin: 0 -50%;
 
-        @media (min-width: 576px) {
-
-            .section__image--centered {
-                margin-top: 60px;
-                margin-bottom: 60px;
-                transform: scale(1.2);
+            @media (min-width: 768px) {
+                width: 150%;
+                margin: 0 -25%;
             }
-        }
 
-        @media (min-width: 992px) {
-            padding-bottom: 75px;
-
-            .section__image--centered {
-                margin-top: 30px;
-                margin-bottom: 50px;
-                transform: scale(1);
+            @media (min-width: 992px) {
+                width: calc(100% + 30px);
+                margin: 0 -15px;
             }
         }
     }
