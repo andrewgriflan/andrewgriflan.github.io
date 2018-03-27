@@ -52,23 +52,25 @@
 
 //nav menu markup and styles from
 .menuToggle {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top: 55px;
+    top: 95px;
     left: 0;
-
+    right: 0;
     display: block;
     overflow: hidden;
-
     width: 100%;
     height: 60px;
-    margin-top: 40px;
     padding-top: 12px;
-
     -webkit-user-select: none;
     user-select: none;
+
+    @media (min-width: 480px) {
+        top: 74px;
+    }
+
     @media (min-width: 768px) {
-        top: 41px;
+        top: 74px;
     }
     &__hamburger {
         position: relative;
@@ -144,14 +146,10 @@
     z-index: 10;
     top: 0;
     right: 15px;
-
     display: block;
-
     width: 50px;
     height: 50px;
-
     cursor: pointer;
-
     opacity: 0;
     /* and place it over the hamburger */
 
