@@ -34,7 +34,7 @@
                 float: none;
                 @media (min-width: 992px) {
 
-                    float: right;
+                    // float: right;
                     // margin-right: 30px;
                 }
             }
@@ -83,7 +83,7 @@
 
         &--left {
             margin: 20px auto;
-            @media (min-width: 556px) {
+            @media (min-width: 992px) {
                 margin-right: 20px;
                 float: right;
             }
@@ -91,7 +91,8 @@
 
         &--right {
             margin: 20px auto;
-            @media (min-width: 556px) {
+
+            @media (min-width: 992px) {
                 margin-left: 20px;
                 float: left;
             }
