@@ -187,7 +187,9 @@
         }
 
         .section__illustration__container {
-            transform: translateX(-60%) scale(.4);
+            transform: scale(0.4)  translateY(-300px);
+            width: auto;
+            margin: 0;
         }
 
         //illustration responsive positioning
@@ -197,7 +199,7 @@
             }
 
             .section__illustration__container {
-                transform: translateX(-44%) scale(.5);
+                transform: scale(.5) translateY(-185px);
             }
         }
 
@@ -208,7 +210,7 @@
             }
 
             .section__illustration__container {
-                transform: translateX(-29%) scale(.55);
+                transform: scale(.55)  translateY(-185px);
             }
         }
 
@@ -218,7 +220,7 @@
             }
 
             .section__illustration__container {
-                transform: translateX(-30%) scale(.6);
+                transform: scale(.6)  translateY(-175px);
             }
         }
 
@@ -228,7 +230,7 @@
             }
 
             .section__illustration__container {
-                transform: translateX(-13%) scale(.7);
+                transform: scale(.7) translateY(-115px);
             }
         }
 
@@ -238,7 +240,7 @@
             }
 
             .section__illustration__container {
-                transform: translateX(-3%) scale(.9);
+                transform: scale(.9) translateY(-15px);
             }
         }
 
@@ -256,7 +258,7 @@
                 height: 520px;
             }
             .section__illustration__container {
-                transform: scale(1.1) translateX(5%);
+                transform: scale(1.1) translateY(15px);
             }
         }
     }

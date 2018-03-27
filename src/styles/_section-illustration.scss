@@ -198,6 +198,7 @@
     &__heart-mask {
         clip-path: url(#heart-clip);
         z-index: 2;
+        transform: translateX(556px) translateY(192px);
     }
 
     &__speaker-lines {
