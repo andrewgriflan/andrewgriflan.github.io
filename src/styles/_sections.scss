@@ -25,21 +25,11 @@
         .section__sub-title {
             margin-bottom: 20px;
         }
-
-        img {
-            // max-width: 100%;
-        }
     }
 
     &--img-split {
 
         .section__image {
-            // margin-top: 25px;
-            // margin-bottom: 25px;
-            // max-width: 115%;
-            // margin-right: -7.5%;
-            // margin-left: -7.5%;
-
             &--left {
                 float: none;
                 @media (min-width: 992px) {
@@ -56,14 +46,6 @@
             }
         }
     }
-
-    &--footer {
-        // background-image: url('../../img/placeholder-illustrations/water.png');
-        // background-repeat: no-repeat;
-        // background-position: bottom center;
-    }
-
-
 
     &__outer {
         padding-top: 50px;
@@ -503,7 +485,7 @@
             }
 
             @media (min-width: 992px) {
-                width: calc(100% + 30px);
+                width: calc(100% + 60px);
                 margin: 0 -15px;
             }
         }

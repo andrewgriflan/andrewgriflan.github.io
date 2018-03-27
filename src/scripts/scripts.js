@@ -441,7 +441,7 @@ jQuery(document).ready(function () {
 	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
 	toggleHeadlines();
 
-	// initAnimations();
+	initAnimations();
 
 	initFooterAnimation();
 

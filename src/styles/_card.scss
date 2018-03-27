@@ -6,50 +6,52 @@
     //common styles
 
     .flip-btn {
-
-        font-size: 18px;
-        font-weight: 600;
+        cursor: pointer;
         appearance: none !important;
         background: none;
         border: 0;
+        border-radius: 50%;
         backface-visibility: hidden;
-        position: absolute;
-        display: flex;
-        align-items: center;
+        width: 45px;
+        height: 45px;
         padding: 0;
         margin: 0;
+
+        &:active, &:focus {
+            outline: 0;
+        }
 
         span {
             color: $color-secondary;
             order: 2;
+            margin-left: 8px;
         }
 
-        &::after {
-            content: "";
-            display: inline-block;
+        svg {
+            cursor: pointer;
             width: 45px;
             height: 45px;
-            font-size: 30px;
-            background-color: $color-white;
+            padding: 10px;
             border: 2px solid $color-secondary;
             border-radius: 50%;
-            background-repeat: no-repeat;
-            background-position: center;
+            background-color: transparent;
             order: 1;
         }
     }
 
-    &__read-more-button {
-        &::after {
-            margin-right: 8px;
-            background-image: url('../../img/plus.svg');
-        }
-    }
+    &__toggle-button {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
 
-    &__flip-back-button {
-        &::after {
-            margin-right: 8px;
-            background-image: url('../../img/minus.svg');
+        span {
+            color: $color-secondary;
+            order: 2;
+            font-size: 18px;
+            font-weight: 600;
+            margin-left: 8px;
         }
     }
 
@@ -155,6 +157,26 @@
         .card__front {
             padding-right: 30px;
         }
+
+        &:hover {
+            .flip-btn {
+                color: $color-white;
+                background-color: transparent;
+                border-color: $color-secondary;
+
+                &::before {
+                    transform: scale(1);
+                }
+                svg .icon {
+                    fill: $color-white;
+                }
+
+                span {
+                    color: $color-white;
+
+                }
+            }
+        }
     }
 
     &--flip {
@@ -236,26 +258,19 @@
             color: $color-white;
         }
 
-        .card__read-more-button {
+        .card__toggle-button {
             position: absolute;
-            right: 15px;
+            left: calc(50% + 95px);
             top: calc(50% - 80px);
             z-index: 2;
-            // width: 45px;
-            // height: 45px;
 
-            &::after {
-                background-color: $color-white;
-                width: 45px;
-                height: 45px;
-                margin-right: 0;
+            @media (min-width: 768px) {
+                left: calc(50% + 82.5px);
             }
 
-            &::before {
-                z-index: 1;
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
+
+            @media (min-width: 992px) {
+                left: calc(50% + 95px);
             }
         }
     }
@@ -299,13 +314,37 @@
             transition: opacity 0.5s $transition-curve, transform 0.4s $transition-curve;
             transform: scale(0.5);
             position: absolute;
-            top: -30%;
-            left: -36%;
+            bottom: -25px;
+            left: -50px;
             z-index: 5;
-            width: 550px;
-            height: 550px;
-            padding: 100px 70px;
+            width: calc(100% + 100px);
+            // min-height: calc(100% + 200px);
+            padding: 100px 50px 70px 50px;
             border-radius: 50%;
+
+            @media (min-width: 576px) {
+                width: 450px;
+                min-height: 450px;
+                padding: 100px 70px 70px 70px;
+                bottom: calc(50% - 200px);
+                left: calc(50% - 225px);
+            }
+
+            @media (min-width: 768px) {
+                width: 500px;
+                min-height: 500px;
+                padding: 100px 70px 80px 70px;
+                bottom: calc(50% - 200px);
+                left: calc(50% - 250px);
+            }
+
+            @media (min-width: 992px) {
+                width: 550px;
+                min-height: 550px;
+                padding: 100px 70px;
+                bottom: calc(50% - 200px);
+                left: calc(50% - 275px);
+            }
 
             .card__team-member-name, .card__team-member-title {
                 color: $color-main;
@@ -313,28 +352,31 @@
 
             .card__team-member-title {
                 font-weight: 300;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
+
+                @media (min-width: 576px) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .card__toggle-button {
+                position: absolute;
+                top: 40px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 45px;
+
+                &::after {
+                    margin-right: 0;
+                }
             }
         }
 
-        .card__flip-back-button {
-            position: absolute;
-            top: 40px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            width: 45px;
-
-            &::after {
-                margin-right: 0;
-            }
+        .card__toggle-button {
+            background-color: $color-white;
+            border-radius: 50%;
         }
-
-        // .card-text {
-        //     color: $color-main;
-        //     transition: color 0.3s $transition-curve;
-        //     transition-delay: 0.1s;
-        // }
 
         &.is-active {
             .card__back {
@@ -342,6 +384,26 @@
                 transform: scale(1);
                 background-color: $color-white;
                 border: 1px solid $color-secondary;
+            }
+        }
+    }
+
+    &:hover {
+        .flip-btn {
+            color: $color-white;
+            background-color: transparent;
+            border-color: $color-secondary;
+
+            &::before {
+                transform: scale(1);
+            }
+            svg .icon {
+                fill: $color-white;
+            }
+
+            span {
+                color: $color-white;
+
             }
         }
     }

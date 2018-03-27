@@ -86,7 +86,7 @@
     //section 2
     &__spaceship-nav {
         display: none;
-        transform: translateX(-300px) translateY(-200px);
+        transform: translateX(100px) translateY(-200px);
 
         @media (min-width: 992px) {
             display: block;
