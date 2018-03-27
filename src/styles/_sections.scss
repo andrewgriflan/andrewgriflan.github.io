@@ -29,21 +29,8 @@
 
     &--img-split {
 
-        .section__image {
-            &--left {
-                float: none;
-                @media (min-width: 992px) {
-
-                    // float: right;
-                    // margin-right: 30px;
-                }
-            }
-
-            &--right {
-                @media (min-width: 992px) {
-                    // margin-left: 30px;
-                }
-            }
+        img {
+            max-width: 100%;
         }
     }
 

@@ -393,6 +393,10 @@ function initRupieTokenAnimation() {
 	var screenWidth = jQuery(window).outerWidth();
 	var scale = screenWidth/1600;
 
+	TweenMax.killTweensOf('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', {x: true});
+
+	TweenMax.killTweensOf('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', {x: true});
+
 	TweenMax.set('.section__illustration__rupie-token #tube-left rect', {
 		transformOrigin: "right"
 	});
@@ -414,8 +418,13 @@ function initRupieTokenAnimation() {
 	});
 	TweenMax.staggerTo('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', 8, {
 		x: function(i) {
-			var distance = 700*scale;
-			return '-=' + distance.toString();
+			if (screenWidth > 992) {
+			   var distance = 700*scale;
+		   } else {
+			   var distance = 500;
+		   }
+
+		   return '-=' + distance.toString();
 		},
 		 ease: Power0.easeNone, repeat: -1 }, 1);
 
@@ -427,10 +436,17 @@ function initRupieTokenAnimation() {
 
 	 TweenMax.staggerTo('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', 8, {
 		 x: function(i) {
-			 var distance = 700*scale;
+			 if (screenWidth > 992) {
+			 	var distance = 700*scale;
+			} else {
+				var distance = 500;
+			}
+
 			 return '+=' + distance.toString();
 		 },
-		  ease: Power0.easeNone, repeat: -1 }, 1);
+		ease: Power0.easeNone, repeat: -1 }, 1);
+
+	TweenMax.staggerTo('.section__illustration__rupie-token-coin', 4, {rotationY: 360, ease: Power0.easeNone, repeat: -1, repeatDelay: 3 }, 5);
 }
 
 jQuery(document).ready(function () {
@@ -438,7 +454,7 @@ jQuery(document).ready(function () {
 		jQuery('.menu').toggleClass('is-active');
 	});
 
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
+	jQuery('.menu').css({ 'height': jQuery(document).outerHeight() - 90 });
 	toggleHeadlines();
 
 	initAnimations();
@@ -467,6 +483,8 @@ jQuery(window).resize(function () {
 			return scale*2;
 		}
 	});
+
+	initRupieTokenAnimation();
 
 	initFooterAnimation();
 });
