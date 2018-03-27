@@ -244,6 +244,12 @@
     }
 
     &__build {
+
+        &-base {
+            @media (min-width: 1200px) {
+                margin-right: -30px;
+            }
+        }
         &-crane {
             &[data-num="1"] {
                 transform: translateX(171px) translateY(102px);
