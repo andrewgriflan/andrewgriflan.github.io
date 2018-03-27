@@ -412,7 +412,7 @@ function initRupieTokenAnimation() {
 			return (i * 53) + 21;
 		}
 	});
-	TweenMax.staggerTo('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', 4, {
+	TweenMax.staggerTo('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', 8, {
 		x: function(i) {
 			var distance = 700*scale;
 			return '-=' + distance.toString();
@@ -425,7 +425,7 @@ function initRupieTokenAnimation() {
 		}
 	});
 
-	 TweenMax.staggerTo('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', 4, {
+	 TweenMax.staggerTo('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', 8, {
 		 x: function(i) {
 			 var distance = 700*scale;
 			 return '+=' + distance.toString();
