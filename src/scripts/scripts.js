@@ -454,7 +454,12 @@ jQuery(document).ready(function () {
 		jQuery('.menu').toggleClass('is-active');
 	});
 
+	jQuery('.menu a').click(function() {
+		jQuery('.menu').removeClass('is-active');
+	});
+
 	jQuery('.menu').css({ 'height': jQuery(document).outerHeight() - 90 });
+
 	toggleHeadlines();
 
 	initAnimations();

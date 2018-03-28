@@ -52,8 +52,8 @@
 
 //nav menu markup and styles from
 .menuToggle {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 100;
     top: 95px;
     left: 0;
     right: 0;
@@ -184,7 +184,7 @@
 
 .menu {
     position: absolute;
-    z-index: 1000;
+    z-index: 10;
     top: 175px;
     right: 0;
     left: 100%;
@@ -198,6 +198,10 @@
     transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     background: #fff;
     -webkit-font-smoothing: antialiased;
+
+    .container {
+        position: fixed;
+    }
 
     &.is-active {
         left: 0;

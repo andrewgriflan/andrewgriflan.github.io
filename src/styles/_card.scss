@@ -118,6 +118,10 @@
         margin-top: 25px;
         background-color: transparent;
 
+        .card__inner {
+
+        }
+
         &::before {
             content: "";
             display: block;
@@ -129,14 +133,19 @@
             left: 0;
             right: -10px;
             z-index: 1;
-            animation-name: animateTransition2;
-            animation-duration: 0.7s;
-            transition: transform 0.8s $transition-curve;
+            transform: scaleX(1);
+            // animation-name: animateTransition2;
+            // animation-duration: 0.7s;
+            // transition: transform 0.8s $transition-curve;
         }
 
         @keyframes animateTransition2 {
                 0% { transform: scaleX(0); }
                 100% { transform: scaleX(1); }
+        }
+
+        .card__toggle-button {
+            bottom: 30px;
         }
 
         // padding: 20px;
@@ -152,10 +161,6 @@
             @media (min-width: 768px) {
                 padding: 30px;
             }
-        }
-
-        .card__front {
-            padding-right: 30px;
         }
 
         &:hover {
@@ -183,25 +188,39 @@
 
         position: relative;
         perspective: 800px;
-
+        // transform-style: preserve-3d;
         cursor: pointer;
 
         .card__inner {
             transform-style: preserve-3d;
             transition: transform 0.8s $transition-curve;
+            background-color: transparent;
         }
 
         .card__front {
             position: absolute;
+            padding: 30px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
             backface-visibility: hidden;
             z-index: 2;
+            background-color: $color-white;
 
         }
 
         .card__back {
             transform: rotateY(180deg);
             backface-visibility: hidden;
-            position: relative;
+            position: absolute;
+            padding: 30px;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: $color-white;
             z-index: 2;
 
             ul  {
@@ -235,9 +254,10 @@
         }
     }
 
+
     @keyframes animateTransition {
-            0% { transform: scaleX(0); }
-            100% { transform: scaleX(1); }
+            0% { width: 0; }
+            100% { width: 100%; }
     }
 
 
@@ -408,4 +428,8 @@
         }
     }
 
+}
+
+.transform-fix {
+    transform: translate(0,0);
 }
