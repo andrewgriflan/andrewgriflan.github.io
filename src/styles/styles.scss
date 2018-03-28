@@ -199,12 +199,17 @@ html {
     bottom: 20px;
     right: 15px;
     display: block;
-    opacity: 0.5;
+    opacity: 0;
     appearance: none !important;
     background-color: transparent;
     border: 0;
     cursor: pointer;
     z-index: 5;
+    transition: opacity 0.5s $transition-button-curve;
+    
+    &.is-active {
+        opacity: 0.5;
+    }
 
     &:active, &:focus {
         outline: 0;

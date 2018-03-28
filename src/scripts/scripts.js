@@ -296,7 +296,9 @@ function initAnimations() {
 	TweenMax.to('.section__illustration__spaceship-rupie-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
 
 	//rocketship
-	TweenMax.to('.section__illustration__space-rocketship', 6, {y: '+=35', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 });
+	var rocketTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
+	rocketTimeline.to('.section__illustration__space-rocketship', 5, {y: '+=35'});
+	rocketTimeline.to('.section__illustration__space-rocketship', 1, {opacity: 0}, '-=2.5');
 
 	//Tube coins
 	TweenMax.set('.section__illustration__space-coins[data-num="1"] img', {
@@ -506,6 +508,7 @@ jQuery(window).resize(function () {
 jQuery('body').scroll(function() {
 	setMenuTogglePosition();
 	setMenuPosition();
+	setBackToTopButton();
 });
 
 function setMenuTogglePosition() {
@@ -536,5 +539,14 @@ function setMenuPosition() {
 		jQuery('.menu__inner').css('top', 235 - scrollPosition);
 	} else {
 		jQuery('.menu__inner').css('top', 30);
+	}
+}
+
+function setBackToTopButton() {
+	var scrollPosition = jQuery('body').scrollTop();
+	if (scrollPosition > 85) {
+		jQuery('#back-to-top').addClass('is-active');
+	} else {
+		jQuery('#back-to-top').removeClass('is-active');
 	}
 }
