@@ -445,9 +445,29 @@ function initRupieTokenAnimation() {
 			 return '+=' + distance.toString();
 		 },
 		ease: Power0.easeNone, repeat: -1 }, 1);
-
-	TweenMax.staggerTo('.section__illustration__rupie-token-coin', 4, {rotationY: 360, ease: Power0.easeNone, repeat: -1, repeatDelay: 3 }, 5);
 }
+
+function initScrollToTop() {
+	if (jQuery('#back-to-top').length) {
+		jQuery('#back-to-top').click(function() {
+			jQuery("html, body").animate({ scrollTop: 0 }, "slow");;
+		});
+	}
+}
+
+
+function scrollFunction() {
+	// if (jQuery(document).scrollTop() > 20) {
+    //     jQuery('#back-to-top').show();
+    // } else {
+    //     jQuery('#back-to-top').hide()
+    // }
+	// console.log(jQuery(document).scrollTop());
+}
+
+jQuery(window).scroll(function() {
+	// scrollFunction();
+});
 
 jQuery(document).ready(function () {
 	jQuery('.menuToggle input').change(function () {
@@ -469,6 +489,8 @@ jQuery(document).ready(function () {
 	initRupieTokenAnimation();
 
 	initCardFlipInteraction();
+
+	initScrollToTop();
 });
 
 jQuery(window).resize(function () {

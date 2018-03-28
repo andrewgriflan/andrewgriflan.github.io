@@ -193,3 +193,24 @@ html {
 #mce-responses {
     font-size: 12px;
 }
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    opacity: 0.5;
+    appearance: none !important;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 5;
+
+    &:active, &:focus {
+        outline: 0;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}

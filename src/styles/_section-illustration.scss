@@ -374,29 +374,6 @@
 
      &__rupie-token {
          margin: 50px -15px;
-
-         &-coin {
-
-             &[data-num="1"] {
-                 // transform: translateX(458px) translateY(106px);
-                 perspective: 500px;
-             }
-
-             &[data-num="2"] {
-                 // transform: translateX(594px) translateY(106px);
-                 perspective: 500px;
-             }
-
-             &[data-num="3"] {
-                 // transform: translateX(458px) translateY(225px);
-                 perspective: 500px;
-             }
-
-             &[data-num="4"] {
-                 // transform: translateX(594px) translateY(225px);
-                 perspective: 500px;
-             }
-         }
      }
 
 
