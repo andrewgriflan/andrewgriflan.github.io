@@ -121,7 +121,7 @@
         border-radius: 50%;
         background-color: $color-main;
     }
-    & input:checked~.menuToggle__hamburger span {
+    &.is-active>.menuToggle__hamburger span {
         &:nth-child(1) {
             left: 2px;
 
@@ -163,7 +163,7 @@
  * But let's hide the middle one.
  */
 
-.menuToggle input:checked~span:nth-last-child(3) {
+.menuToggle.is-active>span:nth-last-child(3) {
     transform: rotate(0deg) scale(0.2, 0.2);
 
     opacity: 0;
@@ -173,7 +173,7 @@
  * Ohyeah and the last one should go the other direction
  */
 
-.menuToggle input:checked~span:nth-last-child(2) {
+.menuToggle.is-active>span:nth-last-child(2) {
     transform: rotate(-45deg) translate(1px, 0px);
 }
 
@@ -199,7 +199,7 @@
     background: #fff;
     -webkit-font-smoothing: antialiased;
 
-    .container {
+    &__inner {
         position: fixed;
     }
 

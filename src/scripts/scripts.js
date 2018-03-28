@@ -470,12 +470,14 @@ jQuery(window).scroll(function() {
 });
 
 jQuery(document).ready(function () {
-	jQuery('.menuToggle input').change(function () {
+	jQuery('.menuToggle').click(function () {
 		jQuery('.menu').toggleClass('is-active');
+		jQuery('.menuToggle').toggleClass('is-active');
 	});
 
 	jQuery('.menu a').click(function() {
 		jQuery('.menu').removeClass('is-active');
+		jQuery('.menuToggle').removeClass('is-active');
 	});
 
 	jQuery('.menu').css({ 'height': jQuery(document).outerHeight() - 90 });
