@@ -184,8 +184,12 @@
     padding-top: 25px;
     list-style-type: none;
     transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    background: #fff;
+    background-color: #fff;
     -webkit-font-smoothing: antialiased;
+    background-image: url('../../img/cloud-bg-menu.svg');
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: 1800px;
 
     &__inner {
         position: fixed;
