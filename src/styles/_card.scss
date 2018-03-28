@@ -151,15 +151,19 @@
             bottom: 30px;
         }
 
-        // padding: 20px;
 
         .card__inner {
-            min-height: 385px;
+            min-height: 405px;
             background-color: $color-white;
             border: 1px solid $color-secondary;
             padding: 20px;
             position: relative;
             z-index: 2;
+
+            @media (min-width: 346px) {
+                padding: 30px;
+                min-height: 385px;
+            }
 
             @media (min-width: 768px) {
                 padding: 30px;
@@ -421,8 +425,4 @@
         }
     }
 
-}
-
-.transform-fix {
-    transform: translate(0,0);
 }
