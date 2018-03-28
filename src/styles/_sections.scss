@@ -512,6 +512,10 @@
 
     &--clouds {
         background-color: $color-offwhite;
+        background-image: url('../../img/cloud-bg.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &--cards + .bg-highlight--clouds {
