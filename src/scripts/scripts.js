@@ -455,20 +455,6 @@ function initScrollToTop() {
 	}
 }
 
-
-function scrollFunction() {
-	// if (jQuery(document).scrollTop() > 20) {
-    //     jQuery('#back-to-top').show();
-    // } else {
-    //     jQuery('#back-to-top').hide()
-    // }
-	// console.log(jQuery(document).scrollTop());
-}
-
-jQuery(window).scroll(function() {
-	// scrollFunction();
-});
-
 jQuery(document).ready(function () {
 	jQuery('.menuToggle').click(function () {
 		jQuery('.menu').toggleClass('is-active');
@@ -493,13 +479,15 @@ jQuery(document).ready(function () {
 	initCardFlipInteraction();
 
 	initScrollToTop();
+
+	setMenuTogglePosition();
 });
 
 jQuery(window).resize(function () {
 	var screenWidth = jQuery(window).outerWidth();
 	var scale = screenWidth/1600;
 
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
+	jQuery('.menu').css({ 'height': jQuery(document).outerHeight() - 90 });
 
 	TweenMax.set('.section__illustration__footer-path', {
 		scaleX: function() {
@@ -516,4 +504,42 @@ jQuery(window).resize(function () {
 	initRupieTokenAnimation();
 
 	initFooterAnimation();
+
+	setMenuTogglePosition();
 });
+
+jQuery('body').scroll(function() {
+	setMenuTogglePosition();
+	setMenuPosition();
+});
+
+function setMenuTogglePosition() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scrollPosition = jQuery('body').scrollTop();
+	var buttonOffset = jQuery('.menuToggle').position().top;
+	if (screenWidth >= 525 && screenWidth < 992) {
+		if (scrollPosition <= 70) {
+			jQuery('.menuToggle').css('top', 100 - scrollPosition)
+		} else {
+			jQuery('.menuToggle').css('top', 30)
+		}
+	} else {
+		if (scrollPosition <= 85) {
+			jQuery('.menuToggle').css('top', 115 - scrollPosition)
+		} else {
+			jQuery('.menuToggle').css('top', 30)
+		}
+	}
+}
+
+function setMenuPosition() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scrollPosition = jQuery('body').scrollTop();
+	var menuPosition = jQuery('.menu__inner').position().top;
+
+	if (scrollPosition <= 205) {
+		jQuery('.menu__inner').css('top', 235 - scrollPosition);
+	} else {
+		jQuery('.menu__inner').css('top', 30);
+	}
+}

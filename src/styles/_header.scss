@@ -52,41 +52,39 @@
 
 //nav menu markup and styles from
 .menuToggle {
+    cursor: pointer;
     position: fixed;
     z-index: 100;
-    top: 105px;
-    left: 0;
-    right: 0;
+    top: 115px;
+    right: 30px;
     display: block;
     overflow: hidden;
-    width: 100%;
+    width: 60px;
     height: 60px;
-    padding-top: 12px;
+    padding: 0;
+    margin-top: 0px;
     -webkit-user-select: none;
     user-select: none;
 
     @media (min-width: 480px) {
-        top: 95px;
+        margin-top: 0px;
+        top: 100px;
     }
 
-    @media (min-width: 768px) {
-        top: 95px;
+    @media (min-width: 992px) {
+        top: 115px;
     }
     &__hamburger {
-        position: relative;
-        top: 0;
-        right: 0;
-
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        left: 29px;
         width: 30px;
         height: 30px;
-        margin-top: 14px;
-        margin-right: 2px;
-        margin-left: auto;
+
         span {
             position: absolute;
-
             display: block;
-
             width: 20px;
             height: 2px;
 
@@ -108,8 +106,8 @@
     &::after {
         position: absolute;
         z-index: -10;
-        top: 12px;
-        right: 15px;
+        top: 0;
+        right: 0;
 
         display: block;
 
@@ -137,25 +135,6 @@
 
             transform: rotate(-45deg);
         }
-    }
-}
-
-.menuToggle input {
-    position: absolute;
-    /* hide this */
-    z-index: 10;
-    top: 0;
-    right: 15px;
-    display: block;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    opacity: 0;
-    /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
-    @media (min-width: 580px) {
-        right: 2px;
     }
 }
 
