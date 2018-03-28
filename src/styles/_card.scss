@@ -119,30 +119,33 @@
         background-color: transparent;
 
         .card__inner {
+            box-shadow: 10px 10px 0px 0px $color-secondary;
 
+            &::before {
+                // content: "";
+                // display: block;
+                // margin: 0;
+                // background-color: $color-secondary;
+                // position: absolute;
+                // top: 0;
+                // bottom: -10px;
+                // left: 0;
+                // right: -10px;
+                // z-index: 1;
+                // transform: scaleX(1);
+                // animation-name: animateTransition2;
+                // animation-duration: 0.7s;
+                // transition: transform 0.8s $transition-curve;
+            }
         }
 
-        &::before {
-            content: "";
-            display: block;
-            margin: 0;
-            background-color: $color-secondary;
-            position: absolute;
-            top: 0;
-            bottom: -10px;
-            left: 0;
-            right: -10px;
-            z-index: 1;
-            transform: scaleX(1);
-            // animation-name: animateTransition2;
-            // animation-duration: 0.7s;
-            // transition: transform 0.8s $transition-curve;
-        }
 
-        @keyframes animateTransition2 {
-                0% { transform: scaleX(0); }
-                100% { transform: scaleX(1); }
-        }
+
+        // @keyframes animateTransition2 {
+        //         0% { transform: scaleX(1); }
+        //         50% { transform: scaleX(0.1); }
+        //         100% { transform: scaleX(1); }
+        // }
 
         .card__toggle-button {
             bottom: 30px;
@@ -169,9 +172,6 @@
                 background-color: transparent;
                 border-color: $color-secondary;
 
-                &::before {
-                    transform: scale(1);
-                }
                 svg .icon {
                     fill: $color-white;
                 }
@@ -195,6 +195,7 @@
             transform-style: preserve-3d;
             transition: transform 0.8s $transition-curve;
             background-color: transparent;
+            transform: rotateY(0deg);
         }
 
         .card__front {
@@ -246,19 +247,11 @@
                 transform: rotateY(180deg);
             }
 
-            &::before {
-                animation-name: animateTransition;
-                animation-duration: 0.7s;
-                animation-timing-function: $transition-curve;
-            }
+            transform: translate(0, 0);
         }
     }
 
 
-    @keyframes animateTransition {
-            0% { width: 0; }
-            100% { width: 100%; }
-    }
 
 
     &--round {

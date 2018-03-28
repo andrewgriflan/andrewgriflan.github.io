@@ -54,7 +54,7 @@
 .menuToggle {
     position: fixed;
     z-index: 100;
-    top: 95px;
+    top: 105px;
     left: 0;
     right: 0;
     display: block;
@@ -66,11 +66,11 @@
     user-select: none;
 
     @media (min-width: 480px) {
-        top: 74px;
+        top: 95px;
     }
 
     @media (min-width: 768px) {
-        top: 74px;
+        top: 95px;
     }
     &__hamburger {
         position: relative;
