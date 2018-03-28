@@ -112,70 +112,52 @@
         color: $color-main;
     }
 
+    &__container {
+        display: flex;
+    }
+
     //specific styles
     &--info {
         margin-bottom:25px;
         margin-top: 25px;
         background-color: transparent;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        padding: 0 20px;
 
-        .card__inner {
-            box-shadow: 10px 10px 0px 0px $color-secondary;
-
-            &::before {
-                // content: "";
-                // display: block;
-                // margin: 0;
-                // background-color: $color-secondary;
-                // position: absolute;
-                // top: 0;
-                // bottom: -10px;
-                // left: 0;
-                // right: -10px;
-                // z-index: 1;
-                // transform: scaleX(1);
-                // animation-name: animateTransition2;
-                // animation-duration: 0.7s;
-                // transition: transform 0.8s $transition-curve;
-            }
+        @media (min-width: 576px) {
+            padding: 0;
         }
-
-
-
-        // @keyframes animateTransition2 {
-        //         0% { transform: scaleX(1); }
-        //         50% { transform: scaleX(0.1); }
-        //         100% { transform: scaleX(1); }
-        // }
 
         .card__toggle-button {
-            bottom: 0px;
-        }
-
-        .card__front .card__toggle-button {
             bottom: 30px;
         }
 
-
-        .card__inner {
-            // min-height: 405px;
-            background-color: $color-white;
-            border: 1px solid $color-secondary;
+        .card__back, .card__front {
             padding: 20px;
-            position: relative;
-            z-index: 2;
-
-            @media (min-width: 346px) {
-
-            }
+            padding-bottom: 90px;
 
             @media (min-width: 768px) {
+                min-height: 350px;
+            }
+
+            @media (min-width: 992px) {
                 padding: 30px;
                 min-height: 385px;
             }
         }
 
-        .card__title {
 
+        .card__inner {
+            box-shadow: 10px 10px 0px 0px $color-secondary;
+            background-color: $color-white;
+
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: stretch;
         }
 
         .card__title {
@@ -217,7 +199,7 @@
         .card__inner {
             transform-style: preserve-3d;
             transition: transform 0.8s $transition-curve;
-            background-color: $color-white;
+            background-color: transparent;
             transform: rotateY(0deg);
         }
 
@@ -231,6 +213,7 @@
             backface-visibility: hidden;
             z-index: 2;
             background-color: $color-white;
+            border: 1px solid $color-secondary;
 
             @media (min-width: 768px) {
                 padding: 20px;
@@ -242,8 +225,6 @@
             transform: rotateY(180deg);
             backface-visibility: hidden;
             position: relative;
-            padding: 0;
-            padding-bottom: 60px;
             height: 100%;
             top: 0;
             bottom: 0;
@@ -251,6 +232,7 @@
             left: 0;
             background-color: $color-white;
             z-index: 2;
+            border: 1px solid $color-secondary;
 
             ul  {
                 list-style: none;
