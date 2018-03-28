@@ -192,7 +192,11 @@
     }
 
     &__heart-outline {
-        z-index: 5;
+        z-index: 10;
+    }
+
+    &__heart-white {
+        z-index: 1;
     }
 
     &__heart-mask {
