@@ -56,7 +56,7 @@
     position: fixed;
     z-index: 100;
     top: 115px;
-    right: 30px;
+    right: 15px;
     display: block;
     overflow: hidden;
     width: 60px;
@@ -73,6 +73,7 @@
 
     @media (min-width: 992px) {
         top: 115px;
+        right: 30px;
     }
     &__hamburger {
         cursor: pointer;

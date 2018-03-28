@@ -197,7 +197,7 @@ html {
 #back-to-top {
     position: fixed;
     bottom: 20px;
-    right: 35px;
+    right: 15px;
     display: block;
     opacity: 0.5;
     appearance: none !important;
@@ -211,6 +211,10 @@ html {
     }
 
     @media (min-width: 768px) {
+        // right: 35px;
+    }
+
+    @media (min-width: 992px) {
         display: none;
     }
 }
