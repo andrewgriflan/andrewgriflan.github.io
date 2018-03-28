@@ -373,7 +373,16 @@
 
 
      &__rupie-token {
-         margin: 50px -15px;
+            margin: -20px -15px;
+
+         //illustration responsive positioning
+         @media (min-width: 346px) {
+            margin: 0 -15px;
+         }
+
+         @media (min-width: 480px) {
+            margin: 50px -15px;
+         }
      }
 
 
