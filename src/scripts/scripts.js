@@ -322,12 +322,7 @@ function initAnimations() {
 
 	////////Bounty System  -- Section 6 /////////////
 	//Arm Boat
-	var armboatTimeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn, repeatDelay: 1});
-	armboatTimeline.to('.section__illustration__robot #arm-boat', 6, {x: '+=50'})
-	.to('.section__illustration__robot #arm-boat', 4, {y: '+=10'}, '-=2')
-	.to('.section__illustration__robot #arm-boat', 12, {x: '-=100'})
-	.to('.section__illustration__robot #arm-boat', 4, {y: '-=10'}, '-=2')
-	.to('.section__illustration__robot #arm-boat', 6, {x: '+=50'});
+	TweenMax.to('.section__illustration__robot #arm-boat', 8, {x: '-=100',  repeat: -1, ease: Sine.easeInOut, repeatDelay: 1, yoyo: true});
 
 	//helicopter
 	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
