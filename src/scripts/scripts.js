@@ -264,7 +264,7 @@ function initAnimations() {
 	TweenMax.to('.section__illustration__helicopter-blades', .75, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
 
 	//heart mask
-	TweenMax.fromTo('#heart-clip', 8, {y: 27}, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+	TweenMax.fromTo('#heart-clip', 12, {y: 27}, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 3 });
 
 	//speaker lines
 	TweenMax.staggerFromTo(['.section__illustration__speaker-lines-1', '.section__illustration__speaker-lines-2'], 1, {alpha: 1}, {alpha: 0, repeat: -1, yoyo: true, ease: Power2.easeInOut }, 1);

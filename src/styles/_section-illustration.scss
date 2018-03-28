@@ -193,6 +193,7 @@
 
     &__heart-outline {
         z-index: 10;
+        transform: translateX(-0.5px) translateY(-0.5px);
     }
 
     &__heart-white {
