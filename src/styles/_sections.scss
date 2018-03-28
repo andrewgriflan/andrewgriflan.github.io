@@ -90,6 +90,12 @@
         margin-top: 50px;
     }
 
+    &[data-section="1"] {
+        @media (min-width: 992px) {
+            margin-bottom: 50px;
+        }
+    }
+
     //Hey, Listen styles
     &[data-section="2"] {
         padding-bottom: 25px;
