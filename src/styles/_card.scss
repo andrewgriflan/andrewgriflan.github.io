@@ -161,12 +161,26 @@
             z-index: 2;
 
             @media (min-width: 346px) {
-                padding: 30px;
                 min-height: 385px;
             }
 
             @media (min-width: 768px) {
                 padding: 30px;
+            }
+        }
+
+        .card__title {
+
+        }
+
+        .card__title {
+            line-height: 1.3;
+            color: $color-secondary;
+            margin-bottom: 25px;
+            font-size: 26px;
+
+            @media (min-width: 346px) {
+                font-size: 28px;
             }
         }
 
@@ -237,13 +251,6 @@
             li {
                 padding: 0;
             }
-        }
-
-        .card__title {
-            line-height: 1.3;
-            color: $color-secondary;
-            margin-bottom: 25px;
-            font-size: 28px;
         }
 
         &.is-active {
