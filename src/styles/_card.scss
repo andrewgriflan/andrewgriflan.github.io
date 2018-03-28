@@ -148,12 +148,16 @@
         // }
 
         .card__toggle-button {
+            bottom: 0px;
+        }
+
+        .card__front .card__toggle-button {
             bottom: 30px;
         }
 
 
         .card__inner {
-            min-height: 405px;
+            // min-height: 405px;
             background-color: $color-white;
             border: 1px solid $color-secondary;
             padding: 20px;
@@ -161,11 +165,12 @@
             z-index: 2;
 
             @media (min-width: 346px) {
-                min-height: 385px;
+
             }
 
             @media (min-width: 768px) {
                 padding: 30px;
+                min-height: 385px;
             }
         }
 
@@ -212,13 +217,13 @@
         .card__inner {
             transform-style: preserve-3d;
             transition: transform 0.8s $transition-curve;
-            background-color: transparent;
+            background-color: $color-white;
             transform: rotateY(0deg);
         }
 
         .card__front {
             position: absolute;
-            padding: 30px;
+            padding: 20px;
             top: 0;
             bottom: 0;
             right: 0;
@@ -227,13 +232,18 @@
             z-index: 2;
             background-color: $color-white;
 
+            @media (min-width: 768px) {
+                padding: 20px;
+            }
+
         }
 
         .card__back {
             transform: rotateY(180deg);
             backface-visibility: hidden;
-            position: absolute;
-            padding: 30px;
+            position: relative;
+            padding: 0;
+            padding-bottom: 60px;
             height: 100%;
             top: 0;
             bottom: 0;
