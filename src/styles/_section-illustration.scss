@@ -317,6 +317,11 @@
             }
         }
 
+        &-eyes {
+            transform: translate(268px,196px);
+            transform-origin: bottom;
+        }
+
         &-unchecked {
             transform: translateX(-20px) translateY(-6px);
         }

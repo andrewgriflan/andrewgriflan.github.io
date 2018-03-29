@@ -288,10 +288,14 @@ function initAnimations() {
 
 	//connect
 	var connectCheckBoxesTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
-	// connectCheckBoxesTimeline.staggerFromTo(['.section__illustration__connect-unchecked[data-num="1"]', '.section__illustration__connect-unchecked[data-num="2"]', '.section__illustration__connect-unchecked[data-num="3"]', '.section__illustration__connect-unchecked[data-num="4"]', '.section__illustration__connect-unchecked[data-num="5"]',
-	// '.section__illustration__connect-unchecked[data-num="6"]'], 2, {y:-6},  {y: 10}, 1);
 	connectCheckBoxesTimeline.staggerTo(['.section__illustration__connect-checked[data-num="1"]', '.section__illustration__connect-checked[data-num="2"]', '.section__illustration__connect-checked[data-num="3"]', '.section__illustration__connect-checked[data-num="4"]', '.section__illustration__connect-checked[data-num="5"]',
 	'.section__illustration__connect-checked[data-num="6"]'], 1,  {y: -6, ease: Power2.easeInOut}, 1);
+
+	var eyesTimeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn, repeatDelay: 4});
+	eyesTimeline.to('.section__illustration__connect-eyes', 0.2,  {scaleY: 0.1});
+	eyesTimeline.to('.section__illustration__connect-eyes', 0.08,  {scaleY: 1})
+				.to('.section__illustration__connect-eyes', 0.2,  {scaleY: 0.1}, '+=2')
+				.to('.section__illustration__connect-eyes', 0.1,  {scaleY: 1});
 
 
 	////////Aset Marketplace -- section 5 //////////
@@ -463,7 +467,7 @@ jQuery(document).ready(function () {
 		jQuery('.menu').toggleClass('is-active');
 		jQuery('.menuToggle').toggleClass('is-active');
 		if (jQuery('.menuToggle').hasClass('is-active')) {
-			jQuery('.menuToggle').css('top', 30)
+			jQuery('.menuToggle').css('top', 50)
 		} else {
 			setMenuTogglePosition();
 		}
