@@ -1,7 +1,7 @@
 //global variable to detect safari for scroll position workaround
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-console.log(isMobile);
+
 jQuery('#mc-embedded-subscribe-form').on('submit', function () {
 	if (jQuery(this).find('input').hasClass('valid') && !jQuery(this).find('input').hasClass('mce_inline_error')) {
 		jQuery(this).find('input, button').fadeOut();
@@ -467,7 +467,7 @@ jQuery(document).ready(function () {
 		jQuery('.menu').toggleClass('is-active');
 		jQuery('.menuToggle').toggleClass('is-active');
 		if (jQuery('.menuToggle').hasClass('is-active')) {
-			jQuery('.menuToggle').css('top', 50)
+			jQuery('.menuToggle').css('top', 30);
 		} else {
 			setMenuTogglePosition();
 		}
@@ -520,16 +520,16 @@ jQuery(window).resize(function () {
 
 jQuery('body, html').scroll(function() {
 	setMenuTogglePosition();
-	setBackToTopButton();
 });
+
 
 function setMenuTogglePosition() {
 	var screenWidth = jQuery(window).outerWidth();
 	var scrollPosition = jQuery('body').scrollTop();
 	var buttonOffset = jQuery('.menuToggle').position().top;
 
-	if (isSafari) {
-		jQuery('.menuToggle').css('top', 30);
+	if (isSafari || isMobile) {
+		jQuery('.menuToggle').css('top', 50);
 		return;
 	}
 
@@ -545,14 +545,5 @@ function setMenuTogglePosition() {
 		} else {
 			jQuery('.menuToggle').css('top', 30)
 		}
-	}
-}
-
-function setBackToTopButton() {
-	var scrollPosition = jQuery('body').scrollTop();
-	if (scrollPosition > 85) {
-		jQuery('#back-to-top').addClass('is-active');
-	} else {
-		jQuery('#back-to-top').removeClass('is-active');
 	}
 }
