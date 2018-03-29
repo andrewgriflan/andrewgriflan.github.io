@@ -479,7 +479,7 @@
 
     //Rupie Token
     &[data-section="7"] {
-        padding-bottom: 50px;
+        padding-bottom: 75px;
         padding-top: 50px;
         margin-top: -50px;
 
@@ -502,11 +502,16 @@
     //Team
     &[data-section="8"] {
         padding-bottom: 25px;
-        padding-top: 50px;
+        padding-top: 75px;
         margin-top: -50px;
 
         .section__title-advisors {
             margin-top: 80px;
+        }
+
+        @media (min-width: 992px) {
+            padding-top: 50px;
+            margin-top: -50px;
         }
     }
 
@@ -530,7 +535,11 @@
 
     //footer
     &[data-section="11"] {
-        padding-bottom: 190px;
+        padding-bottom: 140px;
+
+        @media (min-width: 768px) {
+            padding-bottom: 160px;
+        }
     }
 }
 
