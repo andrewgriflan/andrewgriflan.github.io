@@ -8,7 +8,7 @@
     border: 1px solid $color-secondary;
     padding: 6x 18px;
     position: relative;
-    transition: border .25s $transition-button-curve, background-color .25s $transition-button-curve;
+    transition: border .25s ease-out, background-color .25s ease-out;
     background-color: transparent;
 
     &::before {
@@ -21,8 +21,8 @@
         height: 100%;
         content: '';
         cursor: pointer;
-        transition: transform 0.3s ease-out;
-        transform: scale(0);
+        transition: transform 0.2s $transition-button-curve;
+        transform: scale(0) translate3d(0,0,0);
         border-radius: inherit;
         background-color: $color-secondary;
     }
@@ -41,7 +41,6 @@
 
         span {
             color: $color-white;
-
         }
     }
 
@@ -50,15 +49,19 @@
         position: relative;
         color: $color-secondary;
         transition: color 0.2s $transition-button-curve;
+        transform:translate3d(0,0,0);
     }
 
     svg {
         cursor: pointer;
         z-index: 2;
         position: relative;
+        fill: $color-secondary;
+        transform:translate3d(0,0,0);
 
         .icon {
-            transition: fill 0.2s $transition-button-curve;
+            transition: fill 0.2s ease-in-out;
+            fill: $color-secondary;
         }
     }
 
