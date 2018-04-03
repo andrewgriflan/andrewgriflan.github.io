@@ -361,11 +361,6 @@ function initAnimations() {
 	//////////////Roadmap -- section 9////
 	//////////////Roadmap -- section 9////
 	TweenMax.staggerTo('.roadmap__step', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut}, 0.5);
-
-
-
-
-
 }
 
 function initFooterAnimation() {
@@ -462,6 +457,16 @@ function initScrollToTop() {
 	}
 }
 
+
+
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+});
+
+//////////////// DOCUMENT READY/////////////////
 jQuery(document).ready(function () {
 
 	jQuery('.menuToggle').click(function () {
