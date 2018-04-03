@@ -9,7 +9,8 @@ const autoprefixer = require('gulp-autoprefixer'),
       rename = require('gulp-rename'),
       sass = require('gulp-ruby-sass'),
       sourcemaps = require('gulp-sourcemaps'),
-      svgsprite = require('gulp-svg-sprite'),
+      imgagemin = require('gulp-imagemin'),
+      svgo = require('gulp-svgo'),
       uglify = require('gulp-uglify');
 
 gulp.task('scripts', function() {
@@ -61,39 +62,40 @@ gulp.task('styles', function() {
     }));
 });
 
-gulp.task('svg-sprite', function() {
-    const config = {
-        mode: {
-            symbol: { // symbol mode to build the SVG
-                render: {
-                    scss: {
-                        dest: '../src/scss/partial/_iconography.scss'
-                    }
-                },
-                prefix: '.u-icon-%s',
-                sprite: '../images/sprite-ui.svg', //generated sprite name
-            }
-        }
-    };
+gulp.task('img-min', function() {
+    // const config = {
+    //     mode: {
+    //         symbol: { // symbol mode to build the SVG
+    //             render: {
+    //                 scss: {
+    //                     dest: '../src/scss/partial/_iconography.scss'
+    //                 }
+    //             },
+    //             prefix: '.u-icon-%s',
+    //             sprite: '../images/sprite-ui.svg', //generated sprite name
+    //         }
+    //     }
+    // };
 
-    gulp.src('images/svg/*.svg', {
+    gulp.src('img/**/*', {
         cwd: ''
     })
     .pipe(plumber())
     .pipe(imagemin())
-    .pipe(svgsprite(config))
+    .pipe(svgo())
+    // .pipe(svgsprite(config))
     .pipe(gulp.dest(''))
     .pipe(notify({
-        message: '"SVG Sprite" Task Completed'
+        message: 'image min Task Completed'
     }));
 });
 
 
 gulp.task('watch', function() {
     gulp.watch(['src/*.scss', 'src/**/*.scss'], ['styles']);
-    gulp.watch('images/svg/*.svg', ['svg-sprite']);
+    gulp.watch('images/svg/*.svg', ['img-min']);
     gulp.watch('src/scripts/*.js', ['scripts']);
 
 });
 
-gulp.task( 'default', [ 'styles', 'scripts', 'svg-sprite'] );
+gulp.task( 'default', [ 'styles', 'scripts', 'img-min'] );
