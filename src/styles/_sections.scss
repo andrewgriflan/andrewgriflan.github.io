@@ -48,6 +48,7 @@
     }
     &__text {
         margin-bottom: 25px;
+
         @media (min-width: 1200px) {
             &:last-child {
                 // margin-bottom: 0;
