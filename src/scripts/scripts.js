@@ -307,27 +307,27 @@ function initAnimations() {
 
 	//rocketship
 	var rocketTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
-	rocketTimeline.to('.section__illustration__space-rocketship', 5, {y: '+=35'});
-	rocketTimeline.to('.section__illustration__space-rocketship', 1, {opacity: 0}, '-=2.5');
+	rocketTimeline.to('#rocket-ship', 5, {y: '+=35'});
+	rocketTimeline.to('#rocket-ship', 1, {opacity: 0}, '-=2.5');
 
 	//Tube coins
-	TweenMax.set('.section__illustration__space-coins[data-num="1"] img', {
+	TweenMax.set('#tube-coins-left [data-name="coin"]', {
 		x: function (i) {
-			return -(i * 24);
+			return -(i * 24) + 110;
 		}
 	});
-	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="1"] [data-num="1"]', '.section__illustration__space-coins[data-num="1"] [data-num="2"]', '.section__illustration__space-coins[data-num="1"] [data-num="3"]', '.section__illustration__space-coins[data-num="1"] [data-num="4"]', '.section__illustration__space-coins[data-num="1"] [data-num="5"]'], 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+	TweenMax.staggerTo('#tube-coins-left [data-name="coin"]', 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
 
-	TweenMax.set('.section__illustration__space-coins[data-num="2"] img', {
+	TweenMax.set('#tube-coins-right [data-name="coin"]', {
 		x: function (i) {
-			return -(i * 24) - 130;
+			return -(i * 24) - 30;
 		}
 	});
-	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="2"] [data-num="1"]', '.section__illustration__space-coins[data-num="2"] [data-num="2"]', '.section__illustration__space-coins[data-num="2"] [data-num="3"]', '.section__illustration__space-coins[data-num="2"] [data-num="4"]', '.section__illustration__space-coins[data-num="2"] [data-num="5"]'], 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+	TweenMax.staggerTo('#tube-coins-right [data-name="coin"]', 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
 
 	//buttons
 
-	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
+	TweenMax.staggerTo('#buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
 
 
 
@@ -348,8 +348,6 @@ function initAnimations() {
 	helicopter3Timeline.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 4, { x: '+=20', y: '+=40' })
 		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '+=10', y: '-=20' })
 		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '-=30', y: '-=20' });
-
-	TweenMax.to('.section__illustration__robot #tail-blades', 1, {rotation: 180, transformOrigin: "center", repeat: -1, ease: Power0.easeNone });
 
 	TweenMax.to('.section__illustration__robot-helicopter-blades', 1.5, {rotationY: 360, repeat: -1, ease: Power0.easeNone });
 
