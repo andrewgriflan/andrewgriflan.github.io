@@ -45,20 +45,36 @@
     }
 }
 
+//custom nav styles
+nav {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    left: 0;
+    width: 100%; // max-width: 540px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    transition: top 0.5s $transition-button-curve;
+
+    @media (min-width: 480px) {
+        top: 95px;
+    }
+
+    @media (min-width: 768px) {
+        top: 90px;
+    }
+}
+
 //nav menu markup and styles from
 .menuToggle {
-    position: fixed;
+    position: relative;
     z-index: 1000;
-    top: 50px;
     right: 0;
     left: 0;
 
-    transition: top 0.5s $transition-button-curve;
+    will-change: transform, top;
 
-    will-change: transform;
-    @media (min-width: 480px) {
-        top: 100px;
-    }
     &__inner {
         position: absolute;
         right: 15px;
@@ -97,16 +113,15 @@
         position: absolute;
         top: 15px;
         right: 2px;
-
+        z-index: 1000;
         width: 30px;
         height: 30px;
 
         cursor: pointer;
         span {
             position: absolute;
-
+            z-index: 1000;
             display: block;
-
             width: 20px;
             height: 2px;
 
@@ -236,18 +251,7 @@
     }
 }
 
-//custom nav styles
-nav {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    left: 0;
 
-    width: 100%; // max-width: 540px;
-    margin: 0 auto;
-    padding-right: 0;
-    padding-left: 0;
-}
 
 .alertSlide {
     visibility: visible !important;

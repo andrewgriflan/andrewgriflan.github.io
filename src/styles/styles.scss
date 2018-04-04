@@ -29,6 +29,10 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	&.menu-active {
+		overflow: hidden;
+	}
 }
 
 .container {
@@ -103,7 +107,7 @@ body {
 	@media (min-width: 992px) {
 		width: 77%;
 	}
-	
+
 	&__input {
 		position: absolute;
 		left: 0;
@@ -125,7 +129,7 @@ body {
 			background-color: #FFF;
 		}
 	}
-	
+
 	&__submit {
 		position: absolute;
 		right: 0;
@@ -226,16 +230,16 @@ body {
 	&.is-active {
 		opacity: 0.5;
 	}
-		
+
 	&:active,
 	&:focus {
 		outline: 0;
 	}
-		
+
 	@media (min-width: 768px) {
 		// right: 35px;
 	}
-		
+
 	@media (min-width: 992px) {
 		display: none;
 	}

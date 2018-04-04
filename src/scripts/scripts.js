@@ -467,14 +467,17 @@ function initScrollToTop() {
 //////////////// DOCUMENT READY/////////////////
 jQuery(document).ready(function () {
 
-	jQuery('.menuToggle').click(function () {
+	jQuery('.menuToggle').sticky({topSpacing: 40, zIndex: 1000});
 
+	jQuery('.menuToggle').click(function () {
 		jQuery('.menu').toggleClass('is-active');
 		jQuery('.menuToggle').toggleClass('is-active');
+		jQuery('body').toggleClass('menu-active');
+
 		if (jQuery('.menuToggle').hasClass('is-active')) {
-			jQuery('.menuToggle').css('top', 30);
+			jQuery('nav').css('top', 50);
 		} else {
-			setMenuTogglePosition();
+			jQuery('nav').css('top', '');
 		}
 
 	});
@@ -495,8 +498,6 @@ jQuery(document).ready(function () {
 	initCardFlipInteraction();
 
 	initScrollToTop();
-
-	setMenuTogglePosition();
 });
 
 jQuery(window).resize(function () {
@@ -519,36 +520,4 @@ jQuery(window).resize(function () {
 	initRupieTokenAnimation();
 
 	initFooterAnimation();
-
-	setMenuTogglePosition();
 });
-
-jQuery('body, html').scroll(function() {
-	setMenuTogglePosition();
-});
-
-
-function setMenuTogglePosition() {
-	var screenWidth = jQuery(window).outerWidth();
-	var scrollPosition = jQuery('body').scrollTop();
-	var buttonOffset = jQuery('.menuToggle').position().top;
-
-	if (isSafari || isMobile) {
-		jQuery('.menuToggle').css('top', 50);
-		return;
-	}
-
-	if (screenWidth >= 525 && screenWidth < 992) {
-		if (scrollPosition <= 70) {
-			jQuery('.menuToggle').css('top', 100 - scrollPosition)
-		} else {
-			jQuery('.menuToggle').css('top', 30)
-		}
-	} else {
-		if (scrollPosition <= 85) {
-			jQuery('.menuToggle').css('top', 115 - scrollPosition)
-		} else {
-			jQuery('.menuToggle').css('top', 30)
-		}
-	}
-}
