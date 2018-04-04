@@ -500,6 +500,10 @@ jQuery(document).ready(function () {
 	initScrollToTop();
 });
 
+jQuery(window).on('load', function() {
+  jQuery(".loader").delay(1000).fadeOut("slow");
+});
+
 jQuery(window).resize(function () {
 	var screenWidth = jQuery(window).outerWidth();
 	var scale = screenWidth/1600;
