@@ -1,580 +1,253 @@
+@import 'variables';
 @import 'mixins';
+@import 'utility';
+@import 'header';
 @import 'illustration-components';
-$fontfamily: "expressway",
-sans-serif;
-$color-main: #0f1f2c;
-$color-highlight: #ed217c;
-$color-highlight-alt: #a02373;
-$color-secondary: #544b9f;
+@import 'typography';
+@import 'sections';
+@import 'diagram';
+@import 'roadmap';
+@import 'card';
+@import 'buttons';
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-body,
-html {
-    overflow-x: hidden;
+body {
+	position: relative;
 
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-i,
-span,
-div,
-li,
-label,
-a {
-    color: $color-main;
-
-    font-family: $fontfamily;
-}
-
-em {
-    color: $color-highlight;
-
-    font-style: normal;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-    @media (min-width: 1400px) {
-        max-width: 1380px;
-    }
+	@media (min-width: 1400px) {
+		max-width: 1380px;
+	}
 }
 
 .page-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    background-color: #FFF;
+	background-color: #FFF;
 
-    &__inner {
-        position: relative;
+	&__inner {
+		position: relative;
 
-        overflow: hidden;
+		overflow: hidden;
 
-        width: 100%;
-    }
-}
-
-.header {
-    margin-top: 25px;
-    padding-bottom: 10px;
-    @media (min-width: 768px) {
-        position: absolute;
-
-        width: 220px;
-    }
-    &__logo {
-        width: 120px;
-        @media (min-width: 992px) {
-            width: 180px; // margin-top: 20px;
-        }
-    }
-}
-
-.content {
-    margin-top: 35px;
-    @media (min-width: 768px) {
-        margin-top: 160px;
-    }
-    &__head {
-        position: relative;
-
-        margin-top: 0;
-        margin-bottom: 25px;
-
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1;
-        @media (min-width: 560px) {
-            font-size: 38px;
-        }
-        span {
-            font-weight: 800;
-        }
-    }
-    &__description {
-        margin-bottom: 25px;
-
-        font-size: 18px;
-        font-weight: 500;
-    }
-    &__form {
-        display: flex;
-        flex-flow: column nowrap;
-        @media (min-width: 768px) {
-            display: block;
-
-            margin-bottom: 25px;
-        }
-    }
-    &__form-support {
-        margin-top: 10px;
-
-        font-size: 12px;
-        font-weight: 500;
-    }
-    &__social-media {
-        margin-bottom: 25px;
-    }
+		width: 100%;
+	}
 }
 
 #headline-swap {
-    position: relative;
+	position: relative;
 
-    display: inline-block;
-    overflow: hidden;
+	display: inline-block;
+	overflow: hidden;
 
-    width: 145px;
-    height: 38px;
-    @media (min-width: 576px) {
-        top: 43px;
-    }
-    span {
-        position: absolute;
-        left: 0;
+	width: 145px;
+	height: 38px;
 
-        color: $color-highlight;
+	@media (min-width: 576px) {
+		top: 43px;
+	}
 
-        font-style: normal;
-        @media (min-width: 576px) {}
-    }
+	span {
+		position: absolute;
+		left: 0;
+
+		color: $color-highlight;
+
+		font-style: normal;
+		@media (min-width: 576px) {
+
+		}
+	}
 }
 
 .headline-static-text {
-    display: block;
+	display: block;
 
-    transform: none;
-    @media (min-width: 576px) {
-        transform: translateX(107px);
-    }
+	transform: none;
+
+	will-change: transform;
+	@media (min-width: 576px) {
+		transform: translateX(107px);
+	}
 }
 
 @include placeholder {
-    color: $color-main;
+	color: $color-main;
 }
 
 .form {
-    position: relative;
-    z-index: 10;
+	position: relative;
+	z-index: 10;
 
-    width: 100%;
-    height: 46px;
-    @media (min-width: 992px) {
-        width: 77%;
-    }
-    &__input {
-        position: absolute;
-        left: 0;
+	width: 100%;
+	height: 46px;
+	@media (min-width: 992px) {
+		width: 77%;
+	}
+	
+	&__input {
+		position: absolute;
+		left: 0;
 
-        width: 100%;
-        height: 45px;
-        padding: 7px 15px;
+		width: 100%;
+		height: 45px;
+		padding: 7px 15px;
 
-        transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 
-        border: 1px solid $color-highlight-alt;
-        border-radius: 22px;
-        background-color: #fdeaf2;
+		border: 1px solid $color-highlight-alt;
+		border-radius: 22px;
+		background-color: #fdeaf2;
 
-        appearance: none;
-        &:focus {
-            border-color: $color-highlight;
-            outline: none;
-            background-color: #FFF;
-        }
-    }
-    &__submit {
-        position: absolute;
-        right: 0;
+		appearance: none;
+		&:focus {
+			border-color: $color-highlight;
+			outline: none;
+			background-color: #FFF;
+		}
+	}
+	
+	&__submit {
+		position: absolute;
+		right: 0;
 
-        width: 36px;
-        height: 36px;
-        margin: 5px;
-        padding: 10px;
+		width: 36px;
+		height: 36px;
+		margin: 5px;
+		padding: 10px;
 
-        cursor: pointer;
-        transition: background .25s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+		cursor: pointer;
+		transition: background .25s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
-        border: 1px solid $color-highlight;
-        border-radius: 50%;
-        background: $color-highlight;
+		border: 1px solid $color-highlight;
+		border-radius: 50%;
+		background: $color-highlight;
 
-        appearance: none;
-        &:focus {
-            outline: none;
-            &::before {
-                transform: scale(1);
-            }
-            .svg .icon {
-                fill: $color-highlight;
-            }
-        }
-        &::before {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
+		will-change: transform;
+		appearance: none;
+		&:focus {
+			outline: none;
+			&::before {
+				transform: scale(1);
+			}
+			.svg .icon {
+				fill: $color-highlight;
+			}
+		}
+		&::before {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
 
-            display: block;
+			display: block;
 
-            width: 100%;
-            height: 100%;
+			width: 100%;
+			height: 100%;
 
-            content: '';
-            cursor: pointer;
-            transition: transform 0.3s ease-out;
-            transform: scale(0);
+			content: '';
+			cursor: pointer;
+			transition: transform 0.3s ease-out;
+			transform: scale(0);
 
-            border-radius: inherit;
-            background-color: #FFF;
-        }
-        &:hover {
-            outline: none;
-            &::before {
-                transform: scale(1);
-            }
-            .svg .icon {
-                fill: $color-highlight;
-            }
-        }
-        .svg {
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 3px;
+			border-radius: inherit;
+			background-color: #FFF;
+		}
+		&:hover {
+			outline: none;
+			&::before {
+				transform: scale(1);
+			}
+			.svg .icon {
+				fill: $color-highlight;
+			}
+		}
+		.svg {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 3px;
 
-            display: block;
+			display: block;
 
-            width: 12px;
-            height: 12px;
-            margin: auto auto;
-            .icon {
-                transition: fill 0.2s ease-in-out;
+			width: 12px;
+			height: 12px;
+			margin: auto auto;
+			.icon {
+				transition: fill 0.2s ease-in-out;
 
-                fill: #FFF;
-            }
-        }
-    }
+				fill: #FFF;
+			}
+		}
+	}
 }
 
 #mce-responses {
-    font-size: 12px;
+	font-size: 12px;
 }
 
-.social-media {
-    &__label {
-        margin-bottom: 10px;
+#back-to-top {
+	position: fixed;
+	z-index: 5;
+	right: 15px;
+	bottom: 20px;
 
-        font-size: 12px;
-        font-weight: 700;
-    }
-    &__list {
-        display: flex;
+	display: block;
 
-        margin: 0;
-        padding: 0;
+	cursor: pointer;
+	transition: opacity 0.5s $transition-button-curve;
 
-        list-style: none;
-    }
-    &__icon {
-        position: relative;
+	opacity: 0;
+	border: 0;
+	background-color: transparent;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 36px;
-        height: 36px;
-        margin-right: 10px;
-
-        transition: border .25s cubic-bezier(0.77, 0.2, 0.05, 1.0), background-color .25s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
-        border: 1px solid $color-secondary;
-        border-radius: 50%;
-        &::before {
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-
-            display: block;
-
-            width: 100%;
-            height: 100%;
-
-            content: '';
-            cursor: pointer;
-            transition: transform 0.3s ease-out;
-            transform: scale(0);
-
-            border-radius: inherit;
-            background-color: $color-secondary;
-        }
-        &:hover {
-            // border-color: lighten($color-secondary, 20%);
-            &::before {
-                transform: scale(1);
-            }
-            svg .icon {
-                fill: #FFF;
-            }
-        }
-        svg {
-            position: absolute;
-            z-index: 10;
-            z-index: 10;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            margin: auto auto;
-
-            cursor: pointer;
-            .icon {
-                transition: fill 0.2s ease-in-out;
-
-                fill: $color-secondary;
-            }
-        }
-    }
+	appearance: none !important;
+	&.is-active {
+		opacity: 0.5;
+	}
+		
+	&:active,
+	&:focus {
+		outline: 0;
+	}
+		
+	@media (min-width: 768px) {
+		// right: 35px;
+	}
+		
+	@media (min-width: 992px) {
+		display: none;
+	}
 }
 
-//custom nav styles
-nav {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    left: 0;
+//lazy loading images
+img {
+	transition: opacity 0.3s;
 
-    width: 100%; // max-width: 540px;
-    margin: 0 auto;
-    padding-right: 0;
-    padding-left: 0;
+	opacity: 1;
 }
 
-.alertSlide {
-  border-radius: 0;
-}
-//nav menu markup and styles from
-.menuToggle {
-    position: relative;
-    z-index: 1;
-    top: 55px;
-    left: 0;
-
-    display: block;
-    overflow: hidden;
-
-    width: 100%;
-    height: 60px;
-    margin-top: 40px;
-    padding-top: 12px;
-
-    -webkit-user-select: none;
-    user-select: none;
-    @media (min-width: 768px) {
-        top: 41px;
-    }
-    &__hamburger {
-        position: relative;
-        top: 0;
-        right: 0;
-
-        width: 30px;
-        height: 30px;
-        margin-top: 14px;
-        margin-right: 2px;
-        margin-left: auto;
-        span {
-            position: absolute;
-
-            display: block;
-
-            width: 20px;
-            height: 2px;
-
-            transition: .25s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-            transform-origin: left center;
-
-            background: #FFF;
-            &:nth-child(1) {
-                top: 0px;
-            }
-            &:nth-child(2) {
-                top: 7px;
-            }
-            &:nth-child(3) {
-                top: 14px;
-            }
-        }
-    }
-    &::after {
-        position: absolute;
-        z-index: -10;
-        top: 12px;
-        right: 15px;
-
-        display: block;
-
-        width: 45px;
-        height: 45px;
-
-        content: "";
-
-        border-radius: 50%;
-        background-color: $color-main;
-    }
-    & input:checked~.menuToggle__hamburger span {
-        &:nth-child(1) {
-            left: 2px;
-
-            transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-            width: 0%;
-
-            opacity: 0;
-        }
-        &:nth-child(3) {
-            left: 2px;
-
-            transform: rotate(-45deg);
-        }
-    }
-}
-
-.menuToggle input {
-    position: absolute;
-    /* hide this */
-    z-index: 2;
-    top: 0;
-    right: 15px;
-
-    display: block;
-
-    width: 50px;
-    height: 50px;
-
-    cursor: pointer;
-
-    opacity: 0;
-    /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
-    @media (min-width: 580px) {
-        right: 2px;
-    }
-}
-
-/*
- * But let's hide the middle one.
- */
-
-.menuToggle input:checked~span:nth-last-child(3) {
-    transform: rotate(0deg) scale(0.2, 0.2);
-
-    opacity: 0;
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-
-.menuToggle input:checked~span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(1px, 0px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-
-.menu {
-    position: absolute;
-    z-index: 1000;
-    top: 165px;
-    right: 0;
-    left: 100%;
-
-    display: block;
-
-    width: 100%;
-    height: 900px;
-    margin: 0;
-    padding: 15px;
-    padding-top: 25px;
-
-    list-style-type: none;
-
-    transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
-    background: #fff;
-
-    -webkit-font-smoothing: antialiased;
-    &.is-active {
-        left: 0;
-    }
-    @media (min-width: 540px) {
-        width: 100%;
-        padding: 50px 15px;
-    }
-    @media (min-width: 992px) {
-        display: none;
-    }
-}
-
-.menu li {
-    padding: 10px 0;
-
-    font-size: 22px;
-}
-
-.alertSlide {
-    visibility: visible !important;
-
-    transform: translateY(-100%);
-    animation: slideDown 0.6s ease-in-out forwards;
-    animation-delay: 3s;
-}
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-.btn-outline-primary {
-    color: $color-secondary;
-    border-color: $color-secondary;
-    &:hover,
-    &:active {
-        border-color: $color-secondary;
-        background-color: $color-secondary;
-    }
-}
-
-.alert-info {
-    border-color: lighten($color-secondary, 46%);
-    background-color: lighten($color-secondary, 50%);
-    .alert-link {
-        color: $color-secondary;
-    }
+img[data-src] {
+	opacity: 0;
 }

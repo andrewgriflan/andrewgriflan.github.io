@@ -1,18 +1,8 @@
-jQuery(document).ready(function () {
-	jQuery('.menuToggle input').change(function () {
-		jQuery('.menu').toggleClass('is-active');
-	});
+"use strict";
 
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
-	toggleHeadlines();
-
-	initAnimations();
-});
-
-jQuery(window).resize(function () {
-	jQuery('.menu').css({ 'height': jQuery(window).outerHeight() - 90 });
-
-});
+//global variable to detect safari for scroll position workaround
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 jQuery('#mc-embedded-subscribe-form').on('submit', function () {
 	if (jQuery(this).find('input').hasClass('valid') && !jQuery(this).find('input').hasClass('mce_inline_error')) {
@@ -89,10 +79,31 @@ function setHeadlineIndex(currentHeadlineIndex) {
 	return currentHeadlineIndex;
 }
 
+function initCardFlipInteraction() {
+	if (jQuery('.card--flip')) {
+		jQuery('.card--flip').on('click', function() {
+			jQuery(this).toggleClass('is-active');
+		})
+	}
+
+	if (jQuery('.card--expand')) {
+		jQuery('.card--expand').on('click', function(e) {
+			if (jQuery(this).hasClass('is-active')) {
+
+				jQuery(this).removeClass('is-active');
+			} else {
+				jQuery('.card--expand').removeClass('is-active');
+				jQuery(this).addClass('is-active');
+			}
+
+		})
+	}
+}
 
 
 //animations
 function initAnimations() {
+	//////// Main illustration/////////
 	//hot air balloon
 	TweenMax.to('.illustration__hot-air-balloon', 5, { x: 520, y: 100, repeat: -1, yoyo: true, ease: Power2.easeInOut });
 	TweenMax.fromTo('.illustration__hot-air-balloon', 2, { rotation: -2 }, { rotation: 2, repeat: -1, yoyo: true, ease: Power2.easeInOut, delay: 1 });
@@ -120,10 +131,6 @@ function initAnimations() {
 	TweenMax.fromTo('.illustration__cars-car2[data-num="1"]', 12, { x: 3, y: -131 }, { x: 815, y: -131, repeat: -1, ease: Power0.easeNone });
 
 	TweenMax.staggerFromTo(['.illustration__cars-car2[data-num="2"]', '.illustration__cars-car2[data-num="3"]'], 12, { x: 3, y: -216 }, { x: 815, y: -216, repeat: -1, ease: Power0.easeNone, delay: 1 }, 2);
-
-	// var car2Timeline1 = new TimelineMax({ repeat: -1 });
-	// car2Timeline1.fromTo('.illustration__cars-car2[data-num="4"]', 4, { x: 723, y: -302 }, { x: 923, y: -302, ease: Power0.easeNone });
-	// car2Timeline1.fromTo('.illustration__cars-car2[data-num="4"]', 15, { x: 0, y: -302 }, { x: 723, y: -302, ease: Power0.easeNone });
 
 	var car2Timeline2 = new TimelineMax({ repeat: -1 });
 	car2Timeline2.fromTo('.illustration__cars-car2[data-num="5"]', 15, { x: 133, y: -352 }, { x: 923, y: -352, ease: Power0.easeNone });
@@ -230,4 +237,320 @@ function initAnimations() {
 	TweenMax.fromTo('.illustration__game-meteor-md[data-num="1"]', 4, { x: -47, y: -31, rotation: 0 }, { x: 27, y: 101, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
 	TweenMax.fromTo('.illustration__game-meteor-md[data-num="2"]', 5.5, { x: 160, y: 29, rotation: 0 }, { x: 33, y: -66, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
 	TweenMax.fromTo('.illustration__game-meteor-sm[data-num="1"]', 6, { x: -3, y: -59, rotation: 0 }, { x: 93, y: 58, rotation: -210, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+
+
+
+	///////Hey, Listen  -- section 2///////
+	//hot air balloon
+	TweenMax.staggerTo('.section__illustration__hot-air-balloon', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
+
+	//spacehship
+	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
+	TweenMax.to('.section__illustration__spaceship-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+
+	//spaceships with block
+	TweenMax.to('.section__illustration__spaceship-block', 7, {x: '+=30', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 4 });
+
+	//crane
+	TweenMax.to('.section__illustration__crane', 4, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+	TweenMax.to('.section__illustration__crane-rope', 4, {scaleY: '1.8', y: '-=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+
+	//car
+	TweenMax.fromTo('.section__illustration__tower-car', 8, {x: -125}, {x: 700, repeat: -1, ease: Power0.easeNone});
+
+
+	////////Why is this needed -- section 3 //////////
+	//Helicopter
+	var helicopter3Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
+	helicopter3Timeline.fromTo('.section__illustration__helicopter[data-num="2"]', 6, { x: 316, y: -40 }, { x: 361, y: -19 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 331, y: -2 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 285, y: -6 })
+		.to('.section__illustration__helicopter[data-num="2"]', 6, { x: 316, y: -40 });
+
+	TweenMax.to('.section__illustration__helicopter-blades', .75, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+
+	//heart mask
+	TweenMax.fromTo('#heart-clip', 12, {y: 27}, {y: '+=50', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 3 });
+
+	//speaker lines
+	TweenMax.staggerFromTo(['.section__illustration__speaker-lines-1', '.section__illustration__speaker-lines-2'], 1, {alpha: 1}, {alpha: 0, repeat: -1, yoyo: true, ease: Power2.easeInOut }, 1);
+
+
+
+	////////Introducing: Community Game Incubation -- section 4 //////////
+	//fund
+	TweenMax.staggerTo(['.section__illustration__fund-coin[data-num="1"]', '.section__illustration__fund-coin[data-num="3"]', '.section__illustration__fund-coin[data-num="4"]', '.section__illustration__fund-coin[data-num="2"]'], 4, { rotationY: -360, repeat: -1, ease: Power0.easeNone, repeatDelay: 1 }, 1.25);
+
+	//build
+	TweenMax.to('.section__illustration__build-crane[data-num="1"]', 5, {y: '+=40', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+	TweenMax.to('.section__illustration__build-crane[data-num="1"] .section__illustration__build-crane-rope', 5, {scaleY: '1.92', y: '-=40', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1 });
+
+	TweenMax.to('.section__illustration__build-crane[data-num="2"]', 4, {y: '+=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
+	TweenMax.to('.section__illustration__build-crane[data-num="2"] .section__illustration__build-crane-rope', 4, {scaleY: '1.2', y: '-=20', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 1, delay: 0.75 });
+
+	//connect
+	var connectCheckBoxesTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
+	connectCheckBoxesTimeline.staggerTo(['.section__illustration__connect-checked[data-num="1"]', '.section__illustration__connect-checked[data-num="2"]', '.section__illustration__connect-checked[data-num="3"]', '.section__illustration__connect-checked[data-num="4"]', '.section__illustration__connect-checked[data-num="5"]',
+	'.section__illustration__connect-checked[data-num="6"]'], 1,  {y: -6, ease: Power2.easeInOut}, 1);
+
+	var eyesTimeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn, repeatDelay: 4});
+	eyesTimeline.to('.section__illustration__connect-eyes', 0.2,  {scaleY: 0.1});
+	eyesTimeline.to('.section__illustration__connect-eyes', 0.08,  {scaleY: 1})
+				.to('.section__illustration__connect-eyes', 0.2,  {scaleY: 0.1}, '+=2')
+				.to('.section__illustration__connect-eyes', 0.1,  {scaleY: 1});
+
+
+	////////Aset Marketplace -- section 5 //////////
+	//spaceship
+	TweenMax.to('.section__illustration__spaceship-rupie', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
+	TweenMax.to('.section__illustration__spaceship-rupie-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+
+	//rocketship
+	var rocketTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
+	rocketTimeline.to('.section__illustration__space-rocketship', 5, {y: '+=35'});
+	rocketTimeline.to('.section__illustration__space-rocketship', 1, {opacity: 0}, '-=2.5');
+
+	//Tube coins
+	TweenMax.set('.section__illustration__space-coins[data-num="1"] img', {
+		x: function (i) {
+			return -(i * 24);
+		}
+	});
+	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="1"] [data-num="1"]', '.section__illustration__space-coins[data-num="1"] [data-num="2"]', '.section__illustration__space-coins[data-num="1"] [data-num="3"]', '.section__illustration__space-coins[data-num="1"] [data-num="4"]', '.section__illustration__space-coins[data-num="1"] [data-num="5"]'], 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+
+	TweenMax.set('.section__illustration__space-coins[data-num="2"] img', {
+		x: function (i) {
+			return -(i * 24) - 130;
+		}
+	});
+	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="2"] [data-num="1"]', '.section__illustration__space-coins[data-num="2"] [data-num="2"]', '.section__illustration__space-coins[data-num="2"] [data-num="3"]', '.section__illustration__space-coins[data-num="2"] [data-num="4"]', '.section__illustration__space-coins[data-num="2"] [data-num="5"]'], 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+
+	//buttons
+
+	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
+
+
+
+
+	////////Bounty System  -- Section 6 /////////////
+	//Arm Boat
+	TweenMax.to('.section__illustration__robot #arm-boat', 8, {x: '-=100',  repeat: -1, ease: Sine.easeInOut, repeatDelay: 1, yoyo: true});
+
+	//helicopter
+	var helicopter2Timeline = new TimelineMax({ repeat: -1, ease: Sine.easeIn });
+	helicopter2Timeline.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=2', y: '+=20' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=10', y: '+=10' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '-=18', y: '-=15' })
+	.to('.section__illustration__helicopter[data-num="1"]', 4, { x: '+=6', y: '-=15' });
+
+	//robot helicopter
+	var helicopter3Timeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeInOut });
+	helicopter3Timeline.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 4, { x: '+=20', y: '+=40' })
+		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '+=10', y: '-=20' })
+		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '-=30', y: '-=20' });
+
+	TweenMax.to('.section__illustration__robot #tail-blades', 1, {rotation: 180, transformOrigin: "center", repeat: -1, ease: Power0.easeNone });
+
+	TweenMax.to('.section__illustration__robot-helicopter-blades', 1.5, {rotationY: 360, repeat: -1, ease: Power0.easeNone });
+
+	//robot leg
+	TweenMax.to('.section__illustration__robot #robot-leg', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut});
+
+
+
+	//////////////Roadmap -- section 9////
+	//////////////Roadmap -- section 9////
+	TweenMax.staggerTo('.roadmap__step', 6, {y: '+=20', repeat: -1, repeatDelay: 2, yoyo: true, ease: Power2.easeInOut}, 0.5);
+}
+
+function initFooterAnimation() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
+	///////////Footer//////////////////////
+	//////////////Roadmap -- section 9////
+	TweenMax.set('.section__illustration__footer-path', {
+		scaleX: function() {
+			var screenWidth = jQuery(window).outerWidth();
+			var scale = screenWidth/1600;
+			return scale;
+		}
+	});
+
+	if (footerCar) {
+		footerCar.kill();
+	}
+
+	var footerCar = new TweenMax.fromTo('.section__illustration__footer-car', 10, {x: -210}, {
+		x: function() {
+			return screenWidth + 210;
+		}, repeat: -1, ease: Power0.easeNone
+	});
+
+	footerCar.timeScale(1/scale);
+	footerCar.play(1);
+}
+
+function initRupieTokenAnimation() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
+	TweenMax.killTweensOf('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', {x: true});
+
+	TweenMax.killTweensOf('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', {x: true});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect', {
+		transformOrigin: "right"
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-right rect', {
+		transformOrigin: "right"
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, .section__illustration__rupie-token #tube-right rect', {
+		scaleX: function() {
+			return scale*2.5;
+		}
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', {
+		x: function (i) {
+			return (i * 53) + 21;
+		}
+	});
+	TweenMax.staggerTo('.section__illustration__rupie-token #rupie-left-tube [data-name="rupie"]', 8, {
+		x: function(i) {
+			if (screenWidth > 992) {
+			   var distance = 700*scale;
+		   } else {
+			   var distance = 500;
+		   }
+
+		   return '-=' + distance.toString();
+		},
+		 ease: Power0.easeNone, repeat: -1 }, 1);
+
+	 TweenMax.set('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', {
+		x: function (i) {
+			return -(i * 52) - 21;
+		}
+	});
+
+	 TweenMax.staggerTo('.section__illustration__rupie-token #rupie-right-tube [data-name="rupie"]', 8, {
+		 x: function(i) {
+			 if (screenWidth > 992) {
+			 	var distance = 700*scale;
+			} else {
+				var distance = 500;
+			}
+
+			 return '+=' + distance.toString();
+		 },
+		ease: Power0.easeNone, repeat: -1 }, 1);
+}
+
+function initScrollToTop() {
+	if (jQuery('#back-to-top').length) {
+		jQuery('#back-to-top').click(function() {
+			jQuery("html, body").animate({ scrollTop: 0 }, "slow");;
+		});
+	}
+}
+
+
+
+[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+	img.setAttribute('src', img.getAttribute('data-src'));
+	img.onload = function() {
+		img.removeAttribute('data-src');
+	};
+});
+
+//////////////// DOCUMENT READY/////////////////
+jQuery(document).ready(function () {
+
+	jQuery('.menuToggle').click(function () {
+
+		jQuery('.menu').toggleClass('is-active');
+		jQuery('.menuToggle').toggleClass('is-active');
+		if (jQuery('.menuToggle').hasClass('is-active')) {
+			jQuery('.menuToggle').css('top', 30);
+		} else {
+			setMenuTogglePosition();
+		}
+
+	});
+
+	jQuery('.menu a').click(function() {
+		jQuery('.menu').removeClass('is-active');
+		jQuery('.menuToggle').removeClass('is-active');
+	});
+
+	toggleHeadlines();
+
+	initAnimations();
+
+	initFooterAnimation();
+
+	initRupieTokenAnimation();
+
+	initCardFlipInteraction();
+
+	initScrollToTop();
+
+	setMenuTogglePosition();
+});
+
+jQuery(window).resize(function () {
+	var screenWidth = jQuery(window).outerWidth();
+	var scale = screenWidth/1600;
+
+
+	TweenMax.set('.section__illustration__footer-path', {
+		scaleX: function() {
+			return scale;
+		}
+	});
+
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, section__illustration__rupie-token #tube-right rect', {
+		scaleX: function() {
+			return scale*2;
+		}
+	});
+
+	initRupieTokenAnimation();
+
+	initFooterAnimation();
+
+	setMenuTogglePosition();
+});
+
+jQuery('body, html').scroll(function() {
+	setMenuTogglePosition();
+});
+
+
+function setMenuTogglePosition() {
+	var screenWidth = jQuery(window).outerWidth();
+	var scrollPosition = jQuery('body').scrollTop();
+	var buttonOffset = jQuery('.menuToggle').position().top;
+
+	if (isSafari || isMobile) {
+		jQuery('.menuToggle').css('top', 50);
+		return;
+	}
+
+	if (screenWidth >= 525 && screenWidth < 992) {
+		if (scrollPosition <= 70) {
+			jQuery('.menuToggle').css('top', 100 - scrollPosition)
+		} else {
+			jQuery('.menuToggle').css('top', 30)
+		}
+	} else {
+		if (scrollPosition <= 85) {
+			jQuery('.menuToggle').css('top', 115 - scrollPosition)
+		} else {
+			jQuery('.menuToggle').css('top', 30)
+		}
+	}
 }
