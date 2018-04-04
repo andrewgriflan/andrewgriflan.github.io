@@ -1,116 +1,115 @@
 .diagram {
+    will-change: transform;
     .section__text {
         @media (min-width: 1200px) {
-                    margin-bottom: 0;
+            margin-bottom: 0;
         }
     }
     &__top-left {
         padding-bottom: 100px;
-
         &::after {
-            content: "";
-            display: block;
             position: absolute;
+            right: 25%;
+            bottom: 50px;
+
+            display: block;
+
             width: 100px;
             height: 23px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            transform: rotate(90deg);
-            bottom: 50px;
-            right: 25%;
-        }
 
+            content: "";
+            transform: rotate(90deg);
+
+            background-image: url('../../img/diagram-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         @media (min-width: 992px) {
             padding-bottom: 0;
-
             &::after {
-                left: 90%;
                 top: -30px;
+                left: 90%;
+
                 width: 168px;
                 height: 40px;
+
                 transform: rotate(0deg);
             }
         }
-
         @media (min-width: 1200px) {
             &::after {
                 left: 90%;
             }
         }
-
         @media (min-width: 1400px) {
             &::after {
                 left: calc(100% - 60px);
             }
         }
     }
-
     &__top-right {
         padding-bottom: 120px;
-
-
         &::after {
-            content: "";
-            display: block;
             position: absolute;
+            bottom: 46px;
+            left: 25%;
+
+            display: block;
+
             width: 100px;
             height: 23px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            left: 25%;
-            bottom: 46px;
-            transform: rotate(-90deg) rotateY(180deg);
-        }
 
+            content: "";
+            transform: rotate(-90deg) rotateY(180deg);
+
+            background-image: url('../../img/diagram-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         @media (min-width: 992px) {
             padding-bottom: 0;
-
             &::after {
                 right: 20%;
-                left: 50%;
                 bottom: -180px;
+                left: 50%;
+
                 width: 168px;
                 height: 40px;
+
                 transform: rotate(135deg);
             }
         }
-
-        @media (min-width: 1200px) {
-
-        }
+        @media (min-width: 1200px) {}
     }
-
     &__lower {
-
-
         &::after {
-            content: "";
-            display: none;
             position: absolute;
+            top: 140px;
+            left: -45%;
+
+            display: none;
+
             width: 168px;
             height: 40px;
-            background-image: url('../../img/diagram-arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            left: -45%;
-            top: 140px;
+
+            content: "";
             transform: rotate(-135deg);
+
+            background-image: url('../../img/diagram-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
         }
-
         @media (min-width: 992px) {
-            padding-bottom: 0;
             margin-top: 50px;
-
+            padding-bottom: 0;
             &::after {
                 display: block;
             }
         }
     }
-
     ul {
-        list-style:disc;
         padding-left: 20px;
+
+        list-style: disc;
     }
 }

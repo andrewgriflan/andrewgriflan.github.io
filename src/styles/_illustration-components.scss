@@ -1,289 +1,243 @@
 .illustration {
     display: flex;
+    align-items: center;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: center;
 
     height: 325px;
 
-
+    will-change: transform;
     @media (min-width: 346px) {
         height: 350px;
     }
-
     @media (min-width: 480px) {
         height: 450px;
     }
-
-
     @media (min-width: 576px) {
         height: 550px;
     }
-
     @media (min-width: 768px) {
         height: 700px;
     }
-
     @media (min-width: 1200px) {
         height: 750px;
     }
-
-
     &-element {
         position: absolute;
         top: 0;
         left: 0;
     }
-
     &__container {
-        margin: 0;
         position: relative;
         z-index: 2;
+
+        margin: 0;
+
         transform: scale(.35) translateY(-455px);
-
-
         @media (min-width: 300px) {
             transform: scale(.5) translateY(-355px);
         }
-
         @media (min-width: 346px) {
             transform: scale(.5) translateY(-325px);
         }
-
         @media (min-width: 480px) {
             transform: scale(.6) translateY(-205px);
         }
-
         @media (min-width: 576px) {
             transform: scale(.8) translateY(-80px);
         }
-
         @media (min-width: 768px) {
             transform: scale(1) translateY(-20px);
         }
-
         @media (min-width: 992px) {
-            transform: scale(.8) translateX(20px);
             display: block;
-            max-width: 900px;
+
             width: 900px;
-                margin: 50px 0;
-        }
+            max-width: 900px;
+            margin: 50px 0;
 
+            transform: scale(.8) translateX(20px);
+        }
         @media (min-width: 1200px) {
-            transform:scale(.9) translateX(100px);
-            max-width: 1000px;
             width: 1000px;
+            max-width: 1000px;
             margin: 100px -50px 30px -150px;
-        }
 
+            transform: scale(.9) translateX(100px);
+        }
         @media (min-width: 1400px) {
-            transform:scale(1) translateX(60px);
+            transform: scale(1) translateX(60px);
         }
     }
-
     &__city {
         transform: translateX(63px) translateY(150px);
-
         &-tower {
             transform: translateX(397px) translateY(271px);
         }
     }
-
     &__hot-air-balloon {
         transform: translateX(520px) translateY(80px) rotate(-2deg);
     }
-
     &__ferris-wheel {
         &-spinner {
+            width: 100%;
+
             transform: translateX(259px) translateY(233px);
             transform-origin: 84px 118px;
-            width: 100%;
         }
-
         &-cart {
-
             img {
                 transform-origin: 10px 22px;
             }
-
             [data-num="1"] {
                 transform: translateX(18px) translateY(44px);
             }
-
             [data-num="2"] {
                 transform: translateX(48px) translateY(20px);
             }
-
             [data-num="3"] {
                 transform: translateX(77px) translateY(42px);
             }
-
             [data-num="4"] {
                 transform: translateX(75px) translateY(99px);
             }
-
             [data-num="5"] {
                 transform: translateX(29px) translateY(153px);
             }
-
             [data-num="6"] {
                 transform: translateX(-56px) translateY(177px);
             }
-
             [data-num="7"] {
                 transform: translateX(-159px) translateY(99px);
             }
-
             [data-num="8"] {
                 transform: translateX(-163px) translateY(152px);
             }
         }
-
         &-base {
             transform: translateX(266px) translateY(338px);
         }
     }
-
     &__crane {
         &-base {
             transform: translateX(650px) translateY(350px);
         }
-
         &-strings {
             transform: translateX(738px) translateY(375px) scaleY(0.8);
             transform-origin: 0 8px;
         }
-
         &-hook {
             transform: translateX(743px) translateY(357px);
         }
-
         &-bucket {
             transform: translateX(-10px) translateY(-8px);
             transform-origin: 10px 6px;
         }
     }
-
     &__helicopter {
         transform: translateX(165px) translateY(164px);
-
         &-blades {
             transform: translateX(27px) translateY(21px);
             transform-origin: 37px 0px;
+
             perspective: 500px;
         }
-
         &-ruby {
             transform: translateX(59px) translateY(-13px) rotate(7deg);
             transform-origin: 13px 7px;
         }
     }
-
-    &__cars{
+    &__cars {
         transform: translateX(51px) translateY(554px);
+
         clip-path: url(#car-mask);
-
-        &-clip-path {
-
-        }
+        &-clip-path {}
     }
-
     &__tubes {
-        transform: translateX(389px) translateY(330px);
-        opacity: 0.5;
         width: 100%;
 
+        transform: translateX(389px) translateY(330px);
+
+        opacity: 0.5;
         &-top-top {
             transform: translateX(105px) translateY(-184px);
+
             clip-path: url(#tubes-top-top-clip);
         }
-
         &-top-left {
             transform: translateX(-2px) translateY(25px);
+
             clip-path: url(#tubes-top-left-clip);
         }
-
         &-bottom-left {
             transform: translateX(-49px) translateY(26px);
-            clip-path:url(#tubes-bottom-left-clip);
-        }
 
+            clip-path: url(#tubes-bottom-left-clip);
+        }
         &-top-right {
             transform: translateX(115px) translateY(34px);
+
             clip-path: url(#tubes-top-right-clip);
         }
-
         &-bottom-right {
             transform: translateX(115px) translateY(66px);
-            clip-path:url(#tubes-bottom-right-clip);
 
+            clip-path: url(#tubes-bottom-right-clip);
         }
     }
-
     &__gyrocopter {
         transform: translateX(643px) translateY(262px);
-
         &-blades {
             transform: translateX(107px) translateY(-16px);
             transform-origin: 28px 0px;
+
             perspective: 500px;
         }
-
         &-base {
             transform: translateX(48px) translateY(5px);
         }
-
         &-claw {
             transform: translateX(-4px) translateY(-27px);
             transform-origin: 6px 15px;
         }
-
         &-pincher {
             transform: translateX(-9px) translateY(-27px);
-
             [data-num="1"] {
                 transform-origin: 11px 8px;
             }
-
             [data-num="2"] {
                 transform: translateX(-14px) translateY(-0.5px) rotate(80deg);
                 transform-origin: 12px 13px;
             }
         }
     }
-
     &__game {
         width: 100%;
-        transform: translateX(510px) translateY(161px);
 
+        transform: translateX(510px) translateY(161px);
         &-health {
             transform: translateX(62px) translateY(-250px);
         }
-
         &-satellite {
             transform: translateX(-92px) translateY(-77px) rotate(10deg);
             transform-origin: 4px 22px;
         }
-
         &-ship {
             transform: translateX(-61px) translateY(13px);
         }
-
         &-lasers {
             transform: translateX(7.5px) translateY(14px) scale(1.3) rotate(-10deg);
         }
-
         &-explosion {
             transform: translateX(3px) translateY(3px) scale(1.1);
         }
-
         &-components {
-            height: 101px;
             width: 157px;
-            clip-path: url(#game-clip-path);
-            transform:  translateX(57px) translateY(-151px);
+            height: 101px;
 
+            transform: translateX(57px) translateY(-151px);
+
+            clip-path: url(#game-clip-path);
         }
     }
 }

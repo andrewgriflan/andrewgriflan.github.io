@@ -11,6 +11,7 @@ li,
 label,
 a {
     color: $color-main;
+
     font-family: $fontfamily;
 }
 
@@ -21,9 +22,10 @@ em {
 }
 
 a {
-    color: $color-secondary;
     transition: color 0.2s ease-in-out;
     text-decoration: underline;
+
+    color: $color-secondary;
 
     &:hover {
         color: $color-highlight;
@@ -31,9 +33,10 @@ a {
 }
 
 ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
 li {
@@ -41,12 +44,11 @@ li {
 }
 
 p {
-    font-weight: 500;
-    font-size: 18px;
-    font-size: 16px;
     margin-bottom: 25px;
-    line-height: 1.33;
 
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.33;
 }
 
 figure {
@@ -65,8 +67,8 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: 30px;
-    line-height: 1;
     font-weight: 600;
+    line-height: 1;
 
     em {
         font-weight: 800;
@@ -74,8 +76,9 @@ h2, .h2 {
 }
 
 h3, .h3 {
-    font-size: 30px;
     color: $color-main;
+
+    font-size: 30px;
     font-weight: 600;
     line-height: 1;
 }
