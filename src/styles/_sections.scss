@@ -1,247 +1,197 @@
 .section {
     position: relative;
 
+    will-change: tranform;
     &--has-bg {
         .section__title {
             color: $color-white;
         }
-
         .section__text {
             color: $color-white;
         }
-
         i {
             color: $color-white;
         }
     }
-
     &--child-section {
         height: 100%;
-
         .section__title {
             margin-bottom: 20px;
         }
-
         .section__sub-title {
             margin-bottom: 20px;
         }
     }
-
     &--img-split {
-
         img {
             max-width: 100%;
         }
     }
-
     &__outer {
         padding-top: 50px;
-
         @media (min-width: 992px) {
             padding-top: 75px;
         }
     }
-
-
     &__title {
         position: relative;
+
         margin-top: 0;
         margin-bottom: 25px;
     }
-
     &__sub-title {
-        font-size: 20px;
-        color: $color-highlight;
         margin-bottom: 25px;
-    }
 
+        color: $color-highlight;
+
+        font-size: 20px;
+    }
     &__text {
         margin-bottom: 25px;
-
         @media (min-width: 1200px) {
             &:last-child {
                 // margin-bottom: 0;
             }
         }
     }
-
     &__image {
-    display: block;
-
+        display: block;
         &--left {
             margin: 20px auto;
             @media (min-width: 992px) {
-                margin-right: 20px;
                 float: right;
+
+                margin-right: 20px;
             }
         }
-
         &--right {
             margin: 20px auto;
-
             @media (min-width: 992px) {
-                margin-left: 20px;
                 float: left;
+
+                margin-left: 20px;
             }
         }
     }
-
     &__diagram {
         margin-top: 50px;
     }
-
     &[data-section="1"] {
         @media (min-width: 992px) {
             margin-bottom: 50px;
         }
-    }
-
-    //Hey, Listen styles
+    } //Hey, Listen styles
     &[data-section="2"] {
-        padding-bottom: 25px;
-        padding-top: 50px;
         margin-top: -50px;
-
+        padding-top: 50px;
+        padding-bottom: 25px;
         .illustration {
             height: 385px;
             margin-bottom: -75px;
         }
-
-
         .section__illustration__container {
             transform: translateX(-50%) scale(0.5);
-        }
-
-        //illustration responsive positioning
+        } //illustration responsive positioning
         @media (min-width: 346px) {
             .illustration {
                 height: 495px;
             }
-
             .section__illustration__container {
                 transform: translateX(-40%) scale(0.66);
             }
-
         }
-
         @media (min-width: 480px) {
             .illustration {
                 height: 555px;
             }
-
             .section__illustration__container {
                 transform: translateX(-25%) scale(0.75);
             }
-
         }
-
         @media (min-width: 576px) {
             .illustration {
                 height: 555px;
             }
-
         }
-
         @media (min-width: 768px) {
             .illustration {
                 height: 724px;
             }
-
             .section__illustration__container {
                 transform: translateX(-10%) scale(1);
             }
         }
-
         @media (min-width: 992px) {
             .section__illustration__container {
                 transform: translateX(-45%) scale(0.9);
             }
-
             .illustration {
                 height: 680px;
                 margin-bottom: -100px;
             }
         }
-
         @media (min-width: 1200px) {
             .section__illustration__container {
                 transform: translateX(-150px) scale(1);
             }
-
             .illustration {
                 height: 725px;
             }
         }
-    }
-
-    //Why is this needed
+    } //Why is this needed
     &[data-section="3"] {
+        margin-top: -50px;
         margin-bottom: -75px;
         padding-top: 50px;
-        margin-top: -50px;
-
         .illustration {
             height: 200px;
         }
-
         .section__illustration__container {
-            transform: scale(0.4)  translateY(-300px);
             width: auto;
             margin: 0;
-        }
 
-        //illustration responsive positioning
+            transform: scale(0.4) translateY(-300px);
+        } //illustration responsive positioning
         @media (min-width: 346px) {
             .illustration {
                 height: 250px;
             }
-
             .section__illustration__container {
                 transform: scale(.5) translateY(-185px);
             }
         }
-
-
         @media (min-width: 480px) {
             .illustration {
                 height: 250px;
             }
-
             .section__illustration__container {
-                transform: scale(.55)  translateY(-185px);
+                transform: scale(.55) translateY(-185px);
             }
         }
-
         @media (min-width: 576px) {
             .illustration {
                 height: 275px;
             }
-
             .section__illustration__container {
-                transform: scale(.6)  translateY(-175px);
+                transform: scale(.6) translateY(-175px);
             }
         }
-
         @media (min-width: 768px) {
             .illustration {
                 height: 325px;
             }
-
             .section__illustration__container {
                 transform: scale(.7) translateY(-115px);
             }
         }
-
         @media (min-width: 992px) {
             .illustration {
                 height: 425px;
             }
-
             .section__illustration__container {
                 transform: scale(.9) translateY(-15px);
             }
         }
-
         @media (min-width: 1200px) {
             .illustration {
                 height: 470px;
@@ -250,7 +200,6 @@
                 transform: scale(1);
             }
         }
-
         @media (min-width: 1400px) {
             .illustration {
                 height: 520px;
@@ -259,53 +208,41 @@
                 transform: scale(1.1) translateY(15px);
             }
         }
-    }
-
-
-    //fund, build, connect
+    } //fund, build, connect
     &[data-section="4"] {
-        padding-top: 50px;
         margin-top: -50px;
-
+        padding-top: 50px;
         .illustration {
             height: 300px;
         }
-
         .section__illustration__container {
-            transform: scale(0.8);
             width: auto;
-        }
 
-        //illustration responsive positioning
+            transform: scale(0.8);
+        } //illustration responsive positioning
         @media (min-width: 346px) {
             .illustration {
                 height: 325px;
             }
-
             .section__illustration__container {
                 transform: scale(0.8);
             }
         }
-
         @media (min-width: 576px) {
             .illustration {
                 height: 300px;
             }
         }
-
         @media (min-width: 768px) {
-
             .section__illustration__container {
                 transform: translateX(0) scale(1);
             }
         }
-
         @media (min-width: 992px) {
             .illustration {
                 height: 325px;
             }
         }
-
         @media (min-width: 1200px) {
             .illustration {
                 height: 280px;
@@ -314,7 +251,6 @@
                 transform: scale(0.9) translateX(-30px);
             }
         }
-
         @media (min-width: 1400px) {
             .illustration {
                 height: 300px;
@@ -323,112 +259,84 @@
                 transform: scale(1) translateX(-10px);
             }
         }
-    }
-
-    //Asset Marketplace styles
+    } //Asset Marketplace styles
     &[data-section="5"] {
         padding-top: 50px;
         padding-bottom: 50px;
-
         .illustration {
             height: 430px;
         }
-
         .section__illustration__container {
-            transform: scale(.6);
             width: auto;
-            transform-origin: top;
-        }
 
-        //illustration responsive positioning
+            transform: scale(.6);
+            transform-origin: top;
+        } //illustration responsive positioning
         @media (min-width: 480px) {
             .illustration {
                 height: 500px;
             }
-
             .section__illustration__container {
                 transform: scale(.7);
             }
         }
-
         @media (min-width: 576px) {
             .illustration {
                 height: 555px;
             }
-
             .section__illustration__container {
                 transform: scale(0.8);
             }
         }
-
         @media (min-width: 768px) {
             .illustration {
                 height: 700px;
             }
-
             .section__illustration__container {
                 transform: scale(1);
             }
         }
-
         @media (min-width: 992px) {
-            padding-bottom: 0;
             padding-top: 75px;
-
+            padding-bottom: 0;
             .illustration {
                 height: 555px;
             }
-
             .section__illustration__container {
                 transform: scale(0.8) translateX(-10%) translateY(66px);
             }
         }
-
         @media (min-width: 1200px) {
             .illustration {
                 height: 625px;
             }
-
             .section__illustration__container {
                 transform: scale(0.9) translateX(-145px) translateY(45px);
             }
         }
-
         @media (min-width: 1400px) {
             .illustration {
                 height: 625px;
             }
-
             .section__illustration__container {
                 transform: scale(1) translateX(-85px);
             }
         }
-    }
-
-    //Bounty System
+    } //Bounty System
     &[data-section="6"] {
-        padding-bottom: 10px;
-        padding-top: 50px;
         margin-top: -50px;
-
-
+        padding-top: 50px;
+        padding-bottom: 10px;
         .illustration {
             height: 555px;
         }
-
         .section__illustration__container {
-            transform: scale(.6);
             width: auto;
+
+            transform: scale(.6);
             transform-origin: top;
-        }
-
-
-        //illustration responsive positioning
-        @media (min-width: 346px) {
-
-        }
-
-
+        } //illustration responsive positioning
+        @media (min-width: 346px) {}
         @media (min-width: 480px) {
             .illustration {
                 height: 655px;
@@ -437,11 +345,7 @@
                 transform: scale(.7);
             }
         }
-
-        @media (min-width: 576px) {
-
-        }
-
+        @media (min-width: 576px) {}
         @media (min-width: 768px) {
             .illustration {
                 height: 740px;
@@ -450,145 +354,109 @@
                 transform: scale(.8);
             }
         }
-
         @media (min-width: 992px) {
             padding-bottom: 75px;
             .illustration {
                 height: 800px;
             }
-
             .section__illustration__container {
                 transform: scale(0.9);
             }
         }
-
         @media (min-width: 1200px) {
             .illustration {
                 height: 880px;
             }
-
             .section__illustration__container {
                 transform: scale(1);
             }
         }
-
-        @media (min-width: 1400px) {
-
-        }
-    }
-
-    //Rupie Token
+        @media (min-width: 1400px) {}
+    } //Rupie Token
     &[data-section="7"] {
-        padding-bottom: 75px;
-        padding-top: 50px;
         margin-top: -50px;
-
+        padding-top: 50px;
+        padding-bottom: 75px;
         #rupie-tokens {
             width: 200%;
             margin: 0 -45%;
-
             @media (min-width: 768px) {
                 width: 150%;
                 margin: 0 -25%;
             }
-
             @media (min-width: 992px) {
                 width: calc(100% + 60px);
                 margin: 0 -15px;
             }
         }
-    }
-
-    //Team
+    } //Team
     &[data-section="8"] {
-        padding-bottom: 25px;
-        padding-top: 75px;
         margin-top: -50px;
-
+        padding-top: 75px;
+        padding-bottom: 25px;
         .section__title-advisors {
             margin-top: 80px;
         }
-
         @media (min-width: 992px) {
-            padding-top: 50px;
             margin-top: -50px;
+            padding-top: 50px;
         }
-    }
-
-    //Partners
+    } //Partners
     &[data-section="9"] {
-        padding-bottom: 75px;
-        padding-top: 50px;
         margin-top: -50px;
-
+        padding-top: 50px;
+        padding-bottom: 75px;
         .section__title {
             margin-bottom: 50px;
         }
-    }
-
-    //roadmap
+    } //roadmap
     &[data-section="10"] {
-        padding-bottom: 75px;
-        padding-top: 50px;
         margin-top: -50px;
-    }
-
-    //footer
+        padding-top: 50px;
+        padding-bottom: 75px;
+    } //footer
     &[data-section="11"] {
         padding-bottom: 140px;
-
         @media (min-width: 768px) {
             padding-bottom: 160px;
         }
     }
 }
 
-
 .bg-highlight {
     background-color: $color-main;
-
     &--clouds {
         background-color: $color-offwhite;
         background-image: url('../../img/cloud-bg.svg');
-        background-position: bottom;
         background-repeat: no-repeat;
+        background-position: bottom;
         background-size: 1600px;
-
         @media (min-width: 992px) {
             background-size: cover;
         }
     }
-
-    &--cards + .bg-highlight--clouds {
+    &--cards+.bg-highlight--clouds {
         padding-top: 100px;
         padding-bottom: 75px;
-
         @media (min-width: 768px) {
             padding-top: 135px;
             padding-bottom: 135px;
         }
     }
-
     &--cards {
-
-
         @media (min-width: 768px) {
             padding-top: 75px;
         }
-
         @media (min-width: 992px) {
             padding-top: 100px;
         }
-
         .col-sm-6.col-xl-3 {
             padding-right: 24px;
-
             @media (min-width: 576px) {
                 padding-right: 15px;
             }
         }
     }
 }
-
 
 @import 'section-illustration';

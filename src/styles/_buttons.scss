@@ -1,104 +1,103 @@
 .alertSlide {
-  border-radius: 0;
+    border-radius: 0;
 }
 
 .btn {
-    text-decoration: none;
-    border-radius: 19px;
-    border: 1px solid $color-secondary;
-    padding: 6x 18px;
     position: relative;
+
+    padding: 6x 18px;
+
     transition: border .25s ease-out, background-color .25s ease-out;
+    text-decoration: none;
+
+    border: 1px solid $color-secondary;
+    border-radius: 19px;
     background-color: transparent;
 
+    will-change: transform;
     &::before {
         position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
+
         display: block;
+
         width: 100%;
         height: 100%;
+
         content: '';
         cursor: pointer;
         transition: transform 0.2s $transition-button-curve;
-        transform: scale(0) translate3d(0,0,0);
+        transform: scale(0) translate3d(0, 0, 0);
+
         border-radius: inherit;
         background-color: $color-secondary;
     }
-
     &:hover {
         color: $color-white;
-        background-color: transparent;
         border-color: $color-secondary;
-
+        background-color: transparent;
         &::before {
             transform: scale(1);
         }
         svg .icon {
             fill: $color-white;
         }
-
         span {
             color: $color-white;
         }
     }
-
     span {
-        z-index: 2;
         position: relative;
-        color: $color-secondary;
+        z-index: 2;
+
         transition: color 0.2s $transition-button-curve;
-        transform:translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
+
+        color: $color-secondary;
     }
-
     svg {
-        cursor: pointer;
-        z-index: 2;
         position: relative;
-        fill: $color-secondary;
-        transform:translate3d(0,0,0);
+        z-index: 2;
 
+        cursor: pointer;
+        transform: translate3d(0, 0, 0);
+
+        fill: $color-secondary;
         .icon {
             transition: fill 0.2s ease-in-out;
+
             fill: $color-secondary;
         }
     }
-
-    &--footer {
-
-    }
+    &--footer {}
 }
 
 .btn-primary {
     background-color: $color-secondary;
-
     svg .icon {
         fill: $color-white;
     }
-
     span {
         color: $color-white;
     }
-
-  &::before {
-      background-color: $color-white;
-  }
-
-  &:hover {
-      svg .icon {
-          fill: $color-secondary;
-      }
-      span {
-          color: $color-secondary;
-      }
-  }
+    &::before {
+        background-color: $color-white;
+    }
+    &:hover {
+        svg .icon {
+            fill: $color-secondary;
+        }
+        span {
+            color: $color-secondary;
+        }
+    }
 }
 
 .btn-outline-primary {
     color: $color-secondary;
-    border-color: $color-secondary;
-    // &:hover,
+    border-color: $color-secondary; // &:hover,
     // &:active {
     //     border-color: $color-secondary;
     //     background-color: $color-secondary;
@@ -112,7 +111,6 @@
         color: $color-secondary;
     }
 }
-
 
 .social-media {
     &__label {
@@ -131,14 +129,16 @@
     }
     &__icon {
         position: relative;
+
         display: flex;
         align-items: center;
         justify-content: center;
+
         width: 36px;
         height: 36px;
         margin-right: 10px;
-        border-radius: 50%;
 
+        border-radius: 50%;
         svg {
             position: absolute;
             z-index: 10;

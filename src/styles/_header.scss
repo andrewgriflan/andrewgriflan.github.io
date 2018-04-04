@@ -21,15 +21,14 @@
     }
     &__head {
         position: relative;
+
         margin-top: 0;
         margin-bottom: 25px;
-
         span {
             font-weight: 800;
         }
     }
-    &__description {
-    }
+    &__description {}
     &__contact {
         display: flex;
         flex-flow: column nowrap;
@@ -52,64 +51,66 @@
 
 //nav menu markup and styles from
 .menuToggle {
-
+    position: fixed;
     z-index: 1000;
     top: 50px;
     right: 0;
     left: 0;
-    position: fixed;
+
     transition: top 0.5s $transition-button-curve;
 
-
+    will-change: transform;
     @media (min-width: 480px) {
         top: 100px;
     }
-
-
-
     &__inner {
-        cursor: pointer;
-        display: block;
-        overflow: hidden;
-        width: 60px;
-        height: 60px;
-        padding: 0;
-        margin-right: 10px;
         position: absolute;
         right: 15px;
 
+        display: block;
+        overflow: hidden;
+
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        padding: 0;
+
+        cursor: pointer;
         @media (min-width: 992px) {
             right: 30px;
         }
-
         &::after {
             position: absolute;
             z-index: -10;
             top: 0;
             right: 0;
-            cursor: pointer;
+
             display: block;
 
             width: 45px;
             height: 45px;
 
             content: "";
+            cursor: pointer;
 
             border-radius: 50%;
             background-color: $color-main;
         }
     }
     &__hamburger {
-        cursor: pointer;
         position: absolute;
         top: 15px;
         right: 2px;
+
         width: 30px;
         height: 30px;
 
+        cursor: pointer;
         span {
             position: absolute;
+
             display: block;
+
             width: 20px;
             height: 2px;
 
@@ -128,7 +129,6 @@
             }
         }
     }
-
     &.is-active .menuToggle__hamburger span {
         &:nth-child(1) {
             left: 2px;
@@ -176,31 +176,34 @@
     z-index: 100;
     top: -20px;
     right: -20px;
-    bottom:-20px;
+    bottom: -20px;
     left: 100%;
+
     display: block;
+    overflow-y: scroll;
+
     width: 100%;
     height: calc(100% + 30px);
-    overflow-y: scroll;
     margin: 0;
     padding: 15px;
     padding-top: 25px;
+
     list-style-type: none;
+
     transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
     background-color: #fff;
-    -webkit-font-smoothing: antialiased;
     background-image: url('../../img/cloud-bg-menu.svg');
-    background-position: top center;
     background-repeat: repeat;
+    background-position: top center;
     background-size: 1000px;
 
-
+    -webkit-font-smoothing: antialiased;
     &__logo {
-        margin-bottom: 25px;
-        margin-top: 25px;
         width: 120px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
-
     &.is-active {
         left: 0;
     }
@@ -208,35 +211,30 @@
         width: 100%;
         padding: 50px 15px;
     }
-
     &__links {
-        list-style: none;
         margin: 0;
         padding: 0;
 
+        list-style: none;
         li {
             margin-bottom: 20px;
             padding: 0;
         }
-
         a {
             text-decoration: none;
+
             font-size: 20px;
             font-weight: 600;
         }
     }
-
     p {
         margin-top: 10px;
+        margin-bottom: 10px;
+
         font-size: 12px;
         font-weight: 500;
-        margin-bottom: 10px;
     }
-
-    .social-media__list {
-
-    }
-
+    .social-media__list {}
     .social-media__button {
         margin: 20px 0;
     }
@@ -263,7 +261,6 @@ nav {
     animation-delay: 3s;
 
     font-size: 14px;
-
     @media (min-width: 768px) {
         font-size: 16px;
     }
