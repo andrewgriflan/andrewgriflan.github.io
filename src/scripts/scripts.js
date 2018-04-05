@@ -489,7 +489,7 @@ jQuery(document).ready(function () {
 
 	toggleHeadlines();
 
-	initAnimations();
+	// initAnimations();
 
 	initFooterAnimation();
 
@@ -515,7 +515,7 @@ jQuery(window).resize(function () {
 		}
 	});
 
-	TweenMax.set('.section__illustration__rupie-token #tube-left rect, section__illustration__rupie-token #tube-right rect', {
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, .section__illustration__rupie-token #tube-right rect', {
 		scaleX: function() {
 			return scale*2;
 		}
