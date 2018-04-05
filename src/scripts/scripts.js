@@ -489,7 +489,7 @@ jQuery(document).ready(function () {
 
 	toggleHeadlines();
 
-	initAnimations();
+	// initAnimations();
 
 	initFooterAnimation();
 
