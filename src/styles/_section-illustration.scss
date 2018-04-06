@@ -1,6 +1,6 @@
 .section__illustration {
-    will-change: transform; 
-    
+    will-change: transform;
+
     //global positioning
     &__container {
         width: 100%;
@@ -190,6 +190,7 @@
     &__fund {
         &-coin {
             perspective: 500px;
+            transform: translate(0, 0);
             &[data-num="1"] {
                 transform: translateX(180px) translateY(114px);
             }
