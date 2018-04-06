@@ -216,11 +216,10 @@ function initAnimations() {
 			}
 		})
 		.set('.illustration__game-ship', { rotate: 80 })
-		.set('#illustration__game-meteor-md-3', { x: 16, y: 60, rotation: 0 })
 		.to('.illustration__game-ship', 2, { rotation: '-=80', ease: Power2.easeInOut })
 		.to('.illustration__game-ship', 2, { rotation: '+=172', ease: Power2.easeInOut })
 		.staggerTo(['.illustration__game-lasers[data-num="1"]', '.illustration__game-lasers[data-num="2"]', '.illustration__game-lasers[data-num="3"]'], 1.2, { x: 49, y: 3, ease: Power0.easeNone }, 0.25)
-		.fromTo('#illustration__game-meteor-md-3', 3, { x: 107, y: -50, rotation: 0 }, { x: 54, y: 3, rotation: -110, ease: Power0.easeNone }, '-=4.2')
+		.fromTo('#illustration__game-meteor-md-3', 3.1, { x: 115, y: -50, rotation: 0 }, { x: 42, y: 48, rotation: -110, ease: Power0.easeNone }, '-=4.2')
 		.staggerTo(['.illustration__game-lasers[data-num="1"]', '.illustration__game-lasers[data-num="2"]', '.illustration__game-lasers[data-num="3"]'], .2, { opacity: 0, ease: Power0.easeNone, delay: 0.5 }, 0.1, '-=1.35')
 		// .fromTo('.illustration__game-meteor-sm[data-num="2"]', 3, {x: 11, y:-114, rotation: 0}, {x: 9, y:0, rotation: -110, ease:Power0.easeNone}, '-=5')
 		.fromTo('.illustration__game-explosion', 0.3, { opacity: 0 }, { opacity: 100, ease: Power0.easeNone }, '-=1')
@@ -229,14 +228,14 @@ function initAnimations() {
 		.to('.illustration__game-ship', 2, { rotation: '-=92', ease: Power2.easeInOut });
 
 	//meteors
-	TweenMax.fromTo('#illustration__game-meteor-xl-1', 8, { y: '+=37', rotation: 0 }, { x: '-=135', y: '-=155', rotation: 360, repeat: -1, ease: Power0.easeNone });
-	TweenMax.fromTo('#illustration__game-meteor-xl-2', 8, { x: -18, y: 111, rotation: 0 }, { x: 112, y: 3, rotation: 360, repeat: -1, ease: Power0.easeNone, delay: 3 });
+	TweenMax.fromTo('#illustration__game-meteor-xl-1', 10, { y: '+=37', rotation: 0 }, { x: '-=135', y: '-=155', rotation: 360, repeat: -1, ease: Power0.easeNone });
+	TweenMax.fromTo('#illustration__game-meteor-xl-2', 8, { x: 18, y: 40, rotation: 0 }, { x: 182, y: -6, rotation: 40, repeat: -1, ease: Power0.easeNone, delay: 3 });
 	TweenMax.fromTo('#illustration__game-meteor-l-1', 4, { x: -56, y: 110, rotation: 0 }, { x: 77, y: 37, rotation: 90, repeat: -1, ease: Power0.easeNone, repeatDelay: 1 });
-	TweenMax.fromTo('#illustration__game-meteor-l-2', 6, { x: -67, y: -31, rotation: 0 }, { x: -93, y: 97, rotation: -130, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
-	TweenMax.fromTo('#illustration__game-meteor-md-3', 3, { x: -55, y: 49, rotation: 0 }, { x: 139, y: 37, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
-	TweenMax.fromTo('#illustration__game-meteor-md-1', 4, { x: -47, y: -31, rotation: 0 }, { x: 27, y: 101, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
-	TweenMax.fromTo('#illustration__game-meteor-md-2', 5.5, { x: 160, y: 29, rotation: 0 }, { x: 33, y: -66, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
-	TweenMax.fromTo('#illustration__game-meteor-sm-1', 6, { x: -3, y: -59, rotation: 0 }, { x: 93, y: 58, rotation: -210, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	TweenMax.fromTo('#illustration__game-meteor-l-2', 6, { x: 82, y: -71, rotation: 0 }, { x: 16, y: 97, rotation: 230, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	// TweenMax.fromTo('#illustration__game-meteor-md-3', 3, { x: -55, y: 49, rotation: 0 }, { x: 139, y: 37, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
+	TweenMax.fromTo('#illustration__game-meteor-md-1', 4, { x: -43, y: -81, rotation: 0 }, { x: 12, y: 55, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
+	TweenMax.fromTo('#illustration__game-meteor-md-2', 6.1, { x: 60, y: -29, rotation: 0 }, { x: -133, y: 2, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	TweenMax.fromTo('#illustration__game-meteor-sm-1', 3, { x: -73, y: 99, rotation: 0 }, { x: -15, y: -50, rotation: -210, repeat: -1, ease: Power0.easeNone, delay: 2, repeatDelay: 2 });
 
 
 
@@ -489,7 +488,7 @@ jQuery(document).ready(function () {
 
 	toggleHeadlines();
 
-	// initAnimations();
+	initAnimations();
 
 	initFooterAnimation();
 

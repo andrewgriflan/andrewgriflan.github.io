@@ -215,10 +215,10 @@
         width: 100%;
         transform: scale(0.97) translateX(1px) translateY(9px);
         &-health {
-            transform: translateX(62px) translateY(-250px);
+            transform: translateX(573px) translateY(198px);
         }
         &-satellite {
-            transform: translateX(-92px) translateY(-77px) rotate(10deg);
+            transform: translateX(701px) translateY(154px) rotate(10deg);
             transform-origin: 4px 22px;
         }
         &-ship {
@@ -234,7 +234,7 @@
             width: 157px;
             height: 101px;
 
-            transform: translateX(57px) translateY(-151px);
+            transform: translateX(629px) translateY(232px);
 
             clip-path: url(#game-clip-path);
         }
