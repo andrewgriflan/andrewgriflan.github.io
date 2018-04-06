@@ -188,9 +188,12 @@
         }
     } //section 4
     &__fund {
+        &-coins {
+            transform: translate(0, 0);
+        }
         &-coin {
             perspective: 500px;
-            transform: translate(0, 0);
+
             &[data-num="1"] {
                 transform: translateX(180px) translateY(114px);
             }
