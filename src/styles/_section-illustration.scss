@@ -67,14 +67,13 @@
     } //section 2
     &__spaceship-nav {
         display: none;
+        transform: translateX(100px) translateY(-300px);
 
-        #banner-text {
-            transform: translateY(-2px);
-        }
-
-        transform: translateX(100px) translateY(-200px);
         @media (min-width: 992px) {
             display: block;
+        }
+        #banner-text {
+            transform: translateY(-2px);
         }
     }
     &__tower {
