@@ -78,7 +78,9 @@ gulp.task('img-min', () =>
 						removeViewBox: false
 					}, {
 						minifyStyles: false
-					}
+					}, {
+                        cleanupIDs: false
+                    }
 				]
 			})
 		], {verbose: true}))

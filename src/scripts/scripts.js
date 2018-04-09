@@ -246,8 +246,8 @@ function initAnimations() {
 	//spacehship
 	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 	TweenMax.to('.section__illustration__spaceship-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
-	TweenMax.to('#banner-path', 2, {x: '-=91', repeat: -1,  ease: Power0.easeNone});
-	TweenMax.to('#banner-text', 1.5, {y: '+=4', repeat: -1, yoyo: true, ease: Power0.easeNone});
+	TweenMax.to('#banner-path', 3, {x: '-=91', repeat: -1,  ease: Power0.easeNone});
+	TweenMax.to('#banner-text', 2.5, {y: '+=4', repeat: -1, yoyo: true, ease: Power0.easeNone});
 
 	//spaceships with block
 	TweenMax.to('.section__illustration__spaceship-block', 7, {x: '+=30', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 4 });
