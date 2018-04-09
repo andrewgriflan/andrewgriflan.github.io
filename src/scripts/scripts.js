@@ -156,44 +156,44 @@ function initAnimations() {
 
 
 	//Tube Rupies
-	TweenMax.set('.illustration__tubes-top-left img', {
+	TweenMax.set('#top-left-rupies [data-name="rupie"]', {
 		x: function (i) {
-			return -(i * 28);
+			return (i * 26) - 60;
 		}
 	});
-	TweenMax.staggerTo(['.illustration__tubes-top-left [data-num="1"]', '.illustration__tubes-top-left [data-num="2"]', '.illustration__tubes-top-left [data-num="3"]'], 1.5, { x: '+=56', ease: Power0.easeNone, repeat: -1 }, 0.75);
+	TweenMax.staggerTo('#top-left-rupies [data-name="rupie"]', 1.5, { x: '+=56', ease: Power0.easeNone, repeat: -1 }, 0.75);
 
 
-	TweenMax.set('.illustration__tubes-top-right img', {
+	TweenMax.set('#top-right-rupies [data-name="rupie"]', {
 		x: function (i) {
-			return 108 - (i * 28);
+			return (i * 26) + 12;
 		}
 	});
-	TweenMax.staggerTo(['.illustration__tubes-top-right [data-num="1"]', '.illustration__tubes-top-right [data-num="2"]', '.illustration__tubes-top-right [data-num="3"]', '.illustration__tubes-top-right [data-num="4"]', '.illustration__tubes-top-right [data-num="5"]'], 2, { x: '-=112', ease: Power0.easeNone, repeat: -1 }, 0.5);
+	TweenMax.staggerTo('#top-right-rupies [data-name="rupie"]', 3, { x: '-=112', ease: Power0.easeNone, repeat: -1 }, 0.75);
 
 
-	TweenMax.set('.illustration__tubes-bottom-right img', {
+	TweenMax.set('#bottom-right-rupies [data-name="rupie"]', {
 		x: function (i) {
-			return 108 - (i * 28);
+			return 12 + (i * 26);
 		}
 	});
-	TweenMax.staggerTo(['.illustration__tubes-bottom-right [data-num="1"]', '.illustration__tubes-bottom-right [data-num="2"]', '.illustration__tubes-bottom-right [data-num="3"]', '.illustration__tubes-bottom-right [data-num="4"]', '.illustration__tubes-bottom-right [data-num="5"]'], 3, { x: '-=112', ease: Power0.easeNone, repeat: -1 }, 0.75);
+	TweenMax.staggerTo('#bottom-right-rupies [data-name="rupie"]', 3, { x: '-=112', ease: Power0.easeNone, repeat: -1 }, 0.75);
 
 
-	TweenMax.set('.illustration__tubes-bottom-left img', {
+	TweenMax.set('#bottom-left-rupies [data-name="rupie"]', {
 		x: function (i) {
-			return -(i * 28);
+			return (i * 26) - 108;
 		}
 	});
-	TweenMax.staggerTo(['.illustration__tubes-bottom-left [data-num="1"]', '.illustration__tubes-bottom-left [data-num="2"]', '.illustration__tubes-bottom-left [data-num="3"]', '.illustration__tubes-bottom-left [data-num="4"]'], 3, { x: '+=112', ease: Power0.easeNone, repeat: -1 }, 0.75);
+	TweenMax.staggerTo('#bottom-left-rupies [data-name="rupie"]', 3, { x: '+=116', ease: Power0.easeNone, repeat: -1 }, 0.75);
 
 
-	TweenMax.set('.illustration__tubes-top-top img', {
+	TweenMax.set('#board-rupies [data-name="rupie"]', {
 		x: function (i) {
-			return -(i * 28);
+			return (i * 28) - 36;
 		}
 	});
-	TweenMax.staggerTo(['.illustration__tubes-top-top [data-num="1"]', '.illustration__tubes-top-top [data-num="2"]', '.illustration__tubes-top-top [data-num="3"]', '.illustration__tubes-top-top [data-num="4"]'], 1, { x: '+=62', ease: Power0.easeNone, repeat: -1 }, .5);
+	TweenMax.staggerTo('#board-rupies [data-name="rupie"]', 1, { x: '+=66', ease: Power0.easeNone, repeat: -1 }, .5);
 
 	//Gyrocopter
 	TweenMax.to('.illustration__gyrocopter-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
@@ -216,27 +216,26 @@ function initAnimations() {
 			}
 		})
 		.set('.illustration__game-ship', { rotate: 80 })
-		.set('.illustration__game-meteor-sm[data-num="2"]', { x: 16, y: 60, rotation: 0 })
 		.to('.illustration__game-ship', 2, { rotation: '-=80', ease: Power2.easeInOut })
 		.to('.illustration__game-ship', 2, { rotation: '+=172', ease: Power2.easeInOut })
 		.staggerTo(['.illustration__game-lasers[data-num="1"]', '.illustration__game-lasers[data-num="2"]', '.illustration__game-lasers[data-num="3"]'], 1.2, { x: 49, y: 3, ease: Power0.easeNone }, 0.25)
-		.fromTo('.illustration__game-meteor-sm[data-num="2"]', 3, { x: 107, y: -50, rotation: 0 }, { x: 54, y: 3, rotation: -110, ease: Power0.easeNone }, '-=4.2')
+		.fromTo('#illustration__game-meteor-md-3', 3.1, { x: 115, y: -50, rotation: 0 }, { x: 42, y: 48, rotation: -110, ease: Power0.easeNone }, '-=4.2')
 		.staggerTo(['.illustration__game-lasers[data-num="1"]', '.illustration__game-lasers[data-num="2"]', '.illustration__game-lasers[data-num="3"]'], .2, { opacity: 0, ease: Power0.easeNone, delay: 0.5 }, 0.1, '-=1.35')
 		// .fromTo('.illustration__game-meteor-sm[data-num="2"]', 3, {x: 11, y:-114, rotation: 0}, {x: 9, y:0, rotation: -110, ease:Power0.easeNone}, '-=5')
 		.fromTo('.illustration__game-explosion', 0.3, { opacity: 0 }, { opacity: 100, ease: Power0.easeNone }, '-=1')
-		.to('.illustration__game-meteor-sm[data-num="2"]', 0.01, { opacity: 0 }, '-=1')
+		.to('#illustration__game-meteor-md-3', 0.01, { opacity: 0 }, '-=1')
 		.set('.illustration__game-explosion', { opacity: 0 })
 		.to('.illustration__game-ship', 2, { rotation: '-=92', ease: Power2.easeInOut });
 
 	//meteors
-	TweenMax.fromTo('.illustration__game-meteor-xl[data-num="1"]', 8, { x: 31, y: 107, rotation: 0 }, { x: -35, y: 5, rotation: 360, repeat: -1, ease: Power0.easeNone });
-	TweenMax.fromTo('.illustration__game-meteor-xl[data-num="2"]', 8, { x: -18, y: 111, rotation: 0 }, { x: 112, y: 3, rotation: 360, repeat: -1, ease: Power0.easeNone, delay: 3 });
-	TweenMax.fromTo('.illustration__game-meteor-l[data-num="1"]', 4, { x: -56, y: 110, rotation: 0 }, { x: 77, y: 37, rotation: 90, repeat: -1, ease: Power0.easeNone, repeatDelay: 1 });
-	TweenMax.fromTo('.illustration__game-meteor-l[data-num="2"]', 6, { x: -67, y: -31, rotation: 0 }, { x: -93, y: 97, rotation: -130, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
-	TweenMax.fromTo('.illustration__game-meteor-md[data-num="3"]', 3, { x: -55, y: 49, rotation: 0 }, { x: 139, y: 37, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
-	TweenMax.fromTo('.illustration__game-meteor-md[data-num="1"]', 4, { x: -47, y: -31, rotation: 0 }, { x: 27, y: 101, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
-	TweenMax.fromTo('.illustration__game-meteor-md[data-num="2"]', 5.5, { x: 160, y: 29, rotation: 0 }, { x: 33, y: -66, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
-	TweenMax.fromTo('.illustration__game-meteor-sm[data-num="1"]', 6, { x: -3, y: -59, rotation: 0 }, { x: 93, y: 58, rotation: -210, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	TweenMax.fromTo('#illustration__game-meteor-xl-1', 10, { y: '+=37', rotation: 0 }, { x: '-=135', y: '-=155', rotation: 360, repeat: -1, ease: Power0.easeNone });
+	TweenMax.fromTo('#illustration__game-meteor-xl-2', 8, { x: 18, y: 40, rotation: 0 }, { x: 182, y: -6, rotation: 40, repeat: -1, ease: Power0.easeNone, delay: 3 });
+	TweenMax.fromTo('#illustration__game-meteor-l-1', 4, { x: -56, y: 110, rotation: 0 }, { x: 77, y: 37, rotation: 90, repeat: -1, ease: Power0.easeNone, repeatDelay: 1 });
+	TweenMax.fromTo('#illustration__game-meteor-l-2', 6, { x: 82, y: -71, rotation: 0 }, { x: 16, y: 97, rotation: 230, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	// TweenMax.fromTo('#illustration__game-meteor-md-3', 3, { x: -55, y: 49, rotation: 0 }, { x: 139, y: 37, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
+	TweenMax.fromTo('#illustration__game-meteor-md-1', 4, { x: -43, y: -81, rotation: 0 }, { x: 12, y: 55, rotation: 50, repeat: -1, ease: Power0.easeNone, repeatDelay: 1, delay: 1 });
+	TweenMax.fromTo('#illustration__game-meteor-md-2', 6.1, { x: 60, y: -29, rotation: 0 }, { x: -133, y: 2, rotation: 110, repeat: -1, ease: Power0.easeNone, repeatDelay: 2 });
+	TweenMax.fromTo('#illustration__game-meteor-sm-1', 3, { x: -73, y: 99, rotation: 0 }, { x: -15, y: -50, rotation: -210, repeat: -1, ease: Power0.easeNone, delay: 2, repeatDelay: 2 });
 
 
 
@@ -247,6 +246,8 @@ function initAnimations() {
 	//spacehship
 	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 	TweenMax.to('.section__illustration__spaceship-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+	TweenMax.to('#banner-path', 2, {x: '-=91', repeat: -1,  ease: Power0.easeNone});
+	TweenMax.to('#banner-text', 1.5, {y: '+=4', repeat: -1, yoyo: true, ease: Power0.easeNone});
 
 	//spaceships with block
 	TweenMax.to('.section__illustration__spaceship-block', 7, {x: '+=30', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 4 });
@@ -307,27 +308,27 @@ function initAnimations() {
 
 	//rocketship
 	var rocketTimeline = new TimelineMax({ repeat: -1, yoyo: true, ease: Sine.easeIn, repeatDelay: 3});
-	rocketTimeline.to('.section__illustration__space-rocketship', 5, {y: '+=35'});
-	rocketTimeline.to('.section__illustration__space-rocketship', 1, {opacity: 0}, '-=2.5');
+	rocketTimeline.to('#rocket-ship', 5, {y: '+=35'});
+	rocketTimeline.to('#rocket-ship', 1, {opacity: 0}, '-=2.5');
 
 	//Tube coins
-	TweenMax.set('.section__illustration__space-coins[data-num="1"] img', {
+	TweenMax.set('#tube-coins-left [data-name="coin"]', {
 		x: function (i) {
-			return -(i * 24);
+			return -(i * 24) + 110;
 		}
 	});
-	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="1"] [data-num="1"]', '.section__illustration__space-coins[data-num="1"] [data-num="2"]', '.section__illustration__space-coins[data-num="1"] [data-num="3"]', '.section__illustration__space-coins[data-num="1"] [data-num="4"]', '.section__illustration__space-coins[data-num="1"] [data-num="5"]'], 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+	TweenMax.staggerTo('#tube-coins-left [data-name="coin"]', 2, { x: '-=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
 
-	TweenMax.set('.section__illustration__space-coins[data-num="2"] img', {
+	TweenMax.set('#tube-coins-right [data-name="coin"]', {
 		x: function (i) {
-			return -(i * 24) - 130;
+			return -(i * 24) - 30;
 		}
 	});
-	TweenMax.staggerTo(['.section__illustration__space-coins[data-num="2"] [data-num="1"]', '.section__illustration__space-coins[data-num="2"] [data-num="2"]', '.section__illustration__space-coins[data-num="2"] [data-num="3"]', '.section__illustration__space-coins[data-num="2"] [data-num="4"]', '.section__illustration__space-coins[data-num="2"] [data-num="5"]'], 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
+	TweenMax.staggerTo('#tube-coins-right [data-name="coin"]', 2, { x: '+=130', ease: Power0.easeNone, repeat: -1 }, 0.5);
 
 	//buttons
 
-	TweenMax.staggerTo('.section__illustration__space-base #buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
+	TweenMax.staggerTo('#buttons rect', 0.15, {fill: '#FFFFFF', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 2 }, 0.2);
 
 
 
@@ -348,8 +349,6 @@ function initAnimations() {
 	helicopter3Timeline.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 4, { x: '+=20', y: '+=40' })
 		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '+=10', y: '-=20' })
 		.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '-=30', y: '-=20' });
-
-	TweenMax.to('.section__illustration__robot #tail-blades', 1, {rotation: 180, transformOrigin: "center", repeat: -1, ease: Power0.easeNone });
 
 	TweenMax.to('.section__illustration__robot-helicopter-blades', 1.5, {rotationY: 360, repeat: -1, ease: Power0.easeNone });
 
@@ -466,17 +465,29 @@ function initScrollToTop() {
 	};
 });
 
+function initVideoClickHandler() {
+	jQuery('.video-placeholder').on('click', function() {
+		var placeholderHeight
+		jQuery(this).fadeOut(function() {
+			jQuery(this).parent().html('<iframe id="ytplayer" type="text/html" width="100%" height="619" src="https://www.youtube.com/embed/GO5FwsblpT8?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&origin=0.0.0.0:8000" frameborder="0"></iframe>');
+		})
+	});
+}
+
 //////////////// DOCUMENT READY/////////////////
 jQuery(document).ready(function () {
 
-	jQuery('.menuToggle').click(function () {
+	jQuery('.menuToggle').sticky({topSpacing: 40, zIndex: 1000});
 
+	jQuery('.menuToggle').click(function () {
 		jQuery('.menu').toggleClass('is-active');
 		jQuery('.menuToggle').toggleClass('is-active');
+		jQuery('body').toggleClass('menu-active');
+
 		if (jQuery('.menuToggle').hasClass('is-active')) {
-			jQuery('.menuToggle').css('top', 30);
+			jQuery('nav').css('top', 50);
 		} else {
-			setMenuTogglePosition();
+			jQuery('nav').css('top', '');
 		}
 
 	});
@@ -498,7 +509,11 @@ jQuery(document).ready(function () {
 
 	initScrollToTop();
 
-	setMenuTogglePosition();
+	initVideoClickHandler();
+});
+
+jQuery(window).on('load', function() {
+  jQuery(".loader").delay(1000).fadeOut("slow");
 });
 
 jQuery(window).resize(function () {
@@ -512,7 +527,7 @@ jQuery(window).resize(function () {
 		}
 	});
 
-	TweenMax.set('.section__illustration__rupie-token #tube-left rect, section__illustration__rupie-token #tube-right rect', {
+	TweenMax.set('.section__illustration__rupie-token #tube-left rect, .section__illustration__rupie-token #tube-right rect', {
 		scaleX: function() {
 			return scale*2;
 		}
@@ -521,36 +536,4 @@ jQuery(window).resize(function () {
 	initRupieTokenAnimation();
 
 	initFooterAnimation();
-
-	setMenuTogglePosition();
 });
-
-jQuery('body, html').scroll(function() {
-	setMenuTogglePosition();
-});
-
-
-function setMenuTogglePosition() {
-	var screenWidth = jQuery(window).outerWidth();
-	var scrollPosition = jQuery('body').scrollTop();
-	var buttonOffset = jQuery('.menuToggle').position().top;
-
-	if (isSafari || isMobile) {
-		jQuery('.menuToggle').css('top', 50);
-		return;
-	}
-
-	if (screenWidth >= 525 && screenWidth < 992) {
-		if (scrollPosition <= 70) {
-			jQuery('.menuToggle').css('top', 100 - scrollPosition)
-		} else {
-			jQuery('.menuToggle').css('top', 30)
-		}
-	} else {
-		if (scrollPosition <= 85) {
-			jQuery('.menuToggle').css('top', 115 - scrollPosition)
-		} else {
-			jQuery('.menuToggle').css('top', 30)
-		}
-	}
-}
