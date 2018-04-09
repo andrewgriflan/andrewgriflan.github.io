@@ -16,7 +16,8 @@
             height: 23px;
             content: "";
             transform: rotate(90deg);
-            background-image: url('../../img/diagram-arrow.svg');
+
+            background-image: url('../img/diagram-arrow.svg');
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -53,7 +54,8 @@
             height: 23px;
             content: "";
             transform: rotate(-90deg) rotateY(180deg);
-            background-image: url('../../img/diagram-arrow.svg');
+
+            background-image: url('../img/diagram-arrow.svg');
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -86,7 +88,7 @@
             content: "";
             transform: rotate(-135deg);
 
-            background-image: url('../../img/diagram-arrow.svg');
+            background-image: url('../img/diagram-arrow.svg');
             background-repeat: no-repeat;
             background-position: center;
         }

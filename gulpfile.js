@@ -14,88 +14,82 @@ const autoprefixer = require('gulp-autoprefixer'),
       uglify = require('gulp-uglify');
 
 gulp.task('scripts', function() {
-    return gulp.src([
-        'src/scripts/*.js'
-    ])
-    .pipe(plumber())
-    .pipe(concat('scripts.js'))
-    .pipe(babel({
-        presets: ['es2015']
-    }))
-    // .pipe(uglify())
-    .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(notify({
-        message: 'Scripts Compiled',
-        onLast: true
-    }));
+	return gulp.src([
+    './src/scripts/vendor/modernizr-3.5.0.min.js',
+		'./src/scripts/vendor/TimelineMax.min.js',
+		'./src/scripts/vendor/TweenMax.min.js',
+		'./src/scripts/scripts.js'
+	])
+	.pipe(plumber())
+	.pipe(concat('scripts.js'))
+	.pipe(babel({
+		presets: ['es2015']
+	}))
+	.pipe(uglify())
+	.pipe(rename({
+		suffix: '.min'
+	}))
+	.pipe(gulp.dest('dist/js'))
+	.pipe(notify({
+		message: 'Scripts Compiled',
+		onLast: true
+	}));
 });
 
 gulp.task('styles', function() {
-    return sass([
-        'src/styles/styles.scss'
-    ], {
-        noCache: true,
-        style: 'compact',
-        sourcemap: true
-    })
-    .pipe(plumber())
-    .pipe(cleancss({
-        keepSpecialComments: false,
-        processImport: false
-    }))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions', 'IE 11', 'Safari 8']
-    }))
-    .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(sourcemaps.write('maps', {
-        includeContent: false,
-        sourceRoot: '/src/scss'
-    }))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(notify({
-        message: '"Styles" Task Completed'
-    }));
+	return sass([
+		'src/styles/styles.scss'
+	], {
+		noCache: true,
+		style: 'compact',
+		sourcemap: true,
+	})
+	.pipe(plumber())
+	.pipe(cleancss({
+		keepSpecialComments: false,
+		processImport: false
+	}))
+	.pipe(autoprefixer({
+		browsers: ['last 2 versions', 'IE 11', 'Safari 8']
+	}))
+	.pipe(rename({
+		suffix: '.min'
+	}))
+	.pipe(sourcemaps.write('maps', {
+		includeContent: false,
+		sourceRoot: '/src/scss'
+	}))
+	.pipe(gulp.dest('dist/css'))
+	.pipe(notify({
+		message: '"Styles" Task Completed'
+	}));
 });
 
-gulp.task('img-min', function() {
-    // const config = {
-    //     mode: {
-    //         symbol: { // symbol mode to build the SVG
-    //             render: {
-    //                 scss: {
-    //                     dest: '../src/scss/partial/_iconography.scss'
-    //                 }
-    //             },
-    //             prefix: '.u-icon-%s',
-    //             sprite: '../images/sprite-ui.svg', //generated sprite name
-    //         }
-    //     }
-    // };
 
-    gulp.src('img/**/*', {
-        cwd: ''
-    })
-    .pipe(plumber())
-    .pipe(imagemin())
-    .pipe(svgo())
-    // .pipe(svgsprite(config))
-    .pipe(gulp.dest(''))
-    .pipe(notify({
-        message: 'image min Task Completed'
-    }));
-});
-
+gulp.task('img-min', () =>
+	gulp.src('./src/img/**/*')
+		.pipe(plumber())
+		.pipe(imagemin([
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng(),
+			imagemin.svgo({
+				plugins: [
+					{
+						removeViewBox: false
+					}, {
+						minifyStyles: false
+					}
+				]
+			})
+		], {verbose: true}))
+		.pipe(gulp.dest('dist/img'))
+		.pipe(notify({message: 'image min Task Completed'}))
+);
 
 gulp.task('watch', function() {
-    gulp.watch(['src/*.scss', 'src/**/*.scss'], ['styles']);
-    gulp.watch('images/svg/*.svg', ['img-min']);
-    gulp.watch('src/scripts/*.js', ['scripts']);
-
+	gulp.watch(['src/*.scss', 'src/**/*.scss'], ['styles']);
+	gulp.watch('img/**/*', ['img-min']);
+	gulp.watch('src/scripts/*.js', ['scripts']);
 });
 
-gulp.task( 'default', [ 'styles', 'scripts', 'img-min'] );
+gulp.task('default', ['scripts', 'styles', 'img-min']);
