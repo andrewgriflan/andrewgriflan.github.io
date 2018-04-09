@@ -68,6 +68,10 @@
     &__spaceship-nav {
         display: none;
 
+        #banner-text {
+            transform: translateY(-2px);
+        }
+
         transform: translateX(100px) translateY(-200px);
         @media (min-width: 992px) {
             display: block;
@@ -106,7 +110,7 @@
     }
     &__spaceship-blades {
         &[data-num="1"] {
-            transform: translateX(78px);
+            transform: translateX(-2px) translateY(-2px);
             transform-origin: 30px 1px;
 
             perspective: 500px;

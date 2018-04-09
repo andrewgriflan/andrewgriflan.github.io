@@ -246,6 +246,8 @@ function initAnimations() {
 	//spacehship
 	TweenMax.to('.section__illustration__spaceship-nav', 5, {y: '+=15', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 0.4 }, 0.75);
 	TweenMax.to('.section__illustration__spaceship-blades', .5, { rotationY: 180, repeat: -1, ease: Power0.easeNone });
+	TweenMax.to('#banner-path', 2, {x: '-=91', repeat: -1,  ease: Power0.easeNone});
+	TweenMax.to('#banner-text', 2, {y: '+=4', repeat: -1, yoyo: true, ease: Power0.easeNone});
 
 	//spaceships with block
 	TweenMax.to('.section__illustration__spaceship-block', 7, {x: '+=30', repeat: -1, yoyo: true, ease: Power2.easeInOut, repeatDelay: 4 });
@@ -465,6 +467,7 @@ function initScrollToTop() {
 
 function initVideoClickHandler() {
 	jQuery('.video-placeholder').on('click', function() {
+		var placeholderHeight
 		jQuery(this).fadeOut(function() {
 			jQuery(this).parent().html('<iframe id="ytplayer" type="text/html" width="100%" height="619" src="https://www.youtube.com/embed/GO5FwsblpT8?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&origin=0.0.0.0:8000" frameborder="0"></iframe>');
 		})
