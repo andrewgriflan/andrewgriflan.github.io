@@ -422,10 +422,46 @@
             padding-bottom: 160px;
         }
     }
+    &__video-container {
+
+    }
     &__video-placeholder {
         margin-bottom: 50px;
+        cursor: pointer;
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        
+        iframe {
+            position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+        }
+
+
+        .play-button {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: fill 0.3s $transition-button-curve;
+        }
+
+        &:hover {
+            .play-button {
+                fill: $color-secondary;
+            }
+        }
+
+
+
         .video-placeholder {
             max-width: 100%;
+
         }
     }
 }

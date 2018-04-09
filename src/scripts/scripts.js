@@ -465,7 +465,9 @@ function initScrollToTop() {
 
 function initVideoClickHandler() {
 	jQuery('.video-placeholder').on('click', function() {
-		jQuery(this).parent().html('<iframe id="ytplayer" type="text/html" width="100%" height="550" src="https://www.youtube.com/embed/GO5FwsblpT8?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&origin=0.0.0.0:8000" frameborder="0"></iframe>');
+		jQuery(this).fadeOut(function() {
+			jQuery(this).parent().html('<iframe id="ytplayer" type="text/html" width="100%" height="619" src="https://www.youtube.com/embed/GO5FwsblpT8?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&origin=0.0.0.0:8000" frameborder="0"></iframe>');
+		})
 	});
 }
 
