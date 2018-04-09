@@ -422,6 +422,12 @@
             padding-bottom: 160px;
         }
     }
+    &__video-placeholder {
+        margin-bottom: 50px;
+        .video-placeholder {
+            max-width: 100%;
+        }
+    }
 }
 
 .bg-highlight {
