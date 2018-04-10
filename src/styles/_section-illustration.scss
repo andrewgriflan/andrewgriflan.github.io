@@ -67,6 +67,7 @@
     } //section 2
     &__spaceship-nav {
         display: none;
+        cursor: pointer;
         transform: translateX(100px) translateY(-300px);
 
         @media (min-width: 992px) {
