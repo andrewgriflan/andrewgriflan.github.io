@@ -451,11 +451,21 @@ function initRupieTokenAnimation() {
 function initScrollToTop() {
 	if (jQuery('#back-to-top').length) {
 		jQuery('#back-to-top').click(function() {
-			jQuery("html, body").animate({ scrollTop: 0 }, "slow");;
+			jQuery("html, body").animate({ scrollTop: 0 }, "slow");
 		});
 	}
 }
 
+
+function initVideoScroll() {
+	if (jQuery('.section__illustration__spaceship-nav').length) {
+		jQuery('.section__illustration__spaceship-nav').click(function() {
+			jQuery('html, body').animate({
+		        scrollTop: jQuery(".section__video-container").offset().top
+		    }, "slow");
+		});
+	}
+}
 
 
 [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
@@ -508,6 +518,8 @@ jQuery(document).ready(function () {
 	initCardFlipInteraction();
 
 	initScrollToTop();
+
+	initVideoScroll();
 
 	initVideoClickHandler();
 });
