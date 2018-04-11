@@ -1,21 +1,40 @@
 const autoprefixer = require('gulp-autoprefixer'),
-      babel = require('gulp-babel'),
-      cleancss = require('gulp-clean-css'),
-      concat = require('gulp-concat'),
-      gulp = require('gulp'),
-      imagemin = require('gulp-imagemin'),
-      notify = require('gulp-notify'),
-      plumber = require('gulp-plumber'),
-      rename = require('gulp-rename'),
-      sass = require('gulp-ruby-sass'),
-      sourcemaps = require('gulp-sourcemaps'),
-      imgagemin = require('gulp-imagemin'),
-      svgo = require('gulp-svgo'),
-      uglify = require('gulp-uglify');
+babel = require('gulp-babel'),
+cleancss = require('gulp-clean-css'),
+concat = require('gulp-concat'),
+gulp = require('gulp'),
+imagemin = require('gulp-imagemin'),
+htmlmin = require('gulp-htmlmin'),
+notify = require('gulp-notify'),
+plumber = require('gulp-plumber'),
+rename = require('gulp-rename'),
+sass = require('gulp-ruby-sass'),
+sourcemaps = require('gulp-sourcemaps'),
+svgo = require('gulp-svgo'),
+uglify = require('gulp-uglify');
 
-gulp.task('scripts', function() {
-	return gulp.src([
-    './src/scripts/vendor/modernizr-3.5.0.min.js',
+const paths = {
+	src: 'src/**/*',
+	srcFiles: [
+		'src/*.pdf',
+		'src/*.xml',
+		'src/*.txt',
+		'src/*.webmanifest'
+	],
+	srcJS: 'src/**/*.js',
+	srcSCSS: 'src/**/*.scss',
+	srcHTML: 'src/**/*.html',
+	srcImg: 'src/img/**/*',
+	
+	dist: 'dist',
+	distJS: 'dist/js',
+	distCSS: 'dist/css',
+	distImg: 'dist/img'
+};
+
+gulp.task('scripts', () =>
+	gulp.src([
+		'./src/scripts/vendor/modernizr-3.5.0.min.js',
 		'./src/scripts/vendor/TimelineMax.min.js',
 		'./src/scripts/vendor/TweenMax.min.js',
 		'./src/scripts/scripts.js'
@@ -29,20 +48,18 @@ gulp.task('scripts', function() {
 	.pipe(rename({
 		suffix: '.min'
 	}))
-	.pipe(gulp.dest('dist/js'))
+	.pipe(gulp.dest(paths.distJS))
 	.pipe(notify({
 		message: 'Scripts Compiled',
 		onLast: true
-	}));
-});
+	}))
+);
 
-gulp.task('styles', function() {
-	return sass([
-		'src/styles/styles.scss'
-	], {
+gulp.task('styles', () =>
+	sass(paths.srcSCSS, {
 		noCache: true,
 		style: 'compact',
-		sourcemap: true,
+		sourcemap: true
 	})
 	.pipe(plumber())
 	.pipe(cleancss({
@@ -57,41 +74,56 @@ gulp.task('styles', function() {
 	}))
 	.pipe(sourcemaps.write('maps', {
 		includeContent: false,
-		sourceRoot: '/src/scss'
+		sourceRoot : paths.srcSCSS
 	}))
-	.pipe(gulp.dest('dist/css'))
+	.pipe(gulp.dest(paths.distCSS))
 	.pipe(notify({
 		message: '"Styles" Task Completed'
-	}));
-});
+	}))
+);
 
+// Gulp task to minify HTML files
+gulp.task('html', () =>
+	gulp.src(['./src/**/*.html'])
+	.pipe(htmlmin({
+		collapseWhitespace: true, 
+		removeComments: true,
+		minifyCSS: true
+	}))
+	.pipe(gulp.dest(paths.dist))
+);
 
 gulp.task('img-min', () =>
-	gulp.src('./src/img/**/*')
-		.pipe(plumber())
-		.pipe(imagemin([
-			imagemin.jpegtran({progressive: true}),
-			imagemin.optipng(),
-			imagemin.svgo({
-				plugins: [
-					{
-						removeViewBox: false
-					}, {
-						minifyStyles: false
-					}, {
-                        cleanupIDs: false
-                    }
-				]
-			})
-		], {verbose: true}))
-		.pipe(gulp.dest('dist/img'))
-		.pipe(notify({message: 'image min Task Completed'}))
+	gulp.src(paths.srcImg)
+	.pipe(plumber())
+	.pipe(imagemin([
+		imagemin.jpegtran({progressive: true}),
+		imagemin.optipng(),
+		// imagemin.svgo({
+		// 	plugins: [
+		// 		{	removeViewBox: false }, 
+		// 		{ minifyStyles: false }, 
+		// 		{	removeUselessStrokeAndFill: false },
+		// 		{ removeUselessDefs: false }, 
+		// 		{ cleanupIDs: false }
+		// 	]
+		// })
+	], {verbose: true}))
+	.pipe(gulp.dest(paths.distImg))
+	.pipe(notify({message: 'image min Task Completed'}))
+);
+
+gulp.task('copy', () =>
+	gulp.src(paths.srcFiles)
+	.pipe(gulp.dest(paths.dist))
 );
 
 gulp.task('watch', function() {
-	gulp.watch(['src/*.scss', 'src/**/*.scss'], ['styles']);
-	gulp.watch('img/**/*', ['img-min']);
-	gulp.watch('src/scripts/*.js', ['scripts']);
+	gulp.watch(paths.srcJS, ['scripts']);
+	gulp.watch(paths.srcSCSS, ['styles']);
+	gulp.watch(paths.srcHTML, ['html']);
+	gulp.watch(paths.srcImg, ['img-min']);
+	gulp.watch(paths.srcFiles, ['copy']);
 });
 
-gulp.task('default', ['scripts', 'styles', 'img-min']);
+gulp.task('default', ['scripts', 'styles', 'html', 'img-min', 'copy']);
