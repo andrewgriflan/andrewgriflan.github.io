@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="158.64" height="99.95" viewBox="0 0 158.64 99.95"><defs><clipPath id="game-clip-path"><path fill="none" d="M112.75 100.24h45.59V0H0v100.24h17.84"/></clipPath></defs></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="158.64" height="99.95" viewBox="0 0 158.64 99.95">
+    <defs>
+        <clipPath id="game-clip-path">
+            <polyline points="112.75 100.24 158.34 100.24 158.34 0 0 0 0 100.24 17.84 100.24" style="fill:none"/>
+        </clipPath>
+    </defs>
+</svg>
