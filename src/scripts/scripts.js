@@ -349,10 +349,9 @@ function initAnimations() {
 	helicopter3Timeline.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 4, { x: '+=20', y: '+=40' })
 	.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '+=10', y: '-=20' })
 	.to('.section__illustration__robot #helicopter, .section__illustration__robot-helicopter-blades', 6, { x: '-=30', y: '-=20' });
-
+	TweenMax.set('.section__illustration__robot .tail-blades', {transformOrigin: "center"});
 	TweenMax.to('.tail-blades', 1, {
 			rotation: 180,
-			transformOrigin: "center",
 			repeat: -1,
 			ease: Power0.easeNone
 	});

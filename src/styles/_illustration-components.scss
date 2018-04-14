@@ -144,7 +144,19 @@
         }
         &-rear-blades {
             transform: translateX(3px) translateY(55px);
-            transform-origin: 12px 13px;
+            transform-origin: 11px 13px;
+
+            &[data-num="1"] {}
+
+            &[data-num="2"] {
+                transform: translateX(-37px) translateY(55px);
+                transform-origin: 11px 13px;
+            }
+
+            &[data-num="3"] {
+                transform: translateX(-37px) translateY(55px);
+                transform-origin: 51px 13px;
+            }
         }
         &-ruby {
             transform: translateX(59px) translateY(-13px) rotate(7deg);
