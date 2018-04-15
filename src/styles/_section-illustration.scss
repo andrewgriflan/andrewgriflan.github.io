@@ -142,12 +142,12 @@
     &__helicopter-rear-blades {
         &[data-num="1"] {
             transform: translateX(-1px) translateY(195px);
-            transform-origin: 34px 34px;
+            transform-origin: 34px 33px;
         }
 
         &[data-num="2"] {
             transform: translateX(934px) translateY(195px);
-            transform-origin: 34px 34px;
+            transform-origin: 34px 33px;
         }
     }
     &__helicopter[data-num="2"] {
