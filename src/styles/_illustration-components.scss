@@ -144,13 +144,12 @@
         }
         &-rear-blades {
             transform: translateX(3px) translateY(55px);
-            transform-origin: 11px 13px;
+            transform-origin: 11px 14px;
 
             &[data-num="1"] {}
 
             &[data-num="2"] {
                 transform: translateX(-37px) translateY(55px);
-                transform-origin: 11px 13px;
             }
 
             &[data-num="3"] {
