@@ -22,10 +22,10 @@ const paths = {
 		'src/*.webmanifest'
 	],
 	srcJS: 'src/**/*.js',
-	srcSCSS: 'src/**/*.scss',
+	srcSCSS: 'src/styles/*.scss',
 	srcHTML: 'src/**/*.html',
 	srcImg: 'src/img/**/*',
-	
+
 	dist: 'dist',
 	distJS: 'dist/js',
 	distCSS: 'dist/css',
@@ -86,7 +86,7 @@ gulp.task('styles', () =>
 gulp.task('html', () =>
 	gulp.src(['./src/**/*.html'])
 	.pipe(htmlmin({
-		collapseWhitespace: true, 
+		collapseWhitespace: true,
 		removeComments: true,
 		minifyCSS: true
 	}))
@@ -101,10 +101,10 @@ gulp.task('img-min', () =>
 		imagemin.optipng(),
 		// imagemin.svgo({
 		// 	plugins: [
-		// 		{	removeViewBox: false }, 
-		// 		{ minifyStyles: false }, 
+		// 		{	removeViewBox: false },
+		// 		{ minifyStyles: false },
 		// 		{	removeUselessStrokeAndFill: false },
-		// 		{ removeUselessDefs: false }, 
+		// 		{ removeUselessDefs: false },
 		// 		{ cleanupIDs: false }
 		// 	]
 		// })

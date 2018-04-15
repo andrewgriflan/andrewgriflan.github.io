@@ -142,6 +142,21 @@
 
             perspective: 500px;
         }
+        &-rear-blades {
+            transform: translateX(3px) translateY(55px);
+            transform-origin: 11px 14px;
+
+            &[data-num="1"] {}
+
+            &[data-num="2"] {
+                transform: translateX(-37px) translateY(55px);
+            }
+
+            &[data-num="3"] {
+                transform: translateX(-37px) translateY(55px);
+                transform-origin: 51px 13px;
+            }
+        }
         &-ruby {
             transform: translateX(59px) translateY(-13px) rotate(7deg);
             transform-origin: 13px 7px;
@@ -149,9 +164,7 @@
     }
     &__cars {
         transform: translateX(51px) translateY(554px);
-
         clip-path: url(#car-mask);
-        &-clip-path {}
     }
     &__tubes {
         width: 100%;

@@ -139,6 +139,17 @@
             }
         }
     }
+    &__helicopter-rear-blades {
+        &[data-num="1"] {
+            transform: translateX(-1px) translateY(195px);
+            transform-origin: 34px 34px;
+        }
+
+        &[data-num="2"] {
+            transform: translateX(934px) translateY(195px);
+            transform-origin: 34px 34px;
+        }
+    }
     &__helicopter[data-num="2"] {
         .illustration__helicopter-blades {
             transform: translateX(15px) translateY(19px);
