@@ -185,23 +185,22 @@ nav {
 .menu {
     position: fixed;
     z-index: 100;
-    top: -20px;
-    right: -20px;
-    bottom: -20px;
-    left: 100%;
-
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: block;
     overflow-y: scroll;
-
+    transform: translateX(100%);
     width: 100%;
     height: calc(100% + 30px);
     margin: 0;
     padding: 15px;
     padding-top: 25px;
-
+    will-change: transform;
     list-style-type: none;
 
-    transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
     background-color: #fff;
     background-image: url('/img/cloud-bg-menu.svg');
@@ -216,7 +215,7 @@ nav {
         margin-bottom: 25px;
     }
     &.is-active {
-        left: 0;
+        transform: translateX(0);
     }
     @media (min-width: 540px) {
         width: 100%;
